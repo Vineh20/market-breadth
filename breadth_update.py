@@ -264,7 +264,7 @@ def add_metrics(df):
 def backfill(tickers):
     print("Running full 200-day backfill...")
     data = get_prices(tickers, days=320)
-    rows = [calc_row(data, i) for i in range(1, len(data))]
+    rows = [calc_row(data, i) for i in range(1, len(data["close"]))]
     rows = [r for r in rows if r]
     df = pd.DataFrame(rows).tail(200).reset_index(drop=True)
     df = add_metrics(df)
