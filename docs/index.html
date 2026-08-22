@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Market Breadth Monitor</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink:  #0d1117; --ink2: #161b22; --ink3: #1c2330;
+  --wire: #21303f; --dim:  #3d5166; --fog:  #6b8299;
+  --text: #c9d8e8; --bright: #e8f0f8;
+  --g: #3ddc84; --g2: rgba(61,220,132,0.12);
+  --r: #ff4560; --r2: rgba(255,69,96,0.12);
+  --y: #ffd166; --y2: rgba(255,209,102,0.12);
+  --b: #58b4ff; --b2: rgba(88,180,255,0.15);
+  --p: #c084fc;
+  --mono: 'JetBrains Mono', monospace;
+  --disp: 'Syne', sans-serif;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--ink); color:var(--text); font-family:var(--disp); min-height:100vh; overflow-x:hidden; }
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.15;
+  background-image: linear-gradient(var(--wire) 1px,transparent 1px), linear-gradient(90deg,var(--wire) 1px,transparent 1px);
+  background-size: 40px 40px;
+}
+.wrap { position:relative; z-index:1; max-width:1400px; margin:0 auto; padding:28px 24px; }
+
+/* LOADING */
+#loader {
+  position:fixed; inset:0; background:var(--ink); z-index:100;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;
+  transition: opacity 0.5s;
+}
+#loader.hidden { opacity:0; pointer-events:none; }
+.loader-ring {
+  width:48px; height:48px; border-radius:50%;
+  border:2px solid var(--wire); border-top-color:var(--b);
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.loader-text { font-family:var(--mono); font-size:11px; color:var(--fog); letter-spacing:2px; }
+.loader-sub   { font-family:var(--mono); font-size:9px; color:var(--dim); letter-spacing:1px; }
+
+/* ERROR */
+#errorBox {
+  display:none; background:var(--r2); border:1px solid var(--r);
+  border-radius:4px; padding:20px 24px; margin-bottom:20px;
+  font-family:var(--mono); font-size:11px; color:var(--r);
+}
+
+/* HEADER */
+.hdr { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:28px; gap:20px; flex-wrap:wrap; }
+.hdr-title h1 { font-family:var(--disp); font-size:26px; font-weight:800; letter-spacing:-0.5px; color:var(--bright); }
+.hdr-title p  { font-family:var(--mono); font-size:9px; color:var(--fog); letter-spacing:2px; margin-top:5px; text-transform:uppercase; }
+.hdr-right { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.regime-pill {
+  font-family:var(--mono); font-size:11px; font-weight:600;
+  letter-spacing:2px; padding:7px 16px; border-radius:2px; text-transform:uppercase;
+}
+.pill-bull    { background:rgba(61,220,132,.1);   color:var(--g); border:1px solid rgba(61,220,132,.4); }
+.pill-neutral { background:rgba(88,180,255,.1);   color:var(--b); border:1px solid rgba(88,180,255,.4); }
+.pill-caution { background:rgba(255,209,102,.1);  color:var(--y); border:1px solid rgba(255,209,102,.4); }
+.pill-bear    { background:rgba(255,69,96,.1);    color:var(--r); border:1px solid rgba(255,69,96,.4); }
+.live-badge {
+  font-family:var(--mono); font-size:9px; color:var(--g);
+  background:rgba(61,220,132,.08); border:1px solid rgba(61,220,132,.3);
+  padding:7px 12px; border-radius:2px; display:flex; align-items:center; gap:6px;
+}
+.live-dot { width:6px; height:6px; border-radius:50%; background:var(--g); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+.date-badge { font-family:var(--mono); font-size:9px; color:var(--dim); background:var(--ink2); border:1px solid var(--wire); padding:7px 12px; border-radius:2px; }
+
+/* STATS */
+.stats-row { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:16px; }
+.stat { background:var(--ink2); border:1px solid var(--wire); border-radius:3px; padding:14px 16px; position:relative; overflow:hidden; }
+.stat::after { content:''; position:absolute; top:0;left:0;right:0; height:2px; }
+.stat.g::after{background:var(--g)} .stat.r::after{background:var(--r)}
+.stat.b::after{background:var(--b)} .stat.y::after{background:var(--y)} .stat.p::after{background:var(--p)}
+.stat-label { font-family:var(--mono); font-size:9px; letter-spacing:2px; color:var(--fog); text-transform:uppercase; margin-bottom:8px; }
+.stat-val   { font-family:var(--mono); font-size:28px; font-weight:600; line-height:1; }
+.stat.g .stat-val{color:var(--g)} .stat.r .stat-val{color:var(--r)}
+.stat.b .stat-val{color:var(--b)} .stat.y .stat-val{color:var(--y)} .stat.p .stat-val{color:var(--p)}
+.stat-sub { font-family:var(--mono); font-size:9px; color:var(--dim); margin-top:4px; }
+
+/* SIGNAL BAR */
+.signal-bar {
+  background:var(--ink2); border:1px solid var(--wire); border-radius:3px;
+  padding:12px 18px; margin-bottom:16px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+}
+.sig-track { flex:1; min-width:200px; height:8px; background:var(--ink3); border-radius:4px; overflow:hidden; display:flex; }
+.sig-seg { height:100%; transition:width .3s; }
+.sig-legend { display:flex; gap:14px; flex-wrap:wrap; }
+.sig-item { display:flex; align-items:center; gap:6px; font-family:var(--mono); font-size:9px; color:var(--fog); }
+.sig-dot { width:8px; height:8px; border-radius:1px; }
+
+/* SECTION HEADER */
+.sec { font-family:var(--mono); font-size:9px; letter-spacing:3px; color:var(--dim); text-transform:uppercase;
+  padding:8px 0; border-bottom:1px solid var(--wire); margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+.sec-line { flex:1; height:1px; background:var(--wire); }
+
+/* HISTORY TABLE */
+.history-tools { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+.history-tools select, .history-tools input {
+  font-family:var(--mono); font-size:10px; color:var(--text);
+  background:var(--ink3); border:1px solid var(--wire); border-radius:2px;
+  padding:8px 10px; outline:none;
+}
+.history-tools select:focus, .history-tools input:focus { border-color:var(--b); }
+.history-summary { margin-left:auto; font-family:var(--mono); font-size:9px; color:var(--dim); }
+.history-wrap { overflow:auto; border:1px solid var(--wire); border-radius:3px; max-height:620px; }
+.history-table { width:100%; border-collapse:collapse; min-width:900px; font-family:var(--mono); font-size:10px; }
+.history-table th {
+  position:sticky; top:0; z-index:2; background:#111820; color:var(--fog);
+  text-transform:uppercase; letter-spacing:1.2px; font-size:8px; font-weight:500;
+  padding:10px 9px; border-bottom:1px solid var(--wire); text-align:right; white-space:nowrap;
+}
+.history-table th:first-child, .history-table td:first-child { text-align:left; }
+.history-table td {
+  padding:9px; border-bottom:1px solid rgba(33,48,63,.65);
+  text-align:right; color:var(--text); white-space:nowrap;
+}
+.history-table tbody tr:hover { background:rgba(88,180,255,.045); }
+.history-table tbody tr:last-child td { border-bottom:0; }
+.regime-badge, .signal-badge {
+  display:inline-block; min-width:78px; text-align:center; padding:4px 7px;
+  border-radius:2px; font-size:8px; letter-spacing:1px; font-weight:600;
+}
+.regime-badge.BULL { color:var(--g); background:rgba(61,220,132,.10); border:1px solid rgba(61,220,132,.25); }
+.regime-badge.NEUTRAL { color:var(--b); background:rgba(88,180,255,.10); border:1px solid rgba(88,180,255,.25); }
+.regime-badge.CAUTION { color:var(--y); background:rgba(255,209,102,.10); border:1px solid rgba(255,209,102,.25); }
+.regime-badge.BEAR { color:var(--r); background:rgba(255,69,96,.10); border:1px solid rgba(255,69,96,.25); }
+.signal-badge.TRADE { color:var(--g); background:rgba(61,220,132,.10); border:1px solid rgba(61,220,132,.25); }
+.signal-badge.SELECTIVE { color:var(--y); background:rgba(255,209,102,.10); border:1px solid rgba(255,209,102,.25); }
+.signal-badge.CASH { color:var(--r); background:rgba(255,69,96,.10); border:1px solid rgba(255,69,96,.25); }
+.history-empty { padding:30px; text-align:center; color:var(--dim); font-family:var(--mono); font-size:10px; }
+
+/* CARD */
+.card { background:var(--ink2); border:1px solid var(--wire); border-radius:3px; padding:18px; }
+.card-hdr { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; }
+.card-title { font-family:var(--mono); font-size:9px; letter-spacing:2px; color:var(--fog); text-transform:uppercase; }
+.card-val   { font-family:var(--mono); font-size:20px; font-weight:600; margin-top:4px; }
+.card-meta  { font-family:var(--mono); font-size:9px; color:var(--dim); text-align:right; }
+
+/* TABS */
+.tabs { display:flex; gap:5px; }
+.tab { font-family:var(--mono); font-size:9px; letter-spacing:1px; padding:4px 10px; border-radius:2px;
+  cursor:pointer; border:1px solid var(--wire); background:transparent; color:var(--dim); transition:all .15s; }
+.tab:hover,.tab.active { border-color:var(--b); color:var(--b); background:rgba(88,180,255,.08); }
+
+/* REGIME DIST */
+.dist-row { display:flex; height:28px; border-radius:3px; overflow:hidden; margin-bottom:8px; }
+.dist-seg { display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:9px; font-weight:600; }
+.dist-legend { display:flex; gap:14px; flex-wrap:wrap; margin-top:8px; }
+.dist-item { display:flex; align-items:center; gap:5px; font-family:var(--mono); font-size:9px; }
+
+/* GAUGE */
+.gauge { margin-bottom:14px; }
+.gauge-label { font-family:var(--mono); font-size:9px; color:var(--fog); margin-bottom:4px; display:flex; justify-content:space-between; }
+.gauge-track { height:18px; background:var(--ink3); border-radius:2px; position:relative; overflow:visible; }
+.gauge-fill  { height:100%; border-radius:2px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; font-family:var(--mono); font-size:9px; font-weight:600; }
+.gauge-thr   { position:absolute; top:-3px; height:calc(100% + 6px); width:2px; background:var(--y); border-radius:1px; }
+.gauge-thr-lbl { position:absolute; top:-16px; font-family:var(--mono); font-size:8px; color:var(--y); transform:translateX(-50%); white-space:nowrap; }
+
+/* FOOTER */
+.footer { margin-top:24px; padding-top:14px; border-top:1px solid var(--wire); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.footer-text { font-family:var(--mono); font-size:9px; color:var(--dim); }
+.footer-link { color:var(--b); text-decoration:none; }
+.footer-link:hover { text-decoration:underline; }
+
+/* OVERLAY LEGEND */
+.ovl-legend { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+.ovl-item   { font-family:var(--mono); font-size:9px; display:flex; align-items:center; gap:5px; color:var(--fog); }
+.ovl-sw { width:14px; height:3px; border-radius:2px; }
+
+@media(max-width:900px){
+  .stats-row{grid-template-columns:repeat(2,1fr);}
+  .history-tools{align-items:stretch;}
+  .history-tools select,.history-tools input{flex:1;min-width:130px;}
+  .history-summary{width:100%;margin-left:0;}
+}
+@media(max-width:560px){
+  .wrap{padding:18px 12px;}
+  .stats-row{grid-template-columns:1fr 1fr;gap:8px;}
+  .stat{padding:12px;}
+  .stat-val{font-size:22px;}
+  .card{padding:14px;}
+  .history-wrap{max-height:560px;}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-ring"></div>
+  <div class="loader-text">LOADING MARKET DATA</div>
+  <div class="loader-sub" id="loaderSub">Fetching latest breadth data from GitHub...</div>
+</div>
+
+<div class="wrap" id="app" style="display:none">
+
+  <div id="errorBox"></div>
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-title">
+      <h1>Market Breadth Monitor</h1>
+      <p>Pradeep Bonde · Stockbee Methodology · S&amp;P 500 Universe · Live Data</p>
+    </div>
+    <div class="hdr-right">
+      <div class="live-badge"><div class="live-dot"></div>LIVE</div>
+      <div class="regime-pill pill-bull" id="regimePill">● —</div>
+      <div class="date-badge" id="dateBadge">—</div>
+    </div>
+  </div>
+
+  <!-- STAT CARDS -->
+  <div class="stats-row">
+    <div class="stat b">
+      <div class="stat-label">10-Day Ratio</div>
+      <div class="stat-val" id="sv-ratio">—</div>
+      <div class="stat-sub" id="sv-ratio-sub">—</div>
+    </div>
+    <div class="stat g">
+      <div class="stat-label">Up 25%+ Quarter</div>
+      <div class="stat-val" id="sv-up25q">—</div>
+      <div class="stat-sub">Momentum universe</div>
+    </div>
+    <div class="stat r">
+      <div class="stat-label">Down 25%+ Quarter</div>
+      <div class="stat-val" id="sv-dn25q">—</div>
+      <div class="stat-sub">Damaged stocks</div>
+    </div>
+    <div class="stat g">
+      <div class="stat-label">Up 4%+ Today</div>
+      <div class="stat-val" id="sv-up4">—</div>
+      <div class="stat-sub" id="sv-dn4-sub">↓ — down 4%+</div>
+    </div>
+    <div class="stat y">
+      <div class="stat-label">Swing Signal</div>
+      <div class="stat-val" id="sv-signal" style="font-size:15px;padding-top:6px">—</div>
+      <div class="stat-sub" id="sv-signal-sub">—</div>
+    </div>
+  </div>
+
+  <!-- SIGNAL TIMELINE -->
+  <div class="signal-bar">
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--fog);text-transform:uppercase;flex-shrink:0">200-Day Signal</div>
+    <div class="sig-track" id="sigTrack"></div>
+    <div class="sig-legend">
+      <div class="sig-item"><div class="sig-dot" style="background:rgba(255,69,96,.6)"></div>CASH</div>
+      <div class="sig-item"><div class="sig-dot" style="background:rgba(255,209,102,.6)"></div>SELECTIVE</div>
+      <div class="sig-item"><div class="sig-dot" style="background:rgba(61,220,132,.6)"></div>TRADE</div>
+    </div>
+  </div>
+
+  <!-- HISTORICAL TABLE -->
+  <div class="sec"><span>Historical Market Regime &amp; Signal</span><div class="sec-line"></div></div>
+  <div class="card" style="margin-bottom:14px">
+    <div class="card-hdr">
+      <div>
+        <div class="card-title">Daily Breadth History</div>
+        <div class="card-val" id="historyTitle" style="color:var(--b)">200 trading days</div>
+      </div>
+      <div class="card-meta" id="historyMeta">Newest first</div>
+    </div>
+    <div class="history-tools">
+      <select id="historyRegime" aria-label="Filter market regime">
+        <option value="ALL">All Regimes</option>
+        <option value="BULL">BULL</option>
+        <option value="NEUTRAL">NEUTRAL</option>
+        <option value="CAUTION">CAUTION</option>
+        <option value="BEAR">BEAR</option>
+      </select>
+      <select id="historySignal" aria-label="Filter swing signal">
+        <option value="ALL">All Signals</option>
+        <option value="TRADE">TRADE</option>
+        <option value="SELECTIVE">SELECTIVE</option>
+        <option value="CASH">CASH</option>
+      </select>
+      <select id="historyDays" aria-label="History period">
+        <option value="200">200 Days</option>
+        <option value="100">100 Days</option>
+        <option value="60">60 Days</option>
+        <option value="30">30 Days</option>
+      </select>
+      <input id="historySearch" type="search" placeholder="Search date..." aria-label="Search date">
+      <div class="history-summary" id="historySummary">—</div>
+    </div>
+    <div class="history-wrap">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Date</th><th>10D Ratio</th><th>Up 25Q</th><th>Down 25Q</th>
+            <th>Up 4%</th><th>Down 4%</th><th>10D Bulls</th><th>10D Bears</th>
+            <th>Regime</th><th>Signal</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="sec"><span>Regime Distribution &amp; Gauges</span><div class="sec-line"></div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title" style="margin-bottom:14px">Regime Days Distribution (200D)</div>
+      <div class="dist-row" id="distRow"></div>
+      <div class="dist-legend" id="distLegend"></div>
+    </div>
+    <div class="card">
+      <div class="card-title" style="margin-bottom:14px">Current Values vs Thresholds</div>
+      <div id="gaugeWrap"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-text">
+      Market Breadth Monitor · Stockbee / Pradeep Bonde Methodology ·
+      Data: Yahoo Finance via yfinance ·
+      <a class="footer-link" href="https://github.com/Vineh20/market-breadth" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+    <div class="footer-text" id="footerUpdated">—</div>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+// ── CONFIG ───────────────────────────────────────────────────────────────────
+// IMPORTANT: Replace GITHUB_USERNAME and REPO_NAME with your actual values
+const GITHUB_USERNAME = 'Vineh20';
+const REPO_NAME       = 'market-breadth';
+const BRANCH          = 'main';
+
+const CSV_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/${BRANCH}/market_breadth_200d_REAL.csv`;
+const LOG_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/${BRANCH}/update_log.json`;
+
+// ── COLORS ────────────────────────────────────────────────────────────────────
+const C = {
+  g:'#3ddc84', r:'#ff4560', b:'#58b4ff', y:'#ffd166', p:'#c084fc',
+  dim:'#3d5166', fog:'#6b8299', wire:'#21303f', ink3:'#1c2330'
+};
+const REGIME_C = { BULL:C.g, NEUTRAL:C.b, CAUTION:C.y, BEAR:C.r };
+const SIGNAL_C = { CASH:C.r, SELECTIVE:C.y, TRADE:C.g };
+
+// ── CSV PARSER ────────────────────────────────────────────────────────────────
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  const headers = lines[0].split(',').map(h => h.trim());
+  const rows = lines.slice(1).map(line => {
+    const vals = line.split(',');
+    const obj = {};
+    headers.forEach((h, i) => { obj[h] = vals[i]?.trim() ?? ''; });
+    return obj;
+  });
+  return rows;
+}
+
+function rowsToArrays(rows) {
+  if (!rows.length) return null;
+  const n = v => isNaN(parseFloat(v)) ? 0 : parseFloat(v);
+  return {
+    dates:  rows.map(r => r.Date?.slice(5) || r.Date),      // MM-DD
+    fulldates: rows.map(r => r.Date),
+    up4:    rows.map(r => n(r.Up_4pct_Daily)),
+    dn4:    rows.map(r => n(r.Down_4pct_Daily)),
+    ratio:  rows.map(r => n(r['10Day_Ratio'])),
+    up25q:  rows.map(r => n(r.Up_25pct_Quarter)),
+    dn25q:  rows.map(r => n(r.Down_25pct_Quarter)),
+    bulls10:rows.map(r => n(r['10Day_Bulls'])),
+    bears10:rows.map(r => n(r['10Day_Bears'])),
+    regime: rows.map(r => r.Market_Regime?.trim() || 'CAUTION'),
+    signal: rows.map(r => r.Swing_Signal?.trim() || 'CASH'),
+    up25m:  rows.map(r => n(r.Up_25pct_Month || 0)),
+    total:  rows.map(r => n(r.Total_Stocks || 503)),
+  };
+}
+
+// ── FETCH DATA ────────────────────────────────────────────────────────────────
+async function fetchData() {
+  const sub = document.getElementById('loaderSub');
+  try {
+    sub.textContent = 'Fetching latest breadth data from GitHub...';
+    const cacheBust = `?t=${Date.now()}`;
+    const res = await fetch(CSV_URL + cacheBust, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = await res.text();
+    const rows = parseCSV(text);
+    if (rows.length < 5) throw new Error('CSV contains too few rows');
+    sub.textContent = `Loaded ${rows.length} trading days`;
+    return { data: rowsToArrays(rows), source: 'live' };
+  } catch (e) {
+    console.error('Could not load live data:', e);
+    throw new Error(`Could not load market breadth data from GitHub. ${e.message}`);
+  }
+}
+
+// ── SIMPLE HELPERS ───────────────────────────────────────────────────────────
+const fmtNum = v => Number.isFinite(Number(v)) ? Number(v).toLocaleString() : '—';
+const fmtRatio = v => Number.isFinite(Number(v)) ? Number(v).toFixed(2) : '—';
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#039;'
+  }[ch]));
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return '—';
+  const d = new Date(dateStr + 'T00:00:00');
+  if (Number.isNaN(d.getTime())) return dateStr;
+  return d.toLocaleDateString(undefined, {day:'2-digit', month:'short', year:'numeric'});
+}
+
+// ── RENDER DASHBOARD ──────────────────────────────────────────────────────────
+let D;
+
+function renderAll(data, source) {
+  D = data;
+  const N = D.dates.length;
+  const last = k => D[k][N-1];
+
+  const curReg = last('regime'), curSig = last('signal');
+  const regPill = document.getElementById('regimePill');
+  regPill.textContent = '● ' + curReg;
+  regPill.className = 'regime-pill ' + {
+    BULL:'pill-bull', NEUTRAL:'pill-neutral', CAUTION:'pill-caution', BEAR:'pill-bear'
+  }[curReg];
+  document.getElementById('dateBadge').textContent = D.fulldates?.[N-1] || D.dates[N-1];
+
+  const r = Number(last('ratio'));
+  document.getElementById('sv-ratio').textContent = fmtRatio(r);
+  document.getElementById('sv-ratio').style.color = r >= 2 ? C.g : r >= 1.5 ? C.b : r < 1 ? C.r : C.y;
+  document.getElementById('sv-ratio-sub').textContent =
+    r >= 2 ? '✓ Swing long zone' : r >= 1.5 ? '~ Neutral zone' : '✗ Below threshold';
+
+  document.getElementById('sv-up25q').textContent = fmtNum(last('up25q'));
+  document.getElementById('sv-dn25q').textContent = fmtNum(last('dn25q'));
+  document.getElementById('sv-up4').textContent = fmtNum(last('up4'));
+  document.getElementById('sv-dn4-sub').textContent = `↓ ${fmtNum(last('dn4'))} down 4%+`;
+
+  const sigEl = document.getElementById('sv-signal');
+  sigEl.textContent = curSig;
+  sigEl.style.color = SIGNAL_C[curSig] || C.y;
+  document.getElementById('sv-signal-sub').textContent =
+    curSig === 'TRADE' ? '✓ Full position size' :
+    curSig === 'SELECTIVE' ? '~ Small size only' : '✗ Stay in cash';
+
+  document.getElementById('cv-ratio').textContent = fmtRatio(r);
+  document.getElementById('cv-up25q').textContent = fmtNum(last('up25q'));
+  document.getElementById('cv-dn25q').textContent = fmtNum(last('dn25q'));
+  document.getElementById('cv-daily').textContent = `↑${fmtNum(last('up4'))}  ↓${fmtNum(last('dn4'))}`;
+  document.getElementById('cv-bb').textContent = `${fmtNum(last('bulls10'))} / ${fmtNum(last('bears10'))}`;
+  document.getElementById('cv-full').textContent = fmtRatio(r);
+
+  const daysAboveR = D.ratio.filter(v => Number(v) >= 2).length;
+  const daysAboveQ = D.up25q.filter(v => Number(v) >= 300).length;
+  document.getElementById('cm-ratio').textContent = `${daysAboveR}/${N} days ≥2.0`;
+  document.getElementById('cm-up25q').textContent = `${daysAboveQ}/${N} days ≥300`;
+
+  const avgUp = Math.round(D.up4.reduce((a,b)=>a+Number(b||0),0)/N);
+  const avgDn = Math.round(D.dn4.reduce((a,b)=>a+Number(b||0),0)/N);
+  document.getElementById('cm-daily').textContent = `Avg Up: ${avgUp} · Avg Dn: ${avgDn}`;
+  document.getElementById('cm-dn25q').textContent = `${D.dn25q.filter(v=>Number(v)<200).length} days below 200`;
+
+  const track = document.getElementById('sigTrack');
+  track.innerHTML = '';
+  D.signal.forEach((s,i) => {
+    const seg = document.createElement('div');
+    seg.className = 'sig-seg';
+    seg.style.flex = '1';
+    seg.style.background =
+      s === 'TRADE' ? 'rgba(61,220,132,.6)' :
+      s === 'SELECTIVE' ? 'rgba(255,209,102,.5)' : 'rgba(255,69,96,.55)';
+    seg.title = `${formatDate(D.fulldates?.[i] || D.dates[i])} · ${s}`;
+    track.appendChild(seg);
+  });
+
+  document.getElementById('footerUpdated').textContent =
+    source === 'live'
+      ? `Data loaded · Latest trading day ${formatDate(D.fulldates?.[N-1] || D.dates[N-1])}`
+      : '⚠ LIVE DATA UNAVAILABLE';
+
+  const counts = {BULL:0, NEUTRAL:0, CAUTION:0, BEAR:0};
+  D.regime.forEach(x => counts[x] = (counts[x] || 0) + 1);
+  const distRow = document.getElementById('distRow');
+  const distLeg = document.getElementById('distLegend');
+  distRow.innerHTML = ''; distLeg.innerHTML = '';
+
+  Object.entries(counts).forEach(([regime,count]) => {
+    const seg = document.createElement('div');
+    seg.className = 'dist-seg';
+    seg.style.cssText =
+      `width:${count/N*100}%;background:${REGIME_C[regime]}22;` +
+      `border-right:1px solid ${REGIME_C[regime]}44;color:${REGIME_C[regime]}`;
+    if (count/N > .07) seg.textContent = `${count}d`;
+    seg.title = `${regime}: ${count} days`;
+    distRow.appendChild(seg);
+
+    const leg = document.createElement('div');
+    leg.className = 'dist-item';
+    leg.innerHTML =
+      `<div style="width:8px;height:8px;background:${REGIME_C[regime]};border-radius:1px"></div>` +
+      `<span style="color:${REGIME_C[regime]}">${regime}</span>` +
+      `<span style="color:var(--dim)">${count}d · ${(count/N*100).toFixed(0)}%</span>`;
+    distLeg.appendChild(leg);
+  });
+
+  const gw = document.getElementById('gaugeWrap');
+  gw.innerHTML = '';
+  const gauges = [
+    {label:'10-Day Ratio', val:r, max:4.5, thr:2, color:r>=2?C.g:r>=1.5?C.b:C.r},
+    {label:'Up 25%+ Quarter', val:Number(last('up25q')), max:500, thr:300, color:Number(last('up25q'))>=300?C.g:C.y},
+    {label:'Down 25%+ Quarter', val:Number(last('dn25q')), max:400, thr:200,
+      color:Number(last('dn25q'))<200?C.g:Number(last('dn25q'))<280?C.y:C.r}
+  ];
+  gauges.forEach(g => {
+    const pct = Math.min(Math.max(g.val/g.max*100,0),100);
+    const tp = Math.min(Math.max(g.thr/g.max*100,0),100);
+    gw.innerHTML += `
+      <div class="gauge">
+        <div class="gauge-label"><span>${g.label}</span><span style="color:${g.color}">
+          ${typeof g.val==='number' && g.val%1!==0 ? g.val.toFixed(2) : g.val}
+        </span></div>
+        <div class="gauge-track">
+          <div class="gauge-fill" style="width:${pct}%;background:${g.color}22;color:${g.color};border-right:2px solid ${g.color}"></div>
+          <div class="gauge-thr" style="left:${tp}%"><div class="gauge-thr-lbl">${g.thr}</div></div>
+        </div>
+      </div>`;
+  });
+
+  renderHistory();
+}
+
+function renderHistory() {
+  if (!D) return;
+
+  const regimeFilter = document.getElementById('historyRegime').value;
+  const signalFilter = document.getElementById('historySignal').value;
+  const dayLimit = Number(document.getElementById('historyDays').value);
+  const search = document.getElementById('historySearch').value.trim().toLowerCase();
+
+  const rows = [];
+  for (let i=D.dates.length-1; i>=0; i--) {
+    const regime = D.regime[i] || 'CAUTION';
+    const signal = D.signal[i] || 'CASH';
+    const date = D.fulldates?.[i] || D.dates[i] || '';
+
+    if (regimeFilter !== 'ALL' && regime !== regimeFilter) continue;
+    if (signalFilter !== 'ALL' && signal !== signalFilter) continue;
+    if (search && !String(date).toLowerCase().includes(search) &&
+        !String(D.dates[i]).toLowerCase().includes(search)) continue;
+
+    rows.push({i,regime,signal,date});
+    if (rows.length >= dayLimit) break;
+  }
+
+  const body = document.getElementById('historyBody');
+  body.innerHTML = '';
+
+  if (!rows.length) {
+    body.innerHTML = '<tr><td colspan="10" class="history-empty">No matching history found.</td></tr>';
+  } else {
+    rows.forEach(({i,regime,signal,date}) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${escapeHtml(formatDate(date))}</td>
+        <td>${escapeHtml(fmtRatio(Number(D.ratio[i])))}</td>
+        <td>${escapeHtml(fmtNum(D.up25q[i]))}</td>
+        <td>${escapeHtml(fmtNum(D.dn25q[i]))}</td>
+        <td>${escapeHtml(fmtNum(D.up4[i]))}</td>
+        <td>${escapeHtml(fmtNum(D.dn4[i]))}</td>
+        <td>${escapeHtml(fmtNum(D.bulls10[i]))}</td>
+        <td>${escapeHtml(fmtNum(D.bears10[i]))}</td>
+        <td><span class="regime-badge ${escapeHtml(regime)}">${escapeHtml(regime)}</span></td>
+        <td><span class="signal-badge ${escapeHtml(signal)}">${escapeHtml(signal)}</span></td>`;
+      body.appendChild(tr);
+    });
+  }
+
+  document.getElementById('historyTitle').textContent =
+    `${rows.length} displayed · ${D.dates.length} loaded`;
+  document.getElementById('historySummary').textContent =
+    `Showing ${rows.length} of ${D.dates.length} loaded days`;
+}
+
+['historyRegime','historySignal','historyDays'].forEach(id => {
+  document.getElementById(id).addEventListener('change', renderHistory);
+});
+document.getElementById('historySearch').addEventListener('input', renderHistory);
+
+// ── BOOT ─────────────────────────────────────────────────────────────────────
+(async () => {
+  try {
+    const {data,source} = await fetchData();
+    document.getElementById('loader').classList.add('hidden');
+    document.getElementById('app').style.display = 'block';
+    renderAll(data,source);
+  } catch(e) {
+    const loader = document.getElementById('loader');
+    loader.querySelector('.loader-ring').style.display = 'none';
+
+    const msg = document.createElement('div');
+    msg.style.cssText =
+      'max-width:560px;text-align:center;font-family:var(--mono);font-size:10px;' +
+      'line-height:1.7;color:var(--r);padding:0 20px;';
+    msg.textContent = e.message;
+    loader.appendChild(msg);
+
+    const hint = document.createElement('div');
+    hint.style.cssText =
+      'max-width:560px;text-align:center;font-family:var(--mono);font-size:9px;' +
+      'line-height:1.7;color:var(--dim);padding:0 20px;';
+    hint.textContent =
+      'Check that market_breadth_200d_REAL.csv exists in the repository and that GitHub Pages can access the raw file.';
+    loader.appendChild(hint);
+  }
+})();</script>
+</body>
+</html>
