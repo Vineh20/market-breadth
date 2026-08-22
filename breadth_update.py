@@ -7,15 +7,33 @@ CSV_PATH = "market_breadth_200d_REAL.csv"
 LOG_PATH = "update_log.json"
 
 def get_tickers():
-    try:
-        tables = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
-        tickers = tables[0]['Symbol'].str.replace('.', '-', regex=False).tolist()
-        print(f"Got {len(tickers)} tickers from Wikipedia")
-        return tickers
-    except Exception as e:
-        print(f"Wikipedia failed: {e}, using fallback list")
-        return ['AAPL','MSFT','NVDA','AMZN','META','GOOGL','TSLA','BRK-B','JPM','UNH','LLY','XOM','V','AVGO','MA','PG','COST','HD','MRK','CVX','ABBV','PEP','KO','WMT','ADBE','CRM','TMO','MCD','CSCO','ACN','ABT','BAC','DHR','PFE','TXN','NFLX','CMCSA','WFC','AMD','HON','UPS','NEE','RTX','AMGN','QCOM','IBM','CAT','GE','INTU','SPGI','BLK','GS','LOW','AXP','ISRG','MDT','SYK','VRTX','REGN','ZTS','CI','MMC','PLD','AMT']
+    url = "https://raw.githubusercontent.com/Ate329/top-us-stock-tickers/main/tickers/sp500.csv"
 
+    try:
+        df = pd.read_csv(url)
+
+        tickers = (
+            df["symbol"]
+            .dropna()
+            .astype(str)
+            .str.strip()
+            .str.replace("/", "-", regex=False)
+            .str.replace(".", "-", regex=False)
+            .tolist()
+        )
+
+        tickers = list(dict.fromkeys(tickers))
+
+        if len(tickers) < 450:
+            raise RuntimeError(f"Only {len(tickers)} S&P 500 tickers found")
+
+        print(f"Got {len(tickers)} S&P 500 tickers")
+        return tickers
+
+    except Exception as e:
+        raise RuntimeError(
+            f"Could not obtain the S&P 500 ticker list: {e}"
+        )
 def get_prices(tickers, days):
     end = datetime.today()
     start = end - timedelta(days=days)
