@@ -8,6 +8,7 @@ Usage: python pro_reports.py daily|sunday|all
 FMP_API_KEY must be set in the environment (a GitHub Actions secret).
 """
 import glob
+import re
 import json
 import os
 import shutil
@@ -133,6 +134,26 @@ def newest_markdown(out):
     return max(files, key=os.path.getmtime) if files else None
 
 
+# The distribution-day skill writes a few fixed phrases in Japanese.
+TRANSLATIONS = [
+    (re.compile(r"(\S+)は本日Distribution Day該当。"), r"\1 had a Distribution Day today."),
+    (re.compile(r"(\S+)は本日Distribution Day非該当。"), r"\1 had no Distribution Day today."),
+    (re.compile(r"5/15/25セッション経過以内の有効Distribution Dayはそれぞれ (\S+) 件。"),
+     r"Active Distribution Days within the last 5/15/25 sessions: \1."),
+    (re.compile(r"5/15/25セッション経過以内: "), "within 5/15/25 sessions: "),
+    (re.compile(r"リスク判定: (\S+?)。"), r"Risk level: \1."),
+]
+
+
+def publish(md, dest):
+    with open(md, encoding="utf-8") as fh:
+        text = fh.read()
+    for pattern, repl in TRANSLATIONS:
+        text = pattern.sub(repl, text)
+    with open(dest, "w", encoding="utf-8") as fh:
+        fh.write(text)
+
+
 def load_index():
     try:
         with open(INDEX_PATH) as fh:
@@ -146,7 +167,7 @@ def main():
     keys = [k for k, r in REPORTS.items() if group == "all" or r["group"] == group]
     os.makedirs(DOCS_DIR, exist_ok=True)
     index = load_index()
-    index.setdefault("reports", {})
+    index["reports"] = {k: v for k, v in index.get("reports", {}).items() if k in REPORTS}
     has_key = bool(os.environ.get("FMP_API_KEY"))
     index["has_key"] = has_key
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -175,7 +196,7 @@ def main():
             md = newest_markdown(out)
             if not md:
                 raise RuntimeError("no Markdown report was produced")
-            shutil.copyfile(md, os.path.join(DOCS_DIR, f"{key}.md"))
+            publish(md, os.path.join(DOCS_DIR, f"{key}.md"))
             entry.update({"status": "ok", "updated": now, "error": None})
             published += 1
             print(f"Published {md}", flush=True)

@@ -1,0 +1,44 @@
+name: Daily Chart Data
+
+# Builds the data behind docs/charts.html (prices plus TA-Lib indicators and
+# candlestick patterns) and publishes it to the `chart-data` branch. That
+# branch is replaced each day, so the main branch history does not grow.
+on:
+  schedule:
+    - cron: '5 23 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  charts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install yfinance pandas numpy TA-Lib
+
+      - name: Build chart data
+        run: python chart_data.py
+
+      - name: Publish to chart-data branch
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd chart-data
+          git init -q -b chart-data
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Chart data $(date +'%Y-%m-%d')"
+          git push -q --force "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" chart-data

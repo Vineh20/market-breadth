@@ -148,6 +148,7 @@ footer { margin-top:20px; font-size:12px; color:var(--fog); line-height:1.6; }
   <nav class="nav">
     <a href="./">Market Breadth</a>
     <a href="screener.html" class="on">Swing Screener</a>
+    <a href="charts.html">Charts</a>
     <a href="reports.html">Pro Reports</a>
   </nav>
 
@@ -443,6 +444,7 @@ function openStock(t) {
       <div class="calc-out" id="cOut"></div>
     </div>
     <div class="links">
+      <a href="charts.html?t=${encodeURIComponent(s.t)}">Full chart + indicators</a>
       <a href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(s.t.replace('-', '.'))}" target="_blank" rel="noopener">TradingView ↗</a>
       <a href="https://finviz.com/quote.ashx?t=${encodeURIComponent(s.t)}" target="_blank" rel="noopener">Finviz ↗</a>
       <a href="https://finance.yahoo.com/quote/${encodeURIComponent(s.t)}" target="_blank" rel="noopener">Yahoo ↗</a>

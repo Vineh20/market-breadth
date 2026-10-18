@@ -177,3 +177,15 @@ The FMP free tier allows 250 calls a day, which is why the heavy screeners are s
 
 The skills are pinned to one commit (`SKILLS_COMMIT` in `.github/workflows/pro-reports.yml`); change it to pick up newer versions.
 To run by hand: **Actions → Pro Trading Reports → Run workflow**.
+
+---
+
+## 📈 Charts
+
+**`charts.html`** shows an interactive chart for any S&P 500 stock (plus SPY and QQQ), built with
+[KLineChart](https://github.com/klinecharts/KLineChart): moving averages, Bollinger Bands, volume, MACD, RSI, KDJ,
+and drawing tools (trend lines, horizontals, Fibonacci). [TA-Lib](https://github.com/TA-Lib/ta-lib-python) supplies
+an indicator snapshot (RSI, ADX, MACD, stochastic, ATR, OBV) and candlestick-pattern markers.
+
+The data is built by `chart_data.py` (`.github/workflows/chart-data.yml`, weekdays 23:05 UTC) and published to the
+`chart-data` branch, which is replaced each day so the repository does not grow.

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Stock Charts</title>
+<script src="https://cdn.jsdelivr.net/npm/klinecharts@9.8.12/dist/umd/klinecharts.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink:  #0d1117; --ink2: #161b22; --ink3: #1c2330;
+  --wire: #21303f; --dim:  #3d5166; --fog:  #8aa0b6;
+  --text: #c9d8e8; --bright: #e8f0f8;
+  --g: #3ddc84; --g2: rgba(61,220,132,0.12);
+  --r: #ff4560; --r2: rgba(255,69,96,0.12);
+  --y: #ffd166; --y2: rgba(255,209,102,0.12);
+  --b: #58b4ff; --b2: rgba(88,180,255,0.15);
+  --ma50: #3987e5; --ma150: #c98500; --ma200: #d55181;
+  --mono: 'JetBrains Mono', monospace;
+  --disp: 'Syne', sans-serif;
+  color-scheme: dark;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--ink); color:var(--text); font-family:var(--disp); min-height:100vh; }
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.15;
+  background-image: linear-gradient(var(--wire) 1px,transparent 1px), linear-gradient(90deg,var(--wire) 1px,transparent 1px);
+  background-size: 40px 40px;
+}
+.wrap { position:relative; z-index:1; max-width:1400px; margin:0 auto; padding:24px 16px 40px; }
+a { color:var(--b); }
+button, input { font:inherit; color:inherit; }
+.nav { display:flex; gap:6px; margin-bottom:18px; flex-wrap:wrap; }
+.nav a { font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; text-decoration:none;
+  color:var(--fog); border:1px solid var(--wire); border-radius:6px; padding:7px 12px; background:var(--ink2); }
+.nav a.on { color:var(--bright); border-color:var(--b); background:var(--b2); }
+
+.top { display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap; margin-bottom:12px; }
+.title h1 { font-size:26px; font-weight:800; color:var(--bright); letter-spacing:-0.5px; display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+.title h1 .px { font-family:var(--mono); font-size:18px; font-weight:500; color:var(--text); }
+.title h1 .chg { font-family:var(--mono); font-size:14px; font-weight:500; }
+.title p { font-size:13px; color:var(--fog); margin-top:3px; }
+.search { display:flex; gap:6px; }
+.search input { font-family:var(--mono); font-size:13px; padding:9px 12px; border-radius:6px; border:1px solid var(--wire);
+  background:var(--ink2); color:var(--bright); width:220px; max-width:60vw; text-transform:uppercase; }
+.btn { font-family:var(--mono); font-size:11px; padding:8px 11px; border-radius:6px; border:1px solid var(--wire);
+  background:var(--ink2); color:var(--text); cursor:pointer; white-space:nowrap; }
+.btn:hover { border-color:var(--dim); }
+.btn.on { border-color:var(--b); background:var(--b2); color:var(--bright); }
+.btn.go { border-color:var(--b); color:var(--bright); }
+
+.toolbar { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
+.toolbar .lbl { font-family:var(--mono); font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--fog); margin:0 4px 0 6px; }
+.toolbar .sep { width:1px; height:22px; background:var(--wire); margin:0 4px; }
+
+#chart { height:560px; border:1px solid var(--wire); border-radius:10px; background:var(--ink2); overflow:hidden; }
+.hint { font-size:12px; color:var(--fog); margin:6px 2px 0; min-height:16px; }
+
+.grid { display:grid; grid-template-columns: 1.3fr 1fr; gap:12px; margin-top:12px; }
+.box { border:1px solid var(--wire); border-radius:10px; background:var(--ink2); padding:14px; }
+.box h3 { font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--fog); margin-bottom:10px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; }
+.card { border:1px solid var(--wire); border-radius:8px; padding:10px; background:var(--ink); }
+.card .k { font-size:11px; color:var(--fog); }
+.card .v { font-family:var(--mono); font-size:18px; color:var(--bright); margin-top:2px; }
+.card .s { font-size:12px; margin-top:3px; line-height:1.4; }
+.up { color:var(--g); } .dn { color:var(--r); } .mid { color:var(--y); } .muted { color:var(--fog); }
+.plist { list-style:none; display:grid; gap:8px; font-size:13px; line-height:1.5; }
+.plist li { display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:baseline; }
+.plist .d { font-family:var(--mono); font-size:11px; color:var(--fog); white-space:nowrap; }
+.tag { display:inline-block; font-family:var(--mono); font-size:10px; padding:1px 6px; border-radius:4px; border:1px solid; margin-right:4px; }
+.tag.bull { color:var(--g); border-color:var(--g); } .tag.bear { color:var(--r); border-color:var(--r); }
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chip { font-family:var(--mono); font-size:11px; padding:5px 9px; border-radius:6px; border:1px solid var(--wire); background:var(--ink); cursor:pointer; }
+.chip:hover { border-color:var(--b); }
+.links { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.links a { font-family:var(--mono); font-size:11px; text-decoration:none; border:1px solid var(--wire); border-radius:6px; padding:7px 11px; background:var(--ink); }
+#err { display:none; border:1px solid var(--r); background:var(--r2); color:var(--bright); border-radius:10px; padding:14px; margin-bottom:12px; font-size:14px; line-height:1.5; }
+details.help { margin-top:12px; border:1px solid var(--wire); border-radius:10px; background:var(--ink2); }
+details.help summary { cursor:pointer; padding:12px 14px; font-weight:700; color:var(--bright); font-size:14px; }
+.help-body { padding:0 14px 14px; font-size:14px; line-height:1.6; display:grid; gap:8px; }
+.help-body b { color:var(--bright); }
+footer { margin-top:20px; font-size:12px; color:var(--fog); line-height:1.6; }
+
+@media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+@media (max-width:600px) {
+  #chart { height:440px; }
+  .title h1 { font-size:22px; }
+  .search { width:100%; } .search input { flex:1; width:auto; max-width:none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a href="./">Market Breadth</a>
+    <a href="screener.html">Swing Screener</a>
+    <a href="charts.html" class="on">Charts</a>
+    <a href="reports.html">Pro Reports</a>
+  </nav>
+
+  <div id="err"></div>
+
+  <div class="top">
+    <div class="title">
+      <h1><span id="sym">—</span><span class="px" id="px"></span><span class="chg" id="chg"></span></h1>
+      <p id="nm">Loading…</p>
+    </div>
+    <form class="search" id="searchForm" autocomplete="off">
+      <input id="q" list="symbols" placeholder="Ticker, e.g. NVDA" aria-label="Ticker"/>
+      <datalist id="symbols"></datalist>
+      <button class="btn go" type="submit">Show</button>
+    </form>
+  </div>
+
+  <div class="toolbar" id="rangeBar">
+    <span class="lbl">Range</span>
+  </div>
+  <div class="toolbar" id="indBar">
+    <span class="lbl">Indicators</span>
+  </div>
+  <div class="toolbar" id="drawBar">
+    <span class="lbl">Draw</span>
+  </div>
+
+  <div id="chart"></div>
+  <div class="hint" id="hint">Scroll or pinch to zoom · drag to move · hover for values</div>
+
+  <div class="grid">
+    <div class="box">
+      <h3>TA-Lib indicator snapshot</h3>
+      <div class="cards" id="cards"></div>
+      <div class="links" id="links"></div>
+    </div>
+    <div class="box">
+      <h3>Candlestick patterns (last 6 months)</h3>
+      <ul class="plist" id="plist"></ul>
+    </div>
+  </div>
+
+  <div class="box" style="margin-top:12px">
+    <h3>Candlestick signals today across the S&amp;P 500</h3>
+    <div class="chips" id="todayList"><span class="muted">Loading…</span></div>
+  </div>
+
+  <details class="help">
+    <summary>How to read this page</summary>
+    <div class="help-body">
+      <p><b>Candles</b>: each bar is one trading day. Green closed higher than it opened, red lower. The bars at the bottom are volume.</p>
+      <p><b>MA 50/150/200</b>: the 50, 150 and 200-day average prices. A stock above rising averages is in an uptrend.</p>
+      <p><b>BOLL</b> (Bollinger Bands) shows a normal price range; <b>MACD</b> shows momentum turning up or down; <b>RSI</b> above 70 is "overbought", below 30 "oversold"; <b>KDJ</b> is a fast stochastic momentum line.</p>
+      <p><b>▲ / ▼ markers</b> on the last 3 months of the chart are bullish / bearish candlestick patterns found by TA-Lib; their names are listed below the chart. A single pattern is a hint, not a signal — it matters most at support or resistance and with volume.</p>
+      <p><b>Drawing</b>: pick a tool, then click on the chart to place points. Drawings are not saved when you change stock.</p>
+    </div>
+  </details>
+
+  <footer>
+    Charts by <a href="https://github.com/klinecharts/KLineChart" target="_blank" rel="noopener">KLineChart</a>; indicators and candlestick patterns by
+    <a href="https://github.com/TA-Lib/ta-lib-python" target="_blank" rel="noopener">TA-Lib</a>. Yahoo Finance daily prices, updated every weekday after the US close.
+    For education and research only — not financial advice.
+  </footer>
+</div>
+
+<script>
+const DATA_BASE = location.hostname === 'localhost'
+  ? './chart-data/'
+  : 'https://raw.githubusercontent.com/Vineh20/market-breadth/chart-data/';
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (v, d=2) => v == null ? '—' : Number(v).toLocaleString('en-US', {minimumFractionDigits:d, maximumFractionDigits:d});
+const store = {
+  get(k, d) { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+const PATTERN_HELP = {
+  'Engulfing': 'A candle whose body completely covers the previous one — a possible reversal in its direction.',
+  'Hammer': 'Long lower wick after a decline: sellers pushed down but buyers took it back.',
+  'Inverted hammer': 'Long upper wick after a decline: early sign buyers are testing higher.',
+  'Shooting star': 'Long upper wick after a rise: buyers were rejected — possible top.',
+  'Hanging man': 'Hammer shape after a rise: a warning that selling is appearing.',
+  'Morning star': 'Three-candle bottom reversal: down day, small pause, strong up day.',
+  'Evening star': 'Three-candle top reversal: up day, small pause, strong down day.',
+  'Piercing line': 'Up day that closes past the middle of the prior down day — bullish reversal.',
+  'Dark cloud cover': 'Down day that closes below the middle of the prior up day — bearish reversal.',
+  'Three white soldiers': 'Three strong up days in a row — strong buying.',
+  'Three black crows': 'Three strong down days in a row — strong selling.',
+  'Harami': 'A small candle inside the prior large one — momentum is pausing.',
+  'Dragonfly doji': 'Opens and closes at the high after dipping — rejection of lower prices.',
+  'Gravestone doji': 'Opens and closes at the low after rising — rejection of higher prices.',
+};
+
+const INDICATORS = [
+  { key:'MA',   label:'MA 50/150/200', main:true,  create:{ name:'MA', calcParams:[50,150,200] }, on:true },
+  { key:'BOLL', label:'Bollinger',     main:true,  create:{ name:'BOLL' } },
+  { key:'VOL',  label:'Volume',        main:false, create:{ name:'VOL', calcParams:[50] }, on:true },
+  { key:'MACD', label:'MACD',          main:false, create:{ name:'MACD' } },
+  { key:'RSI',  label:'RSI',           main:false, create:{ name:'RSI', calcParams:[14], precision:1 }, on:true },
+  { key:'KDJ',  label:'KDJ',           main:false, create:{ name:'KDJ', precision:1 } },
+];
+const DRAW = [
+  ['segment', 'Trend line'], ['rayLine', 'Ray'], ['horizontalStraightLine', 'Horizontal'],
+  ['priceLine', 'Price line'], ['fibonacciLine', 'Fibonacci'],
+];
+const RANGES = [['3M', 63], ['6M', 126], ['1Y', 252], ['2Y', 9999]];
+
+let chart = null, current = null, LIST = null;
+const panes = {};
+let indOn = {};
+let showPatterns = store.get('ch_pat', '1') === '1';
+let range = store.get('ch_range', '6M');
+try { indOn = JSON.parse(store.get('ch_ind', 'null')) || {}; } catch { indOn = {}; }
+INDICATORS.forEach(i => { if (!(i.key in indOn)) indOn[i.key] = !!i.on; });
+
+function initChart() {
+  chart = klinecharts.init('chart');
+  const g = css('--g'), r = css('--r'), fog = css('--fog'), wire = css('--wire'), text = css('--text');
+  chart.setStyles({
+    grid: { horizontal: { color: wire }, vertical: { show: false } },
+    candle: {
+      bar: { upColor: g, downColor: r, noChangeColor: fog, upBorderColor: g, downBorderColor: r, noChangeBorderColor: fog,
+             upWickColor: g, downWickColor: r, noChangeWickColor: fog },
+      priceMark: { last: { upColor: g, downColor: r, noChangeColor: fog } },
+      tooltip: { text: { color: text, family: 'JetBrains Mono, monospace', size: 11 } },
+    },
+    indicator: {
+      lines: [{ color: css('--ma50') }, { color: css('--ma150') }, { color: css('--ma200') }, { color: css('--b') }, { color: css('--y') }],
+      tooltip: { text: { color: text, family: 'JetBrains Mono, monospace', size: 11 } },
+      bars: [{ upColor: g + '88', downColor: r + '88', noChangeColor: fog }],
+    },
+    xAxis: { axisLine: { color: wire }, tickLine: { color: wire }, tickText: { color: fog, family: 'JetBrains Mono, monospace' } },
+    yAxis: { axisLine: { color: wire }, tickLine: { color: wire }, tickText: { color: fog, family: 'JetBrains Mono, monospace' } },
+    separator: { color: wire },
+    crosshair: {
+      horizontal: { line: { color: fog }, text: { backgroundColor: css('--ink3'), borderColor: wire } },
+      vertical: { line: { color: fog }, text: { backgroundColor: css('--ink3'), borderColor: wire } },
+    },
+    overlay: { line: { color: css('--b') }, point: { color: css('--b'), borderColor: css('--b') } },
+  });
+  INDICATORS.forEach(i => { if (indOn[i.key]) addIndicator(i); });
+  window.addEventListener('resize', () => { chart.resize(); applyRange(); });
+}
+
+function addIndicator(i) {
+  panes[i.key] = i.main
+    ? chart.createIndicator(i.create, true, { id: 'candle_pane' })
+    : chart.createIndicator(i.create, false, { height: 90 });
+}
+function removeIndicator(i) {
+  if (panes[i.key]) chart.removeIndicator(panes[i.key], i.create.name);
+  delete panes[i.key];
+}
+
+function buildToolbars() {
+  RANGES.forEach(([lbl]) => {
+    const b = document.createElement('button');
+    b.className = 'btn'; b.textContent = lbl; b.dataset.r = lbl;
+    b.onclick = () => { range = lbl; store.set('ch_range', lbl); applyRange(); };
+    $('rangeBar').appendChild(b);
+  });
+  INDICATORS.forEach(i => {
+    const b = document.createElement('button');
+    b.className = 'btn' + (indOn[i.key] ? ' on' : ''); b.textContent = i.label;
+    b.onclick = () => {
+      indOn[i.key] = !indOn[i.key];
+      indOn[i.key] ? addIndicator(i) : removeIndicator(i);
+      b.classList.toggle('on', indOn[i.key]);
+      store.set('ch_ind', JSON.stringify(indOn));
+    };
+    $('indBar').appendChild(b);
+  });
+  const sep = document.createElement('span'); sep.className = 'sep'; $('indBar').appendChild(sep);
+  const pb = document.createElement('button');
+  pb.className = 'btn' + (showPatterns ? ' on' : ''); pb.textContent = 'Candle patterns ▲▼';
+  pb.onclick = () => { showPatterns = !showPatterns; pb.classList.toggle('on', showPatterns); store.set('ch_pat', showPatterns ? '1' : '0'); drawPatterns(); };
+  $('indBar').appendChild(pb);
+
+  DRAW.forEach(([name, lbl]) => {
+    const b = document.createElement('button');
+    b.className = 'btn'; b.textContent = lbl;
+    b.onclick = () => {
+      chart.createOverlay({ name, groupId: 'drawings' });
+      $('hint').textContent = `${lbl}: click on the chart to place ${name === 'horizontalStraightLine' || name === 'priceLine' ? 'it' : 'each point'}.`;
+    };
+    $('drawBar').appendChild(b);
+  });
+  const clr = document.createElement('button');
+  clr.className = 'btn'; clr.textContent = 'Clear drawings';
+  clr.onclick = () => { chart.removeOverlay({ groupId: 'drawings' }); $('hint').textContent = 'Drawings cleared.'; };
+  $('drawBar').appendChild(clr);
+}
+
+function applyRange() {
+  document.querySelectorAll('#rangeBar .btn').forEach(b => b.classList.toggle('on', b.dataset.r === range));
+  if (!current) return;
+  const bars = Math.min((RANGES.find(r => r[0] === range) || RANGES[1])[1], current.d.length);
+  const width = $('chart').clientWidth - 70;
+  chart.setBarSpace(Math.max(1, Math.min(40, width / bars)));
+  chart.scrollToRealTime();
+}
+
+const ts = d => { const [y, m, dd] = d.split('-').map(Number); return Date.UTC(y, m - 1, dd, 12); };
+
+function drawPatterns() {
+  chart.removeOverlay({ groupId: 'patterns' });
+  if (!showPatterns || !current) return;
+  // One label per day: the bullish/bearish majority of that day's patterns.
+  const byDay = {};
+  const first = current.d.length - 63;  // last 3 months only, to keep the chart readable
+  current.patterns.filter(p => p.i >= first).forEach(p => (byDay[p.i] = byDay[p.i] || []).push(p));
+  Object.entries(byDay).forEach(([i, ps]) => {
+    i = +i;
+    const bull = ps.filter(p => p.dir === 'bull').length >= ps.filter(p => p.dir === 'bear').length;
+    const color = bull ? css('--g') : css('--r');
+    chart.createOverlay({
+      name: 'simpleAnnotation', groupId: 'patterns', lock: true,
+      points: [{ timestamp: ts(current.d[i]), value: current.h[i] }],
+      extendData: bull ? '▲' : '▼',
+      styles: { line: { color }, polygon: { color }, text: { color: css('--ink'), backgroundColor: color, borderColor: color } },
+    });
+  });
+}
+
+function signal(v, lo, hi, loTxt, midTxt, hiTxt) {
+  if (v == null) return ['muted', '—'];
+  return v >= hi ? ['dn', hiTxt] : v <= lo ? ['up', loTxt] : ['muted', midTxt];
+}
+
+function renderInfo(c) {
+  const n = c.c.length - 1;
+  const chg = (c.c[n] / c.c[n - 1] - 1) * 100;
+  $('sym').textContent = c.t;
+  $('px').textContent = '$' + fmt(c.c[n]);
+  $('chg').textContent = (chg >= 0 ? '+' : '') + fmt(chg) + '%';
+  $('chg').className = 'chg ' + (chg >= 0 ? 'up' : 'dn');
+  $('nm').textContent = [c.name, c.sector, 'prices as of ' + c.as_of].filter(Boolean).join(' · ');
+  document.title = c.t + ' · Stock Charts';
+
+  const i = c.ind;
+  const rsi = signal(i.rsi, 30, 70, 'Oversold (below 30)', 'Neutral', 'Overbought (above 70)');
+  const adxTxt = i.adx == null ? '—' : (i.adx >= 25 ? 'Strong trend' : i.adx >= 20 ? 'Trend forming' : 'Weak / no trend')
+    + (i.plus_di != null ? (i.plus_di > i.minus_di ? ', buyers in control' : ', sellers in control') : '');
+  const macdTxt = i.macd_hist == null ? '—' : (i.macd_cross === 'up' ? 'Bullish cross today' : i.macd_cross === 'down' ? 'Bearish cross today'
+    : i.macd_hist > 0 ? 'Above signal line (bullish)' : 'Below signal line (bearish)');
+  const st = signal(i.stoch_k, 20, 80, 'Oversold (below 20)', 'Neutral', 'Overbought (above 80)');
+  const cards = [
+    ['RSI (14)', fmt(i.rsi, 1), rsi[0], rsi[1]],
+    ['ADX (14)', fmt(i.adx, 1), i.adx >= 25 ? (i.plus_di > i.minus_di ? 'up' : 'dn') : 'muted', adxTxt],
+    ['MACD histogram', fmt(i.macd_hist, 2), i.macd_hist > 0 ? 'up' : 'dn', macdTxt],
+    ['Stochastic %K', fmt(i.stoch_k, 1), st[0], st[1]],
+    ['ATR (14)', '$' + fmt(i.atr, 2), 'muted', `Moves about ${fmt(i.atr_pct, 1)}% a day`],
+    ['vs 50-day avg', (i.vs_sma50 > 0 ? '+' : '') + fmt(i.vs_sma50, 1) + '%', i.vs_sma50 > 0 ? 'up' : 'dn', i.vs_sma50 > 0 ? 'Above' : 'Below'],
+    ['vs 200-day avg', i.vs_sma200 == null ? '—' : (i.vs_sma200 > 0 ? '+' : '') + fmt(i.vs_sma200, 1) + '%', i.vs_sma200 > 0 ? 'up' : 'dn',
+      i.vs_sma200 == null ? 'Not enough history' : i.vs_sma200 > 0 ? 'Long-term uptrend' : 'Long-term downtrend'],
+    ['On-balance volume', i.obv_trend === 'up' ? 'Rising' : i.obv_trend === 'down' ? 'Falling' : '—', i.obv_trend === 'up' ? 'up' : 'dn',
+      i.obv_trend === 'up' ? 'Volume favours buyers (20 days)' : 'Volume favours sellers (20 days)'],
+  ];
+  $('cards').innerHTML = cards.map(([k, v, cls, s]) =>
+    `<div class="card"><div class="k">${k}</div><div class="v">${esc(v)}</div><div class="s ${cls}">${esc(s)}</div></div>`).join('');
+
+  const pats = c.patterns.slice().reverse().slice(0, 12);
+  $('plist').innerHTML = pats.length ? pats.map(p =>
+    `<li><span class="d">${p.d}</span><span><span class="tag ${p.dir}">${p.dir === 'bull' ? '▲ Bullish' : '▼ Bearish'}</span><b>${esc(p.name)}</b> — <span class="muted">${esc(PATTERN_HELP[p.name] || '')}</span></span></li>`
+  ).join('') : '<li class="muted">No TA-Lib candlestick patterns in the last 6 months.</li>';
+
+  const tv = encodeURIComponent(c.t.replace('-', '.'));
+  $('links').innerHTML = `
+    <a href="screener.html?t=${encodeURIComponent(c.t)}">Open in Swing Screener</a>
+    <a href="https://www.tradingview.com/chart/?symbol=${tv}" target="_blank" rel="noopener">TradingView ↗</a>
+    <a href="https://finviz.com/quote.ashx?t=${encodeURIComponent(c.t)}" target="_blank" rel="noopener">Finviz ↗</a>`;
+}
+
+async function loadSymbol(t) {
+  t = (t || '').trim().toUpperCase().replace('.', '-');
+  if (!t) return;
+  $('err').style.display = 'none';
+  try {
+    const r = await fetch(DATA_BASE + encodeURIComponent(t) + '.json');
+    if (!r.ok) throw new Error(r.status === 404 ? `No chart for "${t}". Only S&P 500 stocks plus SPY and QQQ are available.` : 'HTTP ' + r.status);
+    const c = await r.json();
+    current = c;
+    store.set('ch_last', t);
+    history.replaceState(null, '', '?t=' + encodeURIComponent(t));
+    $('q').value = '';
+    chart.applyNewData(c.d.map((d, i) => ({ timestamp: ts(d), open: c.o[i], high: c.h[i], low: c.l[i], close: c.c[i], volume: c.v[i] })));
+    chart.removeOverlay({ groupId: 'drawings' });
+    renderInfo(c);
+    drawPatterns();
+    applyRange();
+  } catch (e) {
+    $('err').style.display = 'block';
+    $('err').textContent = e.message.startsWith('No chart') ? e.message
+      : 'Chart data is not available yet. It is created by the daily update after the US market closes. (' + e.message + ')';
+    if (!current) $('nm').textContent = '';
+  }
+}
+
+async function loadList() {
+  try {
+    const r = await fetch(DATA_BASE + 'list.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    LIST = await r.json();
+  } catch {
+    $('todayList').innerHTML = '<span class="muted">Not available yet.</span>';
+    return;
+  }
+  $('symbols').innerHTML = LIST.stocks.map(s => `<option value="${esc(s.t)}">${esc(s.name)}</option>`).join('');
+  const today = LIST.stocks.filter(s => s.today.length);
+  $('todayList').innerHTML = today.length ? today.map(s => {
+    const bull = s.today.filter(x => x.includes('(bull)')).length >= s.today.filter(x => x.includes('(bear)')).length;
+    return `<button class="chip" data-t="${esc(s.t)}" title="${esc(s.today.join(', '))}"><span class="${bull ? 'up' : 'dn'}">${bull ? '▲' : '▼'}</span> ${esc(s.t)} <span class="muted">${esc(s.today.map(x => x.replace(/ \((bull|bear)\)/, '')).join(', '))}</span></button>`;
+  }).join('') : '<span class="muted">No patterns today.</span>';
+  $('todayList').querySelectorAll('.chip').forEach(b => b.onclick = () => { loadSymbol(b.dataset.t); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+}
+
+$('searchForm').onsubmit = e => { e.preventDefault(); loadSymbol($('q').value); };
+$('q').addEventListener('change', () => { if (LIST && LIST.stocks.some(s => s.t === $('q').value.trim().toUpperCase())) loadSymbol($('q').value); });
+
+if (!window.klinecharts) {
+  $('err').style.display = 'block';
+  $('err').textContent = 'The chart library could not load. Check your internet connection and refresh.';
+} else {
+  initChart();
+  buildToolbars();
+  loadSymbol(new URLSearchParams(location.search).get('t') || store.get('ch_last', 'AAPL'));
+  loadList();
+}
+</script>
+</body>
+</html>
