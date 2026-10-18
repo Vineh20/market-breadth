@@ -30,23 +30,25 @@
    "updated": "2026-10-18T18:55:39Z",
    "error": null
   },
-  "canslim": {
-   "title": "CANSLIM Screener",
-   "about": "William O'Neil's CANSLIM growth-stock checklist applied to large-cap US stocks.",
-   "schedule": "Saturdays",
-   "calls": "~250"
-  },
   "earnings": {
    "title": "Earnings Calendar",
    "about": "Companies over $2B reporting earnings in the coming week, so you can avoid holding through surprises.",
    "schedule": "Sundays",
-   "calls": "~5"
+   "calls": "~5",
+   "last_attempt": "2026-10-18T19:05:26Z",
+   "status": "ok",
+   "updated": "2026-10-18T19:05:26Z",
+   "error": null
   },
   "pead": {
    "title": "Post-Earnings Drift",
    "about": "Stocks that gapped up on earnings in the last two weeks and are forming a continuation setup.",
    "schedule": "Sundays",
-   "calls": "~100 (earnings from FMP)"
+   "calls": "~100 (earnings from FMP)",
+   "last_attempt": "2026-10-18T19:05:26Z",
+   "status": "ok",
+   "updated": "2026-10-18T19:05:26Z",
+   "error": null
   },
   "momentum": {
    "title": "Momentum Bursts",
@@ -60,5 +62,5 @@
   }
  },
  "has_key": true,
- "generated": "2026-10-18T18:55:39Z"
+ "generated": "2026-10-18T19:05:26Z"
 }
