@@ -136,3 +136,19 @@ The **10-day ratio threshold of 2.0** stays the same regardless of universe size
 ---
 
 *Based on Pradeep Bonde's market breadth methodology — stockbee.blogspot.com*
+
+---
+
+## 🔎 Swing Screener
+
+A second page, **`screener.html`**, lists S&P 500 stocks in a strong uptrend and flags swing-trade setups.
+Open it from the **Swing Screener** button at the top of the dashboard, or bookmark
+`https://vineh20.github.io/market-breadth/screener.html`.
+
+- **Trend Template** — Mark Minervini's 8 checks for a Stage 2 uptrend
+- **RS rating** — 1–99 relative strength vs every other S&P 500 stock
+- **Setups** — breakouts, near pivot, VCP-like bases, tight ranges, volume dry-ups, pocket pivots
+- **Click any stock** for a chart with 50/150/200-day averages, pivot and stop lines, and a position-size calculator
+
+It runs automatically every weekday at 22:50 UTC (`.github/workflows/screener.yml`, script `swing_screener.py`).
+To refresh it by hand: **Actions → Daily Swing Screener → Run workflow**.
