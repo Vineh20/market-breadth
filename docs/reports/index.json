@@ -4,30 +4,30 @@
    "title": "VCP Screener",
    "about": "Mark Minervini Volatility Contraction Patterns: Stage 2 stocks forming tight bases near a breakout pivot.",
    "schedule": "Weekdays",
-   "calls": "~200",
-   "last_attempt": "2026-10-18T18:44:40Z",
+   "calls": "0 (Yahoo prices)",
+   "last_attempt": "2026-10-18T18:55:39Z",
    "status": "ok",
-   "updated": "2026-10-18T18:44:40Z",
+   "updated": "2026-10-18T18:55:39Z",
    "error": null
   },
   "ftd": {
    "title": "Follow-Through Day",
    "about": "William O'Neil's market-bottom signal for the S&P 500 and Nasdaq: is a new uptrend confirmed?",
    "schedule": "Weekdays",
-   "calls": "4",
-   "last_attempt": "2026-10-18T18:44:40Z",
+   "calls": "0 (Yahoo prices)",
+   "last_attempt": "2026-10-18T18:55:39Z",
    "status": "ok",
-   "updated": "2026-10-18T18:44:40Z",
+   "updated": "2026-10-18T18:55:39Z",
    "error": null
   },
   "distribution": {
    "title": "Distribution Days",
    "about": "IBD distribution-day count on QQQ and SPY: how much institutional selling is hitting the market, and what exposure that suggests.",
    "schedule": "Weekdays",
-   "calls": "~4",
-   "last_attempt": "2026-10-18T18:44:40Z",
+   "calls": "0 (Yahoo prices)",
+   "last_attempt": "2026-10-18T18:55:39Z",
    "status": "ok",
-   "updated": "2026-10-18T18:44:40Z",
+   "updated": "2026-10-18T18:55:39Z",
    "error": null
   },
   "canslim": {
@@ -46,9 +46,19 @@
    "title": "Post-Earnings Drift",
    "about": "Stocks that gapped up on earnings in the last two weeks and are forming a continuation setup.",
    "schedule": "Sundays",
-   "calls": "~100"
+   "calls": "~100 (earnings from FMP)"
+  },
+  "momentum": {
+   "title": "Momentum Bursts",
+   "about": "Pradeep Bonde (Stockbee) momentum bursts: stocks that just broke out 4%+ on rising volume from a quiet base, for 3-5 day swing moves.",
+   "schedule": "Weekdays",
+   "calls": "0 (Yahoo prices)",
+   "last_attempt": "2026-10-18T18:55:39Z",
+   "status": "ok",
+   "updated": "2026-10-18T18:55:39Z",
+   "error": null
   }
  },
  "has_key": true,
- "generated": "2026-10-18T18:44:40Z"
+ "generated": "2026-10-18T18:55:39Z"
 }

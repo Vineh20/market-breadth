@@ -1,7 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-10-18 18:44:45
+**Generated:** 2026-10-18 18:58:20
 **S&P 500:** $7659.44
+**QQQ:** $709.80
 
 ---
 
@@ -9,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🔴 **Rally Failed** |
+| **Current State** | 🔴 **Correction** |
 | **Quality Score** | **0/100** |
 | **Signal** | No FTD |
 | **Exposure Guidance** | 0-25% |
@@ -23,7 +24,7 @@
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
 | S&P 500 | RALLY_FAILED | $7659.44 | $7818.93 | -2.0% | 2026-09-16 ($7551.81) |
-| NASDAQ/QQQ | NO_SIGNAL | N/A | N/A | N/A | None |
+| NASDAQ/QQQ | CORRECTION | $709.80 | $759.66 | -6.6% | 2026-10-16 ($709.80) |
 
 ---
 
@@ -50,10 +51,10 @@
 
 **Recommended Exposure:** 0-25%
 
-- Rally attempt failed (broke below swing low)
-- Remain in cash/defensive
-- New swing low may form - reset cycle
-- Patience is key; do not force entries
+- Market in correction, no rally attempt yet
+- Stay defensive, preserve capital
+- Build watchlists of relative strength leaders
+- Wait for first up day to start rally count
 
 ---
 
@@ -62,6 +63,10 @@
 **S&P 500:**
 - Swing Low: $7551.81 (2026-09-16)
 - Lookback High: $7818.93
+
+**NASDAQ/QQQ:**
+- Swing Low: $709.80 (2026-10-16)
+- Lookback High: $759.66
 
 ---
 
