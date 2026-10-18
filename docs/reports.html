@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pro Trading Reports</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink:  #0d1117; --ink2: #161b22; --ink3: #1c2330;
+  --wire: #21303f; --dim:  #3d5166; --fog:  #8aa0b6;
+  --text: #c9d8e8; --bright: #e8f0f8;
+  --g: #3ddc84; --g2: rgba(61,220,132,0.12);
+  --r: #ff4560; --r2: rgba(255,69,96,0.12);
+  --y: #ffd166; --y2: rgba(255,209,102,0.12);
+  --b: #58b4ff; --b2: rgba(88,180,255,0.15);
+  --mono: 'JetBrains Mono', monospace;
+  --disp: 'Syne', sans-serif;
+  color-scheme: dark;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--ink); color:var(--text); font-family:var(--disp); min-height:100vh; }
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.15;
+  background-image: linear-gradient(var(--wire) 1px,transparent 1px), linear-gradient(90deg,var(--wire) 1px,transparent 1px);
+  background-size: 40px 40px;
+}
+.wrap { position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:24px 16px 40px; }
+a { color:var(--b); }
+button { font:inherit; color:inherit; }
+.nav { display:flex; gap:6px; margin-bottom:18px; flex-wrap:wrap; }
+.nav a { font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; text-decoration:none;
+  color:var(--fog); border:1px solid var(--wire); border-radius:6px; padding:7px 12px; background:var(--ink2); }
+.nav a.on { color:var(--bright); border-color:var(--b); background:var(--b2); }
+.hdr { margin-bottom:18px; }
+.hdr h1 { font-size:26px; font-weight:800; letter-spacing:-0.5px; color:var(--bright); }
+.hdr p { font-family:var(--mono); font-size:10px; color:var(--fog); letter-spacing:1.5px; margin-top:5px; text-transform:uppercase; }
+
+.notice { border:1px solid var(--y); background:var(--y2); border-radius:10px; padding:16px; margin-bottom:14px; font-size:14px; line-height:1.6; display:none; }
+.notice b { color:var(--bright); }
+.notice ol { padding-left:20px; margin-top:6px; }
+.notice code { font-family:var(--mono); background:var(--ink); padding:1px 6px; border-radius:4px; color:var(--bright); }
+
+.tabs { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:8px; margin-bottom:14px; }
+.tab { text-align:left; border:1px solid var(--wire); background:var(--ink2); border-radius:10px; padding:12px; cursor:pointer; }
+.tab:hover { border-color:var(--dim); }
+.tab.on { border-color:var(--b); background:var(--b2); }
+.tab-t { font-weight:700; color:var(--bright); font-size:14px; }
+.tab-s { font-family:var(--mono); font-size:10px; color:var(--fog); margin-top:4px; display:flex; gap:6px; align-items:center; }
+.dot { width:7px; height:7px; border-radius:50%; background:var(--dim); flex:none; }
+.dot.ok { background:var(--g); } .dot.error { background:var(--r); } .dot.no_key { background:var(--y); }
+
+.panel { border:1px solid var(--wire); border-radius:10px; background:var(--ink2); }
+.panel-hd { padding:14px 16px; border-bottom:1px solid var(--wire); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline; }
+.panel-hd h2 { font-size:18px; color:var(--bright); }
+.panel-hd p { font-size:13px; color:var(--fog); margin-top:3px; line-height:1.5; }
+.meta { font-family:var(--mono); font-size:11px; color:var(--fog); white-space:nowrap; }
+.empty { padding:36px 16px; text-align:center; color:var(--fog); font-size:14px; line-height:1.6; }
+.err { color:var(--r); }
+
+/* Rendered Markdown */
+.md { padding:16px; font-size:14px; line-height:1.65; overflow-wrap:break-word; }
+.md h1 { font-size:22px; color:var(--bright); margin:4px 0 12px; }
+.md h2 { font-size:18px; color:var(--bright); margin:22px 0 10px; padding-top:12px; border-top:1px solid var(--wire); }
+.md h3 { font-size:15px; color:var(--bright); margin:18px 0 8px; }
+.md h4 { font-size:14px; color:var(--bright); margin:14px 0 6px; }
+.md p, .md ul, .md ol, .md blockquote { margin:0 0 10px; }
+.md ul, .md ol { padding-left:22px; }
+.md li { margin:2px 0; }
+.md strong { color:var(--bright); }
+.md code { font-family:var(--mono); font-size:12px; background:var(--ink); padding:1px 5px; border-radius:4px; }
+.md pre { background:var(--ink); border:1px solid var(--wire); border-radius:8px; padding:12px; overflow-x:auto; margin:0 0 12px; }
+.md pre code { background:none; padding:0; }
+.md blockquote { border-left:3px solid var(--b); padding:4px 12px; color:var(--fog); background:var(--ink3); border-radius:0 6px 6px 0; }
+.md hr { border:none; border-top:1px solid var(--wire); margin:18px 0; }
+.md .tbl { overflow-x:auto; margin:0 0 14px; border:1px solid var(--wire); border-radius:8px; }
+.md table { border-collapse:collapse; width:100%; font-family:var(--mono); font-size:12px; font-variant-numeric:tabular-nums; }
+.md th { background:var(--ink3); color:var(--fog); font-weight:500; text-align:left; padding:8px 10px; white-space:nowrap; }
+.md td { padding:7px 10px; border-top:1px solid var(--wire); white-space:nowrap; }
+.md tr:hover td { background:var(--ink3); }
+
+footer { margin-top:20px; font-size:12px; color:var(--fog); line-height:1.6; }
+@media (max-width:600px) { .hdr h1 { font-size:22px; } .md { padding:12px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a href="./">Market Breadth</a>
+    <a href="screener.html">Swing Screener</a>
+    <a href="reports.html" class="on">Pro Reports</a>
+  </nav>
+
+  <div class="hdr">
+    <h1>Pro Trading Reports</h1>
+    <p>VCP · Follow-Through Day · Distribution Days · CANSLIM · Earnings · PEAD</p>
+  </div>
+
+  <div class="notice" id="keyNotice">
+    <b>One step left: add your FMP API key to GitHub.</b> These reports need it, and it has to be stored privately rather than in the code.
+    <ol>
+      <li>Open <a href="https://github.com/Vineh20/market-breadth/settings/secrets/actions/new" target="_blank" rel="noopener">this GitHub page</a> (sign in if asked).</li>
+      <li>In <b>Name</b> type <code>FMP_API_KEY</code></li>
+      <li>In <b>Secret</b> paste your FMP key, then click <b>Add secret</b>.</li>
+    </ol>
+    The reports will fill in on the next scheduled run, or right away if you start it from <a href="https://github.com/Vineh20/market-breadth/actions/workflows/pro-reports.yml" target="_blank" rel="noopener">Actions → Pro Trading Reports → Run workflow</a>.
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+
+  <section class="panel">
+    <div class="panel-hd">
+      <div><h2 id="rTitle">Loading…</h2><p id="rAbout"></p></div>
+      <span class="meta" id="rMeta"></span>
+    </div>
+    <div id="rBody"><div class="empty">Loading…</div></div>
+  </section>
+
+  <footer>
+    Reports are produced by the open-source <a href="https://github.com/tradermonty/claude-trading-skills" target="_blank" rel="noopener">claude-trading-skills</a> scripts (MIT licence) using Financial Modeling Prep data.
+    The free FMP plan allows 250 data requests a day, so the heavier screeners run on weekends.
+    For education and research only — not financial advice.
+  </footer>
+</div>
+
+<script>
+const ORDER = ['vcp', 'ftd', 'distribution', 'canslim', 'earnings', 'pead'];
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let INDEX = null, current = null;
+
+const when = iso => {
+  if (!iso) return 'not run yet';
+  const d = new Date(iso);
+  return d.toLocaleString('en-US', { weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
+};
+const statusText = r => r.status === 'ok' ? 'Updated ' + when(r.updated)
+  : r.status === 'error' ? (r.updated ? 'Last good ' + when(r.updated) : 'Last run failed')
+  : r.status === 'no_key' ? 'Waiting for API key' : 'Not run yet';
+const store = {
+  get(k, d) { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+};
+
+async function load() {
+  try {
+    const r = await fetch('reports/index.json?v=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    INDEX = await r.json();
+  } catch {
+    INDEX = { has_key: false, reports: {} };
+  }
+  if (!INDEX.has_key && !ORDER.some(k => INDEX.reports[k] && INDEX.reports[k].updated)) $('keyNotice').style.display = 'block';
+  const keys = ORDER.filter(k => INDEX.reports[k]);
+  if (!keys.length) {
+    $('rTitle').textContent = 'No reports yet';
+    $('rBody').innerHTML = '<div class="empty">The first reports appear after your API key is added and the job has run once.</div>';
+    return;
+  }
+  $('tabs').innerHTML = keys.map(k => {
+    const r = INDEX.reports[k];
+    return `<button class="tab" data-k="${k}"><div class="tab-t">${esc(r.title)}</div>
+      <div class="tab-s"><span class="dot ${esc(r.status || '')}"></span>${esc(r.schedule)} · ${esc(statusText(r))}</div></button>`;
+  }).join('');
+  $('tabs').querySelectorAll('.tab').forEach(b => b.onclick = () => show(b.dataset.k));
+  const fromHash = location.hash.slice(1);
+  show(keys.includes(fromHash) ? fromHash : (keys.includes(store.get('rp_tab')) ? store.get('rp_tab') : keys[0]));
+}
+
+async function show(k) {
+  current = k;
+  store.set('rp_tab', k);
+  history.replaceState(null, '', '#' + k);
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b.dataset.k === k));
+  const r = INDEX.reports[k];
+  $('rTitle').textContent = r.title;
+  $('rAbout').textContent = r.about;
+  $('rMeta').textContent = statusText(r);
+  if (!r.updated) {
+    const msg = r.status === 'error'
+      ? `<span class="err">The last run failed:</span> ${esc(r.error)}<br>It will try again on the next scheduled run (${esc(r.schedule)}).`
+      : r.status === 'no_key' ? 'Waiting for the FMP API key — see the yellow box above.'
+      : `This report runs on ${esc(r.schedule.toLowerCase())}. It will appear here after its first run.`;
+    $('rBody').innerHTML = `<div class="empty">${msg}</div>`;
+    return;
+  }
+  $('rBody').innerHTML = '<div class="empty">Loading report…</div>';
+  try {
+    const res = await fetch(`reports/${k}.md?v=${encodeURIComponent(r.updated)}`);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+    if (current !== k) return;
+    const html = DOMPurify.sanitize(marked.parse(text, { gfm: true }));
+    const box = document.createElement('div');
+    box.className = 'md';
+    box.innerHTML = html;
+    box.querySelectorAll('table').forEach(t => { const w = document.createElement('div'); w.className = 'tbl'; t.replaceWith(w); w.appendChild(t); });
+    box.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+    $('rBody').replaceChildren(box);
+    if (r.status === 'error') {
+      const warn = document.createElement('div');
+      warn.className = 'empty err';
+      warn.style.padding = '10px 16px';
+      warn.textContent = 'The latest run failed, so this is the last good report. Error: ' + (r.error || 'unknown');
+      $('rBody').prepend(warn);
+    }
+  } catch (e) {
+    $('rBody').innerHTML = `<div class="empty err">Could not load this report (${esc(e.message)}).</div>`;
+  }
+}
+
+load();
+</script>
+</body>
+</html>

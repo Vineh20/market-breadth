@@ -1,0 +1,84 @@
+name: Pro Trading Reports
+
+# Runs scripts from github.com/tradermonty/claude-trading-skills (MIT licence)
+# with the FMP_API_KEY repository secret. The FMP free tier allows 250 calls
+# a day, so the heavier screeners run on the weekend.
+on:
+  schedule:
+    - cron: '20 23 * * 1-5'   # weekdays: VCP, Follow-Through Day, distribution days
+    - cron: '0 14 * * 6'      # Saturday: CANSLIM
+    - cron: '0 14 * * 0'      # Sunday: earnings calendar, post-earnings drift
+  workflow_dispatch:
+    inputs:
+      group:
+        description: 'Which reports to run'
+        required: true
+        default: 'daily'
+        type: choice
+        options: [daily, saturday, sunday]
+
+concurrency:
+  group: push-to-main
+  cancel-in-progress: false
+
+env:
+  SKILLS_COMMIT: b29c6dfc2d4dc82bdfcfc13891e490863283405f
+
+jobs:
+  reports:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch trading skills (pinned version)
+        run: |
+          git init -q trading-skills
+          cd trading-skills
+          git remote add origin https://github.com/tradermonty/claude-trading-skills
+          git fetch -q --depth 1 origin "$SKILLS_COMMIT"
+          git checkout -q FETCH_HEAD
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install requests pyyaml scipy jsonschema packaging beautifulsoup4 lxml pandas yfinance
+
+      - name: Pick report group
+        id: pick
+        run: |
+          if [ -n "${{ github.event.inputs.group }}" ]; then
+            echo "group=${{ github.event.inputs.group }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 14 * * 6" ]; then
+            echo "group=saturday" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 14 * * 0" ]; then
+            echo "group=sunday" >> "$GITHUB_OUTPUT"
+          else
+            echo "group=daily" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run reports
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: python pro_reports.py "${{ steps.pick.outputs.group }}"
+
+      - name: Commit and push
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/reports
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📑 Pro trading reports (${{ steps.pick.outputs.group }}) $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push
+          fi

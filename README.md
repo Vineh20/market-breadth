@@ -152,3 +152,28 @@ Open it from the **Swing Screener** button at the top of the dashboard, or bookm
 
 It runs automatically every weekday at 22:50 UTC (`.github/workflows/screener.yml`, script `swing_screener.py`).
 To refresh it by hand: **Actions → Daily Swing Screener → Run workflow**.
+
+---
+
+## 📑 Pro Trading Reports
+
+A third page, **`reports.html`**, shows reports from the open-source
+[tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) project (MIT licence),
+run automatically with Financial Modeling Prep (FMP) data:
+
+| Report | Runs | FMP calls |
+|---|---|---|
+| VCP Screener | Weekdays 23:20 UTC | ~200 |
+| Follow-Through Day | Weekdays | 4 |
+| Distribution Days (QQQ, SPY) | Weekdays | ~4 |
+| CANSLIM Screener | Saturdays 14:00 UTC | ~250 |
+| Earnings Calendar (next 7 days) | Sundays 14:00 UTC | ~5 |
+| Post-Earnings Drift | Sundays | ≤150 |
+
+The FMP free tier allows 250 calls a day, which is why the heavy screeners are spread across days.
+
+**Setup:** add your FMP key as a repository secret named `FMP_API_KEY`
+(Settings → Secrets and variables → Actions → New repository secret). Never commit the key — this repo is public.
+
+The skills are pinned to one commit (`SKILLS_COMMIT` in `.github/workflows/pro-reports.yml`); change it to pick up newer versions.
+To run by hand: **Actions → Pro Trading Reports → Run workflow**.
