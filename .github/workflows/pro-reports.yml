@@ -15,7 +15,7 @@ on:
         required: true
         default: 'daily'
         type: choice
-        options: [daily, saturday, sunday]
+        options: [daily, saturday, sunday, check]
 
 concurrency:
   group: push-to-main
@@ -65,12 +65,20 @@ jobs:
             echo "group=daily" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Check FMP access
+        if: steps.pick.outputs.group == 'check'
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+        run: python fmp_check.py
+
       - name: Run reports
+        if: steps.pick.outputs.group != 'check'
         env:
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: python pro_reports.py "${{ steps.pick.outputs.group }}"
 
       - name: Commit and push
+        if: steps.pick.outputs.group != 'check'
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
