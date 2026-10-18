@@ -10,6 +10,14 @@ LOG_PATH = "update_log.json"
 # used by Pradeep Bonde's original Market Monitor.
 REFERENCE_UNIVERSE = 3500.0
 
+# A trading day is only used if at least this share of stocks has a price.
+# Yahoo sometimes returns an empty or partial row for the latest day.
+MIN_COVERAGE = 0.8
+
+# Each daily run recalculates this many recent trading days, so a bad or
+# missing day is repaired automatically on the next run.
+REFRESH_DAYS = 10
+
 
 def get_tickers():
     url = "https://raw.githubusercontent.com/Ate329/top-us-stock-tickers/main/tickers/sp500.csv"
@@ -86,6 +94,17 @@ def get_prices(tickers, days):
     valid = close_data.notna().any(axis=0)
     close_data = close_data.loc[:, valid]
     volume_data = volume_data.loc[:, close_data.columns]
+
+    # Drop trading days where too many stocks are missing a price.
+    coverage = close_data.notna().sum(axis=1)
+    good_days = coverage >= MIN_COVERAGE * close_data.shape[1]
+    dropped = close_data.index[~good_days]
+    if len(dropped):
+        print(f"Skipping incomplete days: {[d.strftime('%Y-%m-%d') for d in dropped]}")
+    close_data = close_data.loc[good_days]
+    volume_data = volume_data.loc[good_days]
+    if close_data.empty:
+        raise RuntimeError("No complete trading days downloaded")
 
     print(f"Downloaded {close_data.shape[1]} stocks x {close_data.shape[0]} days")
     return {"close": close_data, "volume": volume_data}
@@ -275,23 +294,32 @@ def backfill(tickers):
 
 def daily_update(tickers, existing):
     print("Running daily update...")
-    data = get_prices(tickers, days=90)
-    today = data["close"].index[-1].strftime("%Y-%m-%d")
-    if today in existing["Date"].values:
-        print(f"Already have {today}, skipping")
+    # ~150 calendar days gives enough history for the 65-day quarter window
+    # on each of the recalculated days.
+    data = get_prices(tickers, days=150)
+    n = len(data["close"])
+    start = max(1, n - REFRESH_DAYS)
+    rows = [calc_row(data, i) for i in range(start, n)]
+    rows = [r for r in rows if r]
+    if not rows:
+        print("Could not calculate recent days")
         return existing
 
-    row = calc_row(data, len(data["close"]) - 1)
-    if not row:
-        print("Could not calculate today")
-        return existing
+    fresh = pd.DataFrame(rows)
+    base_cols = list(fresh.columns)
+    old = existing[base_cols] if not existing.empty else pd.DataFrame(columns=base_cols)
+    old = old[~old["Date"].isin(fresh["Date"])]
 
-    df = pd.concat([existing, pd.DataFrame([row])], ignore_index=True)
+    # Drop any older rows that were saved from incomplete data.
+    median_total = fresh["Total_Stocks"].median()
+    old = old[old["Total_Stocks"] >= MIN_COVERAGE * median_total]
+
+    df = pd.concat([old, fresh], ignore_index=True).sort_values("Date")
     df = df.tail(200).reset_index(drop=True)
     df = add_metrics(df)
     df.to_csv(CSV_PATH, index=False)
     last = df.iloc[-1]
-    print(f"Updated: {today} | Primary: {last['Market_Regime']} | Ratio: {last['10Day_Ratio']} | Signal: {last['Swing_Signal']}")
+    print(f"Updated through {last['Date']} | Primary: {last['Market_Regime']} | Ratio: {last['10Day_Ratio']} | Signal: {last['Swing_Signal']}")
     return df
 
 
@@ -326,6 +354,13 @@ if __name__ == "__main__":
     tickers = get_tickers()
     existing = pd.read_csv(CSV_PATH) if os.path.exists(CSV_PATH) else pd.DataFrame()
     do_backfill = "--backfill" in sys.argv or existing.empty or len(existing) < 10
+    if not do_backfill:
+        # Rebuild the full history if any saved day came from incomplete data.
+        totals = existing["Total_Stocks"]
+        bad = existing.loc[totals < MIN_COVERAGE * totals.median(), "Date"].tolist()
+        if bad:
+            print(f"Found {len(bad)} incomplete saved days, rebuilding history: {bad}")
+            do_backfill = True
     df = backfill(tickers) if do_backfill else daily_update(tickers, existing)
     save_log(df)
     print(f"Done: {len(df)} rows | Primary: {df.iloc[-1]['Market_Regime']} | Signal: {df.iloc[-1]['Swing_Signal']}")
