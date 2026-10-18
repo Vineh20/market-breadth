@@ -1,0 +1,48 @@
+{
+ "reports": {
+  "vcp": {
+   "title": "VCP Screener",
+   "about": "Mark Minervini Volatility Contraction Patterns: Stage 2 stocks forming tight bases near a breakout pivot.",
+   "schedule": "Weekdays",
+   "calls": "~200",
+   "last_attempt": "2026-10-18T18:31:38Z",
+   "status": "no_key"
+  },
+  "ftd": {
+   "title": "Follow-Through Day",
+   "about": "William O'Neil's market-bottom signal for the S&P 500 and Nasdaq: is a new uptrend confirmed?",
+   "schedule": "Weekdays",
+   "calls": "4",
+   "last_attempt": "2026-10-18T18:31:38Z",
+   "status": "no_key"
+  },
+  "distribution": {
+   "title": "Distribution Days",
+   "about": "IBD distribution-day count on QQQ and SPY: how much institutional selling is hitting the market, and what exposure that suggests.",
+   "schedule": "Weekdays",
+   "calls": "~4",
+   "last_attempt": "2026-10-18T18:31:38Z",
+   "status": "no_key"
+  },
+  "canslim": {
+   "title": "CANSLIM Screener",
+   "about": "William O'Neil's CANSLIM growth-stock checklist applied to large-cap US stocks.",
+   "schedule": "Saturdays",
+   "calls": "~250"
+  },
+  "earnings": {
+   "title": "Earnings Calendar",
+   "about": "Companies over $2B reporting earnings in the coming week, so you can avoid holding through surprises.",
+   "schedule": "Sundays",
+   "calls": "~5"
+  },
+  "pead": {
+   "title": "Post-Earnings Drift",
+   "about": "Stocks that gapped up on earnings in the last two weeks and are forming a continuation setup.",
+   "schedule": "Sundays",
+   "calls": "~100"
+  }
+ },
+ "has_key": false,
+ "generated": "2026-10-18T18:31:38Z"
+}
