@@ -5,24 +5,30 @@
    "about": "Mark Minervini Volatility Contraction Patterns: Stage 2 stocks forming tight bases near a breakout pivot.",
    "schedule": "Weekdays",
    "calls": "~200",
-   "last_attempt": "2026-10-18T18:31:38Z",
-   "status": "no_key"
+   "last_attempt": "2026-10-18T18:44:40Z",
+   "status": "ok",
+   "updated": "2026-10-18T18:44:40Z",
+   "error": null
   },
   "ftd": {
    "title": "Follow-Through Day",
    "about": "William O'Neil's market-bottom signal for the S&P 500 and Nasdaq: is a new uptrend confirmed?",
    "schedule": "Weekdays",
    "calls": "4",
-   "last_attempt": "2026-10-18T18:31:38Z",
-   "status": "no_key"
+   "last_attempt": "2026-10-18T18:44:40Z",
+   "status": "ok",
+   "updated": "2026-10-18T18:44:40Z",
+   "error": null
   },
   "distribution": {
    "title": "Distribution Days",
    "about": "IBD distribution-day count on QQQ and SPY: how much institutional selling is hitting the market, and what exposure that suggests.",
    "schedule": "Weekdays",
    "calls": "~4",
-   "last_attempt": "2026-10-18T18:31:38Z",
-   "status": "no_key"
+   "last_attempt": "2026-10-18T18:44:40Z",
+   "status": "ok",
+   "updated": "2026-10-18T18:44:40Z",
+   "error": null
   },
   "canslim": {
    "title": "CANSLIM Screener",
@@ -43,6 +49,6 @@
    "calls": "~100"
   }
  },
- "has_key": false,
- "generated": "2026-10-18T18:31:38Z"
+ "has_key": true,
+ "generated": "2026-10-18T18:44:40Z"
 }
