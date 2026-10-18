@@ -4,7 +4,7 @@ The skills repo is cloned by the workflow into ./trading-skills. Each skill
 writes Markdown reports; the newest one per skill is copied to docs/reports/
 and listed in docs/reports/index.json for the Pro Reports page.
 
-Usage: python pro_reports.py daily|saturday|sunday|all
+Usage: python pro_reports.py daily|sunday|all
 FMP_API_KEY must be set in the environment (a GitHub Actions secret).
 """
 import glob
@@ -20,36 +20,37 @@ WORK_DIR = "pro-out"
 DOCS_DIR = "docs/reports"
 INDEX_PATH = os.path.join(DOCS_DIR, "index.json")
 
-# FMP free tier allows 250 calls a day (reset at midnight UTC), so the heavy
-# screeners run on separate days.
+# The FMP free plan only serves prices for a small sample of symbols, so every
+# skill runs through yahoo_bridge.py, which answers FMP price requests from
+# Yahoo Finance. Only earnings and company-profile requests reach FMP.
 REPORTS = {
     "vcp": {
         "title": "VCP Screener",
         "about": "Mark Minervini Volatility Contraction Patterns: Stage 2 stocks forming tight bases near a breakout pivot.",
         "schedule": "Weekdays",
         "group": "daily",
-        "calls": "~200",
+        "calls": "0 (Yahoo prices)",
     },
     "ftd": {
         "title": "Follow-Through Day",
         "about": "William O'Neil's market-bottom signal for the S&P 500 and Nasdaq: is a new uptrend confirmed?",
         "schedule": "Weekdays",
         "group": "daily",
-        "calls": "4",
+        "calls": "0 (Yahoo prices)",
     },
     "distribution": {
         "title": "Distribution Days",
         "about": "IBD distribution-day count on QQQ and SPY: how much institutional selling is hitting the market, and what exposure that suggests.",
         "schedule": "Weekdays",
         "group": "daily",
-        "calls": "~4",
+        "calls": "0 (Yahoo prices)",
     },
-    "canslim": {
-        "title": "CANSLIM Screener",
-        "about": "William O'Neil's CANSLIM growth-stock checklist applied to large-cap US stocks.",
-        "schedule": "Saturdays",
-        "group": "saturday",
-        "calls": "~250",
+    "momentum": {
+        "title": "Momentum Bursts",
+        "about": "Pradeep Bonde (Stockbee) momentum bursts: stocks that just broke out 4%+ on rising volume from a quiet base, for 3-5 day swing moves.",
+        "schedule": "Weekdays",
+        "group": "daily",
+        "calls": "0 (Yahoo prices)",
     },
     "earnings": {
         "title": "Earnings Calendar",
@@ -63,7 +64,7 @@ REPORTS = {
         "about": "Stocks that gapped up on earnings in the last two weeks and are forming a continuation setup.",
         "schedule": "Sundays",
         "group": "sunday",
-        "calls": "~100",
+        "calls": "~100 (earnings from FMP)",
     },
 }
 
@@ -72,21 +73,34 @@ def script(skill, name):
     return os.path.join(SKILLS_DIR, skill, "scripts", name)
 
 
+def bridged(skill, name, *args):
+    return [sys.executable, "yahoo_bridge.py", script(skill, name), *args]
+
+
+def write_universe(out):
+    """S&P 500 symbols, one per line, for skills that take a universe file."""
+    from breadth_update import get_tickers
+    path = os.path.join(out, "sp500.txt")
+    with open(path, "w") as fh:
+        fh.write("\n".join(get_tickers()))
+    return path
+
+
 def commands(key, out):
-    py = sys.executable
     if key == "vcp":
-        return [[py, script("vcp-screener", "screen_vcp.py"), "--output-dir", out]]
+        return [bridged("vcp-screener", "screen_vcp.py", "--full-sp500", "--output-dir", out)]
     if key == "ftd":
-        return [[py, script("ftd-detector", "ftd_detector.py"), "--output-dir", out]]
+        return [bridged("ftd-detector", "ftd_detector.py", "--output-dir", out)]
     if key == "distribution":
-        return [[py, script("ibd-distribution-day-monitor", "ibd_monitor.py"),
-                 "--symbols", "QQQ,SPY", "--output-dir", out]]
-    if key == "canslim":
-        return [[py, script("canslim-screener", "screen_canslim.py"),
-                 "--max-candidates", "35", "--output-dir", out]]
+        return [bridged("ibd-distribution-day-monitor", "ibd_monitor.py",
+                        "--symbols", "QQQ,SPY", "--output-dir", out)]
+    if key == "momentum":
+        return [bridged("stockbee-momentum-burst-screener", "screen_momentum_burst.py",
+                        "--universe-file", write_universe(out), "--max-symbols", "520",
+                        "--max-api-calls", "2000", "--output-dir", out)]
     if key == "pead":
-        return [[py, script("pead-screener", "screen_pead.py"),
-                 "--max-api-calls", "150", "--output-dir", out]]
+        return [bridged("pead-screener", "screen_pead.py",
+                        "--max-api-calls", "200", "--output-dir", out)]
     raise KeyError(key)
 
 
@@ -108,8 +122,8 @@ def run_earnings(out):
     end = start + timedelta(days=6)
     data = os.path.join(out, "earnings_data.json")
     with open(data, "w") as fh:
-        run([sys.executable, script("earnings-calendar", "fetch_earnings_fmp.py"),
-             start.isoformat(), end.isoformat()], timeout=900, stdout=fh)
+        run(bridged("earnings-calendar", "fetch_earnings_fmp.py",
+                    start.isoformat(), end.isoformat()), timeout=900, stdout=fh)
     run([sys.executable, script("earnings-calendar", "generate_report.py"),
          data, os.path.join(out, f"earnings_calendar_{start.isoformat()}.md")], timeout=300)
 

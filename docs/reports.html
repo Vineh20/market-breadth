@@ -95,7 +95,7 @@ footer { margin-top:20px; font-size:12px; color:var(--fog); line-height:1.6; }
 
   <div class="hdr">
     <h1>Pro Trading Reports</h1>
-    <p>VCP · Follow-Through Day · Distribution Days · CANSLIM · Earnings · PEAD</p>
+    <p>VCP · Momentum Bursts · Follow-Through Day · Distribution Days · Earnings · PEAD</p>
   </div>
 
   <div class="notice" id="keyNotice">
@@ -119,14 +119,14 @@ footer { margin-top:20px; font-size:12px; color:var(--fog); line-height:1.6; }
   </section>
 
   <footer>
-    Reports are produced by the open-source <a href="https://github.com/tradermonty/claude-trading-skills" target="_blank" rel="noopener">claude-trading-skills</a> scripts (MIT licence) using Financial Modeling Prep data.
-    The free FMP plan allows 250 data requests a day, so the heavier screeners run on weekends.
+    Reports are produced by the open-source <a href="https://github.com/tradermonty/claude-trading-skills" target="_blank" rel="noopener">claude-trading-skills</a> scripts (MIT licence).
+    Prices come from Yahoo Finance; earnings data comes from Financial Modeling Prep (free plan).
     For education and research only — not financial advice.
   </footer>
 </div>
 
 <script>
-const ORDER = ['vcp', 'ftd', 'distribution', 'canslim', 'earnings', 'pead'];
+const ORDER = ['vcp', 'momentum', 'ftd', 'distribution', 'earnings', 'pead'];
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let INDEX = null, current = null;
