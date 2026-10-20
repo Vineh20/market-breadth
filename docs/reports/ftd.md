@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-10-18 18:58:20
-**S&P 500:** $7659.44
-**QQQ:** $709.80
+**Generated:** 2026-10-20 01:57:56
+**S&P 500:** $7690.73
+**QQQ:** $718.36
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🔴 **Correction** |
+| **Current State** | 🟡 **Rally Attempt (Day 1-3)** |
 | **Quality Score** | **0/100** |
 | **Signal** | No FTD |
 | **Exposure Guidance** | 0-25% |
@@ -23,8 +23,8 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_FAILED | $7659.44 | $7818.93 | -2.0% | 2026-09-16 ($7551.81) |
-| NASDAQ/QQQ | CORRECTION | $709.80 | $759.66 | -6.6% | 2026-10-16 ($709.80) |
+| S&P 500 | RALLY_FAILED | $7690.73 | $7818.93 | -1.6% | 2026-09-16 ($7551.81) |
+| NASDAQ/QQQ | RALLY_ATTEMPT | $718.36 | $759.66 | -5.4% | 2026-10-16 ($709.80) |
 
 ---
 
@@ -34,14 +34,20 @@
 
 - **Swing Low:** 2026-09-16 ($7551.81, -3.2% decline)
 - **Rally Day 1:** 2026-09-17
-- **Current Day Count:** 22
+- **Current Day Count:** 23
+
+### NASDAQ/QQQ
+
+- **Swing Low:** 2026-10-16 ($709.80, -6.6% decline)
+- **Rally Day 1:** 2026-10-19
+- **Current Day Count:** 1
 
 ---
 
 ## Post-FTD Health
 
 - **Power Trend:** No (2/3 conditions)
-  - 21 EMA: $7729.72 (> 50 SMA: $7706.42)
+  - 21 EMA: $7726.21 (> 50 SMA: $7705.08)
   - 50 SMA Rising: Yes
   - Price above 21 EMA: No
 
@@ -51,10 +57,10 @@
 
 **Recommended Exposure:** 0-25%
 
-- Market in correction, no rally attempt yet
-- Stay defensive, preserve capital
-- Build watchlists of relative strength leaders
-- Wait for first up day to start rally count
+- Rally attempt in progress (Day 1-3)
+- Too early to act - wait for Day 4+
+- Prepare watchlists, research leaders
+- Monitor for rally failure (close below swing low)
 
 ---
 
