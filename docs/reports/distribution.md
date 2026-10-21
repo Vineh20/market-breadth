@@ -1,53 +1,53 @@
 # IBD Distribution Day Monitor Report
 
-- **As of:** 2026-10-19
+- **As of:** 2026-10-20
 - **Overall Risk Level:** **SEVERE**
 - **Primary Signal Symbol:** QQQ
-- **Generated At:** 2026-10-20T01:57:57+00:00
+- **Generated At:** 2026-10-21T01:45:12+00:00
 
 ## Index Results
 
 ### QQQ — risk: **SEVERE**
 
 - Today is Distribution Day: False
-- d5 / d15 / d25 = 4 / 6 / 6
-- Cluster: within 5/15/25 sessions: 4/6/6
+- d5 / d15 / d25 = 3 / 5 / 6
+- Cluster: within 5/15/25 sessions: 3/5/6
 - Trend filters: close_above_21ema=False, close_above_50sma=False, market_below_21ema_or_50ma=True
 
-> QQQ had no Distribution Day today. Active Distribution Days within the last 5/15/25 sessions: 4/6/6. Risk level: SEVERE.
+> QQQ had no Distribution Day today. Active Distribution Days within the last 5/15/25 sessions: 3/5/6. Risk level: SEVERE.
 
 #### Active Distribution Days
 
 | date | close | pct_change | volume_change_pct | age | expires_in | high_since | invalidation_price |
 |------|-------|------------|-------------------|-----|------------|------------|---------------------|
-| 2026-10-16 | 709.8 | -2.50% | 34.31% | 1 | 24 | 725.96 | 745.29 |
-| 2026-10-14 | 728.95 | -1.97% | 82.28% | 3 | 22 | 740.53 | 765.3975 |
-| 2026-10-13 | 743.57 | -0.33% | 14.28% | 4 | 21 | 744.2 | 780.7485 |
-| 2026-10-12 | 746.04 | -0.70% | 18.83% | 5 | 20 | 749.79 | 783.342 |
-| 2026-10-08 | 747.58 | -1.34% | 95.13% | 7 | 18 | 757.18 | 784.9590000000001 |
-| 2026-09-28 | 736.53 | -1.07% | 37.95% | 15 | 10 | 762.86 | 773.3565 |
+| 2026-10-16 | 709.8 | -2.50% | 34.31% | 2 | 23 | 725.96 | 745.29 |
+| 2026-10-14 | 728.95 | -1.97% | 82.28% | 4 | 21 | 740.53 | 765.3975 |
+| 2026-10-13 | 743.57 | -0.33% | 14.28% | 5 | 20 | 744.2 | 780.7485 |
+| 2026-10-12 | 746.04 | -0.70% | 18.83% | 6 | 19 | 749.79 | 783.342 |
+| 2026-10-08 | 747.58 | -1.34% | 95.13% | 8 | 17 | 757.18 | 784.9590000000001 |
+| 2026-09-28 | 736.53 | -1.07% | 37.95% | 16 | 9 | 762.86 | 773.3565 |
 
 ### SPY — risk: **SEVERE**
 
 - Today is Distribution Day: False
-- d5 / d15 / d25 = 2 / 5 / 8
-- Cluster: within 5/15/25 sessions: 2/5/8
-- Trend filters: close_above_21ema=False, close_above_50sma=False, market_below_21ema_or_50ma=True
+- d5 / d15 / d25 = 2 / 4 / 8
+- Cluster: within 5/15/25 sessions: 2/4/8
+- Trend filters: close_above_21ema=False, close_above_50sma=True, market_below_21ema_or_50ma=False
 
-> SPY had no Distribution Day today. Active Distribution Days within the last 5/15/25 sessions: 2/5/8. Risk level: SEVERE.
+> SPY had no Distribution Day today. Active Distribution Days within the last 5/15/25 sessions: 2/4/8. Risk level: SEVERE.
 
 #### Active Distribution Days
 
 | date | close | pct_change | volume_change_pct | age | expires_in | high_since | invalidation_price |
 |------|-------|------------|-------------------|-----|------------|------------|---------------------|
-| 2026-10-16 | 763.25 | -1.11% | 48.83% | 1 | 24 | 773.25 | 801.4125 |
-| 2026-10-14 | 769.6 | -1.08% | 115.55% | 3 | 22 | 776.35 | 808.08 |
-| 2026-10-08 | 773.93 | -0.42% | 30.47% | 7 | 18 | 779.42 | 812.6265 |
-| 2026-09-30 | 762.63 | -0.21% | 68.27% | 13 | 12 | 781.62 | 800.7615000000001 |
-| 2026-09-28 | 765.61 | -0.74% | 16.44% | 15 | 10 | 781.62 | 803.8905000000001 |
-| 2026-09-23 | 767.81 | -0.72% | 57.84% | 18 | 7 | 781.62 | 806.2004999999999 |
-| 2026-09-16 | 752.1822 | -0.44% | 28.19% | 23 | 2 | 781.62 | 789.79131 |
-| 2026-09-15 | 755.5139 | -0.46% | 5.01% | 24 | 1 | 781.62 | 793.2895950000001 |
+| 2026-10-16 | 763.25 | -1.11% | 48.83% | 2 | 23 | 773.25 | 801.4125 |
+| 2026-10-14 | 769.6 | -1.08% | 115.55% | 4 | 21 | 776.35 | 808.08 |
+| 2026-10-08 | 773.93 | -0.42% | 30.47% | 8 | 17 | 779.42 | 812.6265 |
+| 2026-09-30 | 762.63 | -0.21% | 68.27% | 14 | 11 | 781.62 | 800.7615000000001 |
+| 2026-09-28 | 765.61 | -0.74% | 16.44% | 16 | 9 | 781.62 | 803.8905000000001 |
+| 2026-09-23 | 767.81 | -0.72% | 57.84% | 19 | 6 | 781.62 | 806.2004999999999 |
+| 2026-09-16 | 752.1822 | -0.44% | 28.19% | 24 | 1 | 781.62 | 789.79131 |
+| 2026-09-15 | 755.5139 | -0.46% | 5.01% | 25 | 0 | 781.62 | 793.2895950000001 |
 
 ## Portfolio Action
 

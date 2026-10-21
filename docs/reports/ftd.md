@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-10-20 01:57:56
-**S&P 500:** $7690.73
-**QQQ:** $718.36
+**Generated:** 2026-10-21 01:45:11
+**S&P 500:** $7712.57
+**QQQ:** $717.63
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🟡 **Rally Attempt (Day 1-3)** |
+| **Current State** | 🔴 **Correction** |
 | **Quality Score** | **0/100** |
 | **Signal** | No FTD |
 | **Exposure Guidance** | 0-25% |
@@ -23,8 +23,8 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_FAILED | $7690.73 | $7818.93 | -1.6% | 2026-09-16 ($7551.81) |
-| NASDAQ/QQQ | RALLY_ATTEMPT | $718.36 | $759.66 | -5.4% | 2026-10-16 ($709.80) |
+| S&P 500 | RALLY_FAILED | $7712.57 | $7818.93 | -1.4% | 2026-09-16 ($7551.81) |
+| NASDAQ/QQQ | CORRECTION | $717.63 | $759.66 | -5.5% | 2026-10-20 ($717.63) |
 
 ---
 
@@ -34,21 +34,15 @@
 
 - **Swing Low:** 2026-09-16 ($7551.81, -3.2% decline)
 - **Rally Day 1:** 2026-09-17
-- **Current Day Count:** 23
-
-### NASDAQ/QQQ
-
-- **Swing Low:** 2026-10-16 ($709.80, -6.6% decline)
-- **Rally Day 1:** 2026-10-19
-- **Current Day Count:** 1
+- **Current Day Count:** 24
 
 ---
 
 ## Post-FTD Health
 
-- **Power Trend:** No (2/3 conditions)
-  - 21 EMA: $7726.21 (> 50 SMA: $7705.08)
-  - 50 SMA Rising: Yes
+- **Power Trend:** No (1/3 conditions)
+  - 21 EMA: $7725.00 (> 50 SMA: $7704.27)
+  - 50 SMA Rising: No
   - Price above 21 EMA: No
 
 ---
@@ -57,10 +51,10 @@
 
 **Recommended Exposure:** 0-25%
 
-- Rally attempt in progress (Day 1-3)
-- Too early to act - wait for Day 4+
-- Prepare watchlists, research leaders
-- Monitor for rally failure (close below swing low)
+- Market in correction, no rally attempt yet
+- Stay defensive, preserve capital
+- Build watchlists of relative strength leaders
+- Wait for first up day to start rally count
 
 ---
 
@@ -71,7 +65,7 @@
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $709.80 (2026-10-16)
+- Swing Low: $717.63 (2026-10-20)
 - Lookback High: $759.66
 
 ---
