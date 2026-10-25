@@ -1,36 +1,32 @@
-# Upcoming Earnings Calendar - Week of October 20 to October 22, 2026
+# Upcoming Earnings Calendar - Week of October 26 to October 30, 2026
 
-**Report Generated**: October 18, 2026
+**Report Generated**: October 25, 2026
 **Data Source**: FMP API (US stocks, Mid-cap and above, >$2B market cap)
 **Coverage Period**: Next 7 days
-**Total Companies**: 10
+**Total Companies**: 27
 
 ---
 
 ## Executive Summary
 
-- **Total Companies Reporting**: 10
-- **Mega/Large Cap (>$10B)**: 9
-- **Mid Cap ($2B-$10B)**: 1
-- **Peak Day**: Tuesday (4 companies)
+- **Total Companies Reporting**: 27
+- **Mega/Large Cap (>$10B)**: 24
+- **Mid Cap ($2B-$10B)**: 3
+- **Peak Day**: Thursday (10 companies)
 
 ---
 
-## Tuesday, October 20, 2026
+## Monday, October 26, 2026
 
 ### Before Market Open (BMO)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| GE | GE Aerospace | $325.6B | Industrials | $2.01 | $12.9B |
-| GM | General Motors Company | $73.7B | Consumer Cyclical | $3.70 | $48.8B |
+| VZ | Verizon Communications Inc. | $185.6B | Communication Serv | $1.27 | $34.8B |
 
 ### After Market Close (AMC)
 
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| NFLX | Netflix, Inc. | $293.7B | Communication Serv | $0.82 | $12.9B |
-| UAL | United Airlines Holdings, Inc. | $31.2B | Industrials | $2.58 | $17.9B |
+*No earnings announcements*
 
 ### Time Not Announced (TAS)
 
@@ -38,20 +34,24 @@
 
 ---
 
-## Wednesday, October 21, 2026
+## Tuesday, October 27, 2026
 
 ### Before Market Open (BMO)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| T | AT&T Inc. | $160.6B | Communication Serv | $0.60 | $31.7B |
+| KO | The Coca-Cola Company | $398.9B | Consumer Defensive | $0.88 | $12.9B |
+| BA | The Boeing Company | $148.9B | Industrials | $-0.25 | $23.9B |
+| HCA | HCA Healthcare, Inc. | $101.5B | Healthcare | $6.65 | $19.3B |
+| PYPL | PayPal Holdings, Inc. | $48.8B | Financial Services | $1.31 | $8.7B |
+| SOFI | SoFi Technologies, Inc. | $18.9B | Financial Services | $0.17 | $1.3B |
 
 ### After Market Close (AMC)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| META | Meta Platforms, Inc. | $1.8T | Communication Serv | $6.58 | $63.3B |
-| TSLA | Tesla, Inc. | $1.4T | Consumer Cyclical | $0.45 | $27.9B |
+| V | Visa Inc. | $761.6B | Financial Services | $3.44 | $12.1B |
+| HOOD | Robinhood Markets, Inc. | $75.2B | Financial Services | $0.56 | $1.4B |
 
 ### Time Not Announced (TAS)
 
@@ -59,15 +59,66 @@
 
 ---
 
-## Thursday, October 22, 2026
+## Wednesday, October 28, 2026
+
+### Before Market Open (BMO)
+
+*No earnings announcements*
+
+### After Market Close (AMC)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| GOOGL | Alphabet Inc. | $3.9T | Communication Serv | $3.03 | $127.9B |
+| MSFT | Microsoft Corporation | $3.9T | Technology | $4.71 | $90.6B |
+| FDX | FedEx Corporation | $70.7B | Industrials | $3.33 | $22.7B |
+| F | Ford Motor Company | $46.3B | Consumer Cyclical | $0.41 | $49.1B |
+| ETSY | Etsy, Inc. | $8.0B | Consumer Cyclical | $0.76 | $668M |
+| MGM | MGM Resorts International | $7.1B | Consumer Cyclical | $0.06 | $4.2B |
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Thursday, October 29, 2026
 
 ### Before Market Open (BMO)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| LMT | Lockheed Martin Corporation | $127.4B | Industrials | $7.52 | $20.5B |
-| NOK | Nokia Oyj | $49.4B | Technology | $0.08 | $5.7B |
-| AAL | American Airlines Group Inc. | $7.9B | Industrials | $-0.33 | $16.2B |
+| CARR | Carrier Global Corporation | $46.4B | Industrials | $0.76 | $6.1B |
+| SIRI | Sirius XM Holdings Inc. | $9.3B | Communication Serv | $0.77 | $2.2B |
+
+### After Market Close (AMC)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| AMZN | Amazon.com, Inc. | $2.7T | Consumer Cyclical | $1.96 | $202.2B |
+| INTC | Intel Corp. | $459.7B | Technology | $0.40 | $16.5B |
+| SBUX | Starbucks Corporation | $114.9B | Consumer Cyclical | $0.72 | $9.2B |
+| COIN | Coinbase Global, Inc. | $43.4B | Financial Services | $-0.23 | $1.2B |
+| RBLX | Roblox Corporation | $37.8B | Technology | $-0.43 | $1.6B |
+| RKT | Rocket Companies, Inc. | $33.1B | Financial Services | $0.14 | $2.6B |
+| RIVN | Rivian Automotive, Inc. | $17.1B | Consumer Cyclical | $-0.65 | $2.0B |
+| PINS | Pinterest, Inc. | $12.6B | Communication Serv | $0.49 | $1.2B |
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Friday, October 30, 2026
+
+### Before Market Open (BMO)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| XOM | Exxonmobil Holdings Corporation | $753.3B | Energy | $4.10 | $105.4B |
+| ABBV | AbbVie Inc. | $504.8B | Healthcare | $3.74 | $17.3B |
+| CVX | Chevron Corporation | $460.8B | Energy | $4.86 | $61.3B |
 
 ### After Market Close (AMC)
 
@@ -82,20 +133,21 @@
 ## Key Observations
 
 ### Highest Market Cap Companies This Week
-1. Meta Platforms, Inc. (META) - $1.8T - Wed AMC
-2. Tesla, Inc. (TSLA) - $1.4T - Wed AMC
-3. GE Aerospace (GE) - $325.6B - Tue BMO
-4. Netflix, Inc. (NFLX) - $293.7B - Tue AMC
-5. AT&T Inc. (T) - $160.6B - Wed BMO
+1. Alphabet Inc. (GOOGL) - $3.9T - Wed AMC
+2. Microsoft Corporation (MSFT) - $3.9T - Wed AMC
+3. Amazon.com, Inc. (AMZN) - $2.7T - Thu AMC
+4. Visa Inc. (V) - $761.6B - Tue AMC
+5. Exxonmobil Holdings Corporation (XOM) - $753.3B - Fri BMO
 
 ### Sector Distribution
-- **Industrials**: 4 companies
-- **Communication Services**: 3 companies
-- **Consumer Cyclical**: 2 companies
-- **Technology**: 1 companies
+- **Financial Services**: 6 companies
+- **Consumer Cyclical**: 6 companies
+- **Communication Services**: 4 companies
+- **Industrials**: 3 companies
+- **Technology**: 3 companies
 
 ### Trading Considerations
-- **Peak Day**: Tuesday with 4 earnings announcements
+- **Peak Day**: Thursday with 10 earnings announcements
 - **Pre-Market Focus**: BMO announcements before 9:30 AM ET
 - **After-Hours Focus**: AMC announcements after 4:00 PM ET
 

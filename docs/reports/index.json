@@ -35,9 +35,9 @@
    "about": "Companies over $2B reporting earnings in the coming week, so you can avoid holding through surprises.",
    "schedule": "Sundays",
    "calls": "~5",
-   "last_attempt": "2026-10-18T19:05:26Z",
+   "last_attempt": "2026-10-25T17:28:27Z",
    "status": "ok",
-   "updated": "2026-10-18T19:05:26Z",
+   "updated": "2026-10-25T17:28:27Z",
    "error": null
   },
   "pead": {
@@ -45,9 +45,9 @@
    "about": "Stocks that gapped up on earnings in the last two weeks and are forming a continuation setup.",
    "schedule": "Sundays",
    "calls": "~100 (earnings from FMP)",
-   "last_attempt": "2026-10-18T19:05:26Z",
+   "last_attempt": "2026-10-25T17:28:27Z",
    "status": "ok",
-   "updated": "2026-10-18T19:05:26Z",
+   "updated": "2026-10-25T17:28:27Z",
    "error": null
   },
   "momentum": {
@@ -62,5 +62,5 @@
   }
  },
  "has_key": true,
- "generated": "2026-10-24T01:42:30Z"
+ "generated": "2026-10-25T17:28:27Z"
 }
