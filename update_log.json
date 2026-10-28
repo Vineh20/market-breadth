@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-27T01:34:17.102843Z",
+  "last_updated": "2026-10-28T01:32:18.093144Z",
   "latest_date": "2026-10-26",
   "ratio": 1.23,
   "ratio5": 1.53,
@@ -12,6 +12,6 @@
   "extreme_zone": "DIP_TOE_ZONE",
   "regime": "BULL",
   "signal": "SELECTIVE",
-  "t2108_approx": 67.9,
+  "t2108_approx": 67.8,
   "total_rows": 200
 }
