@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-10-30 02:44:29
-**S&P 500:** $7720.39
-**QQQ:** $715.34
+**Generated:** 2026-10-31 02:33:52
+**S&P 500:** $7580.07
+**QQQ:** $690.49
 
 ---
 
@@ -23,27 +23,17 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_FAILED | $7720.39 | $7818.93 | -1.3% | 2026-09-16 ($7551.81) |
-| NASDAQ/QQQ | CORRECTION | $715.34 | $759.66 | -5.8% | 2026-10-29 ($715.34) |
-
----
-
-## Rally Attempt Details
-
-### S&P 500
-
-- **Swing Low:** 2026-09-16 ($7551.81, -3.2% decline)
-- **Rally Day 1:** 2026-09-17
-- **Current Day Count:** 31
+| S&P 500 | CORRECTION | $7580.07 | $7818.93 | -3.0% | 2026-10-30 ($7580.07) |
+| NASDAQ/QQQ | CORRECTION | $690.49 | $759.66 | -9.1% | 2026-10-30 ($690.49) |
 
 ---
 
 ## Post-FTD Health
 
-- **Power Trend:** No (2/3 conditions)
-  - 21 EMA: $7714.47 (> 50 SMA: $7698.30)
+- **Power Trend:** No (1/3 conditions)
+  - 21 EMA: $7702.21 (> 50 SMA: $7697.08)
   - 50 SMA Rising: No
-  - Price above 21 EMA: Yes
+  - Price above 21 EMA: No
 
 ---
 
@@ -61,11 +51,11 @@
 ## Key Watch Levels
 
 **S&P 500:**
-- Swing Low: $7551.81 (2026-09-16)
+- Swing Low: $7580.07 (2026-10-30)
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $715.34 (2026-10-29)
+- Swing Low: $690.49 (2026-10-30)
 - Lookback High: $759.66
 
 ---
