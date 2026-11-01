@@ -1,5 +1,5 @@
 # PEAD Screener Report - Post-Earnings Announcement Drift
-**Generated:** 2026-10-25 17:29:16
+**Generated:** 2026-11-01 18:48:10
 **Mode:** A (FMP Earnings Calendar)
 **Lookback:** 14 days
 **Watch Window:** 5 weeks
@@ -10,12 +10,12 @@
 
 | Stage | Count |
 |-------|-------|
-| Total Screened | 14 |
+| Total Screened | 20 |
 | BREAKOUT | 0 |
-| SIGNAL_READY | 4 |
-| MONITORING | 10 |
+| SIGNAL_READY | 2 |
+| MONITORING | 18 |
 | EXPIRED | 0 |
-| Timing unknown | 0 of 18 |
+| Timing unknown | 0 of 37 |
 
 ---
 
@@ -26,100 +26,77 @@ No stocks in this stage.
 
 ---
 
-## SIGNAL_READY (4 stocks)
+## SIGNAL_READY (2 stocks)
 *Red candle pullback identified, awaiting breakout*
 
-### 1. GS [DEVELOPING]
-**Price:** $875.68 | **Earnings:** 2026-10-13 (bmo) | **Gap:** +3.2% | **Weeks Since:** 1
-**PEAD Score:** 57.0/100 (Developing)
+### 1. NFLX 
+**Price:** $62.08 | **Earnings:** 2026-10-20 (amc) | **Gap:** -6.6% | **Weeks Since:** 1
+**PEAD Score:** 54.0/100 (Weak)
 
 | Component | Score | Weight | Weighted |
 |-----------|-------|--------|----------|
-| Setup Quality | 60 | 30% | 18.0 |
+| Setup Quality | 50 | 30% | 15.0 |
 | Breakout Strength | 0 | 25% | 0.0 |
 | Liquidity | 100 | 25% | 25.0 |
 | Risk/Reward | 70 | 20% | 14.0 |
 
-**Red Candle:** Week of 2026-10-19 | High: $906.48 | Low: $864.12
+**Red Candle:** Week of 2026-10-26 | High: $65.50 | Low: $61.39
 
 **Trade Setup:**
-- Trigger: Close above $906.48 on green weekly candle
-- Stop (if triggered): $864.12
+- Trigger: Close above $65.50 on green weekly candle
+- Stop (if triggered): $61.39
 - Action: Set alert at red candle high
-- Guidance: Watchlist, wait for cleaner breakout
+- Guidance: Not actionable
 
 ---
 
-### 2. BAC [DEVELOPING]
-**Price:** $50.56 | **Earnings:** 2026-10-14 (bmo) | **Gap:** -7.7% | **Weeks Since:** 1
-**PEAD Score:** 55.5/100 (Developing)
+### 2. META 
+**Price:** $614.99 | **Earnings:** 2026-10-21 (amc) | **Gap:** -3.0% | **Weeks Since:** 1
+**PEAD Score:** 54.0/100 (Weak)
 
 | Component | Score | Weight | Weighted |
 |-----------|-------|--------|----------|
-| Setup Quality | 55 | 30% | 16.5 |
+| Setup Quality | 50 | 30% | 15.0 |
 | Breakout Strength | 0 | 25% | 0.0 |
 | Liquidity | 100 | 25% | 25.0 |
 | Risk/Reward | 70 | 20% | 14.0 |
 
-**Red Candle:** Week of 2026-10-19 | High: $51.53 | Low: $50.01
+**Red Candle:** Week of 2026-10-26 | High: $647.69 | Low: $609.00
 
 **Trade Setup:**
-- Trigger: Close above $51.53 on green weekly candle
-- Stop (if triggered): $50.01
+- Trigger: Close above $647.69 on green weekly candle
+- Stop (if triggered): $609.00
 - Action: Set alert at red candle high
-- Guidance: Watchlist, wait for cleaner breakout
-
----
-
-### 3. TSM [DEVELOPING]
-**Price:** $418.51 | **Earnings:** 2026-10-15 (bmo) | **Gap:** -3.5% | **Weeks Since:** 1
-**PEAD Score:** 55.5/100 (Developing)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 55 | 30% | 16.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 70 | 20% | 14.0 |
-
-**Red Candle:** Week of 2026-10-19 | High: $435.16 | Low: $410.22
-
-**Trade Setup:**
-- Trigger: Close above $435.16 on green weekly candle
-- Stop (if triggered): $410.22
-- Action: Set alert at red candle high
-- Guidance: Watchlist, wait for cleaner breakout
-
----
-
-### 4. WFC [DEVELOPING]
-**Price:** $82.39 | **Earnings:** 2026-10-13 (bmo) | **Gap:** -3.3% | **Weeks Since:** 1
-**PEAD Score:** 55.5/100 (Developing)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 55 | 30% | 16.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 70 | 20% | 14.0 |
-
-**Red Candle:** Week of 2026-10-19 | High: $83.80 | Low: $81.02
-
-**Trade Setup:**
-- Trigger: Close above $83.80 on green weekly candle
-- Stop (if triggered): $81.02
-- Action: Set alert at red candle high
-- Guidance: Watchlist, wait for cleaner breakout
+- Guidance: Not actionable
 
 ---
 
 ---
 
-## MONITORING (10 stocks)
+## MONITORING (18 stocks)
 *Post-earnings gap-up, no red candle yet*
 
-### 1. LMT 
-**Price:** $604.18 | **Earnings:** 2026-10-22 (bmo) | **Gap:** +5.1% | **Weeks Since:** 0
+### 1. SOFI 
+**Price:** $16.76 | **Earnings:** 2026-10-27 (bmo) | **Gap:** +10.5% | **Weeks Since:** 0
+**PEAD Score:** 52.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 75 | 30% | 22.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 2. LMT 
+**Price:** $636.95 | **Earnings:** 2026-10-22 (bmo) | **Gap:** +5.1% | **Weeks Since:** 1
 **PEAD Score:** 46.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -137,8 +114,8 @@ No stocks in this stage.
 
 ---
 
-### 2. UNH 
-**Price:** $418.09 | **Earnings:** 2026-10-13 (bmo) | **Gap:** +5.0% | **Weeks Since:** 1
+### 3. RKT 
+**Price:** $12.80 | **Earnings:** 2026-10-29 (amc) | **Gap:** +5.4% | **Weeks Since:** 0
 **PEAD Score:** 46.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -156,8 +133,65 @@ No stocks in this stage.
 
 ---
 
-### 3. META 
-**Price:** $642.62 | **Earnings:** 2026-10-21 (amc) | **Gap:** -3.0% | **Weeks Since:** 0
+### 4. RIVN 
+**Price:** $12.16 | **Earnings:** 2026-10-29 (amc) | **Gap:** +5.6% | **Weeks Since:** 0
+**PEAD Score:** 46.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 55 | 30% | 16.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 5. ETSY 
+**Price:** $88.96 | **Earnings:** 2026-10-28 (bmo) | **Gap:** +6.2% | **Weeks Since:** 0
+**PEAD Score:** 46.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 55 | 30% | 16.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 6. HCA 
+**Price:** $473.19 | **Earnings:** 2026-10-27 (bmo) | **Gap:** +3.2% | **Weeks Since:** 0
+**PEAD Score:** 43.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 45 | 30% | 13.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 7. TSLA 
+**Price:** $399.81 | **Earnings:** 2026-10-21 (amc) | **Gap:** -3.1% | **Weeks Since:** 1
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -175,8 +209,8 @@ No stocks in this stage.
 
 ---
 
-### 4. AAL 
-**Price:** $12.11 | **Earnings:** 2026-10-22 (bmo) | **Gap:** -4.2% | **Weeks Since:** 0
+### 8. AAL 
+**Price:** $12.60 | **Earnings:** 2026-10-22 (bmo) | **Gap:** -4.2% | **Weeks Since:** 1
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -194,8 +228,8 @@ No stocks in this stage.
 
 ---
 
-### 5. GM 
-**Price:** $75.92 | **Earnings:** 2026-10-20 (bmo) | **Gap:** -6.7% | **Weeks Since:** 0
+### 9. INTC 
+**Price:** $65.76 | **Earnings:** 2026-10-29 (amc) | **Gap:** -25.8% | **Weeks Since:** 0
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -213,8 +247,8 @@ No stocks in this stage.
 
 ---
 
-### 6. NFLX 
-**Price:** $65.85 | **Earnings:** 2026-10-20 (amc) | **Gap:** -6.6% | **Weeks Since:** 0
+### 10. CARR 
+**Price:** $53.63 | **Earnings:** 2026-10-29 (bmo) | **Gap:** -4.5% | **Weeks Since:** 0
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -232,8 +266,8 @@ No stocks in this stage.
 
 ---
 
-### 7. JNJ 
-**Price:** $263.81 | **Earnings:** 2026-10-13 (bmo) | **Gap:** -3.5% | **Weeks Since:** 1
+### 11. COIN 
+**Price:** $143.54 | **Earnings:** 2026-10-29 (amc) | **Gap:** -7.7% | **Weeks Since:** 0
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -251,8 +285,8 @@ No stocks in this stage.
 
 ---
 
-### 8. T 
-**Price:** $20.93 | **Earnings:** 2026-10-21 (bmo) | **Gap:** -6.5% | **Weeks Since:** 0
+### 12. HOOD 
+**Price:** $84.99 | **Earnings:** 2026-10-27 (amc) | **Gap:** -5.6% | **Weeks Since:** 0
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -270,8 +304,8 @@ No stocks in this stage.
 
 ---
 
-### 9. TSLA 
-**Price:** $372.22 | **Earnings:** 2026-10-21 (amc) | **Gap:** -3.1% | **Weeks Since:** 0
+### 13. AMZN 
+**Price:** $240.35 | **Earnings:** 2026-10-29 (amc) | **Gap:** -4.6% | **Weeks Since:** 0
 **PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
@@ -289,15 +323,91 @@ No stocks in this stage.
 
 ---
 
-### 10. NOK 
-**Price:** $8.14 | **Earnings:** 2026-10-22 (bmo) | **Gap:** -7.3% | **Weeks Since:** 0
-**PEAD Score:** 25.5/100 (Weak)
+### 14. T 
+**Price:** $21.41 | **Earnings:** 2026-10-21 (bmo) | **Gap:** -6.5% | **Weeks Since:** 1
+**PEAD Score:** 40.5/100 (Weak)
 
 | Component | Score | Weight | Weighted |
 |-----------|-------|--------|----------|
 | Setup Quality | 35 | 30% | 10.5 |
 | Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 40 | 25% | 10.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 15. GM 
+**Price:** $87.40 | **Earnings:** 2026-10-20 (bmo) | **Gap:** -6.7% | **Weeks Since:** 1
+**PEAD Score:** 40.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 35 | 30% | 10.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 16. PINS 
+**Price:** $19.36 | **Earnings:** 2026-10-29 (amc) | **Gap:** -5.9% | **Weeks Since:** 0
+**PEAD Score:** 40.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 35 | 30% | 10.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 17. RBLX 
+**Price:** $42.99 | **Earnings:** 2026-10-29 (amc) | **Gap:** -12.8% | **Weeks Since:** 0
+**PEAD Score:** 40.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 35 | 30% | 10.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
+| Risk/Reward | 25 | 20% | 5.0 |
+
+**Red Candle:** Not yet formed
+
+**Trade Setup:**
+- Action: Monitor for red candle formation
+- Guidance: Not actionable
+
+---
+
+### 18. GOOGL 
+**Price:** $279.84 | **Earnings:** 2026-10-28 (amc) | **Gap:** -11.7% | **Weeks Since:** 0
+**PEAD Score:** 40.5/100 (Weak)
+
+| Component | Score | Weight | Weighted |
+|-----------|-------|--------|----------|
+| Setup Quality | 35 | 30% | 10.5 |
+| Breakout Strength | 0 | 25% | 0.0 |
+| Liquidity | 100 | 25% | 25.0 |
 | Risk/Reward | 25 | 20% | 5.0 |
 
 **Red Candle:** Not yet formed
@@ -318,9 +428,9 @@ No stocks in this stage.
 ---
 
 ## API Usage
-- **API Calls Made:** 37
-- **Budget Remaining:** 163
-- **Cache Entries:** 37
+- **API Calls Made:** 75
+- **Budget Remaining:** 125
+- **Cache Entries:** 75
 
 ---
 

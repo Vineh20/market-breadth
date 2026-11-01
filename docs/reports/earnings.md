@@ -1,28 +1,91 @@
-# Upcoming Earnings Calendar - Week of October 26 to October 30, 2026
+# Upcoming Earnings Calendar - Week of November 02 to November 06, 2026
 
-**Report Generated**: October 25, 2026
+**Report Generated**: November 01, 2026
 **Data Source**: FMP API (US stocks, Mid-cap and above, >$2B market cap)
 **Coverage Period**: Next 7 days
-**Total Companies**: 27
+**Total Companies**: 12
 
 ---
 
 ## Executive Summary
 
-- **Total Companies Reporting**: 27
-- **Mega/Large Cap (>$10B)**: 24
-- **Mid Cap ($2B-$10B)**: 3
-- **Peak Day**: Thursday (10 companies)
+- **Total Companies Reporting**: 12
+- **Mega/Large Cap (>$10B)**: 10
+- **Mid Cap ($2B-$10B)**: 2
+- **Peak Day**: Tuesday (4 companies)
 
 ---
 
-## Monday, October 26, 2026
+## Monday, November 02, 2026
+
+### Before Market Open (BMO)
+
+*No earnings announcements*
+
+### After Market Close (AMC)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| AAPL | Apple Inc. | $5.0T | Technology | $1.99 | $113.4B |
+| PLTR | Palantir Technologies Inc. | $423.6B | Technology | $0.41 | $2.2B |
+| ROKU | Roku, Inc. | $20.5B | Communication Serv | $0.53 | $1.4B |
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Tuesday, November 03, 2026
 
 ### Before Market Open (BMO)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| VZ | Verizon Communications Inc. | $185.6B | Communication Serv | $1.27 | $34.8B |
+| SHOP | Shopify Inc. | $204.4B | Technology | $0.46 | $3.7B |
+| PFE | Pfizer Inc. | $174.0B | Healthcare | $0.73 | $15.9B |
+| ET | Energy Transfer LP | $69.7B | Energy | $0.40 | $31.0B |
+
+### After Market Close (AMC)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| AMD | Advanced Micro Devices, Inc. | $824.1B | Technology | $1.95 | $13.1B |
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Wednesday, November 04, 2026
+
+### Before Market Open (BMO)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| UBER | Uber Technologies, Inc. | $133.3B | Technology | $0.86 | $14.7B |
+
+### After Market Close (AMC)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| SNAP | Snap Inc. | $9.0B | Communication Serv | $0.00 | $1.7B |
+| RIOT | Riot Platforms, Inc. | $4.8B | Financial Services | $-0.34 | $160M |
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Thursday, November 05, 2026
+
+### Before Market Open (BMO)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| SONY | Sony Group Corporation | $148.7B | Technology | $0.38 | $20.1B |
 
 ### After Market Close (AMC)
 
@@ -34,91 +97,13 @@
 
 ---
 
-## Tuesday, October 27, 2026
+## Friday, November 06, 2026
 
 ### Before Market Open (BMO)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| KO | The Coca-Cola Company | $398.9B | Consumer Defensive | $0.88 | $12.9B |
-| BA | The Boeing Company | $148.9B | Industrials | $-0.25 | $23.9B |
-| HCA | HCA Healthcare, Inc. | $101.5B | Healthcare | $6.65 | $19.3B |
-| PYPL | PayPal Holdings, Inc. | $48.8B | Financial Services | $1.31 | $8.7B |
-| SOFI | SoFi Technologies, Inc. | $18.9B | Financial Services | $0.17 | $1.3B |
-
-### After Market Close (AMC)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| V | Visa Inc. | $761.6B | Financial Services | $3.44 | $12.1B |
-| HOOD | Robinhood Markets, Inc. | $75.2B | Financial Services | $0.56 | $1.4B |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Wednesday, October 28, 2026
-
-### Before Market Open (BMO)
-
-*No earnings announcements*
-
-### After Market Close (AMC)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| GOOGL | Alphabet Inc. | $3.9T | Communication Serv | $3.03 | $127.9B |
-| MSFT | Microsoft Corporation | $3.9T | Technology | $4.71 | $90.6B |
-| FDX | FedEx Corporation | $70.7B | Industrials | $3.33 | $22.7B |
-| F | Ford Motor Company | $46.3B | Consumer Cyclical | $0.41 | $49.1B |
-| ETSY | Etsy, Inc. | $8.0B | Consumer Cyclical | $0.76 | $668M |
-| MGM | MGM Resorts International | $7.1B | Consumer Cyclical | $0.06 | $4.2B |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Thursday, October 29, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| CARR | Carrier Global Corporation | $46.4B | Industrials | $0.76 | $6.1B |
-| SIRI | Sirius XM Holdings Inc. | $9.3B | Communication Serv | $0.77 | $2.2B |
-
-### After Market Close (AMC)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| AMZN | Amazon.com, Inc. | $2.7T | Consumer Cyclical | $1.96 | $202.2B |
-| INTC | Intel Corp. | $459.7B | Technology | $0.40 | $16.5B |
-| SBUX | Starbucks Corporation | $114.9B | Consumer Cyclical | $0.72 | $9.2B |
-| COIN | Coinbase Global, Inc. | $43.4B | Financial Services | $-0.23 | $1.2B |
-| RBLX | Roblox Corporation | $37.8B | Technology | $-0.43 | $1.6B |
-| RKT | Rocket Companies, Inc. | $33.1B | Financial Services | $0.14 | $2.6B |
-| RIVN | Rivian Automotive, Inc. | $17.1B | Consumer Cyclical | $-0.65 | $2.0B |
-| PINS | Pinterest, Inc. | $12.6B | Communication Serv | $0.49 | $1.2B |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Friday, October 30, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| XOM | Exxonmobil Holdings Corporation | $753.3B | Energy | $4.10 | $105.4B |
-| ABBV | AbbVie Inc. | $504.8B | Healthcare | $3.74 | $17.3B |
-| CVX | Chevron Corporation | $460.8B | Energy | $4.86 | $61.3B |
+| MRNA | Moderna, Inc. | $88.5B | Healthcare | $-1.10 | $890M |
 
 ### After Market Close (AMC)
 
@@ -133,21 +118,21 @@
 ## Key Observations
 
 ### Highest Market Cap Companies This Week
-1. Alphabet Inc. (GOOGL) - $3.9T - Wed AMC
-2. Microsoft Corporation (MSFT) - $3.9T - Wed AMC
-3. Amazon.com, Inc. (AMZN) - $2.7T - Thu AMC
-4. Visa Inc. (V) - $761.6B - Tue AMC
-5. Exxonmobil Holdings Corporation (XOM) - $753.3B - Fri BMO
+1. Apple Inc. (AAPL) - $5.0T - Mon AMC
+2. Advanced Micro Devices, Inc. (AMD) - $824.1B - Tue AMC
+3. Palantir Technologies Inc. (PLTR) - $423.6B - Mon AMC
+4. Shopify Inc. (SHOP) - $204.4B - Tue BMO
+5. Pfizer Inc. (PFE) - $174.0B - Tue BMO
 
 ### Sector Distribution
-- **Financial Services**: 6 companies
-- **Consumer Cyclical**: 6 companies
-- **Communication Services**: 4 companies
-- **Industrials**: 3 companies
-- **Technology**: 3 companies
+- **Technology**: 6 companies
+- **Communication Services**: 2 companies
+- **Healthcare**: 2 companies
+- **Energy**: 1 companies
+- **Financial Services**: 1 companies
 
 ### Trading Considerations
-- **Peak Day**: Thursday with 10 earnings announcements
+- **Peak Day**: Tuesday with 4 earnings announcements
 - **Pre-Market Focus**: BMO announcements before 9:30 AM ET
 - **After-Hours Focus**: AMC announcements after 4:00 PM ET
 
