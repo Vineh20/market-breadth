@@ -1,5 +1,5 @@
 # VCP Screener Report - Minervini Volatility Contraction Pattern
-**Generated:** 2026-11-04 03:05:25
+**Generated:** 2026-11-05 03:36:48
 **Universe:** S&P 500 (503 stocks)
 
 ---
@@ -9,11 +9,11 @@
 | Stage | Count |
 |-------|-------|
 | Universe | 503 |
-| Pre-filter passed | 323 |
-| Trend Template passed | 159 |
-| VCP candidates | 157 |
+| Pre-filter passed | 340 |
+| Trend Template passed | 174 |
+| VCP candidates | 172 |
 
-**Showing top 20 of 157 candidates** (sorted by composite score)
+**Showing top 20 of 172 candidates** (sorted by composite score)
 
 ---
 
@@ -21,26 +21,26 @@
 
 | # | Symbol | Quality | State | Type | Price | Pivot Dist |
 |---|--------|---------|-------|------|-------|------------|
-| 1 | EOG | 66 (Developing VCP) | Early-post-breakout | VCP-adjacent | $155.17 | +1.3% |
-| 2 | WSM | 66 (Developing VCP) | Early-post-breakout | VCP-adjacent | $253.70 | +2.6% |
-| 3 | FDX | 65 (Developing VCP) | Pre-breakout | VCP-adjacent | $318.02 | -3.1% |
-| 4 | CPAY | 64 (Developing VCP) | Pre-breakout | VCP-adjacent | $406.58 | -0.2% |
-| 5 | MNST | 64 (Developing VCP) | Pre-breakout | VCP-adjacent | $47.18 | -4.2% |
-| 6 | TRGP | 64 (Developing VCP) | Early-post-breakout | VCP-adjacent | $298.56 | +1.1% |
-| 7 | CVX | 62 (Developing VCP) | Early-post-breakout | VCP-adjacent | $225.27 | +3.4% |
-| 8 | PSX | 62 (Developing VCP) | Pre-breakout | VCP-adjacent | $271.94 | -1.9% |
-| 9 | IFF | 61 (Developing VCP) | Extended | VCP-adjacent | $92.18 | +6.3% |
-| 10 | PFE | 61 (Developing VCP) | Breakout | VCP-adjacent | $30.00 | +2.7% |
-| 11 | NDSN | 61 (Developing VCP) | Pre-breakout | VCP-adjacent | $331.06 | -2.1% |
-| 12 | UNP | 61 (Developing VCP) | Pre-breakout | VCP-adjacent | $303.43 | -3.0% |
-| 13 | KDP | 60 (Developing VCP) | Extended | VCP-adjacent | $34.74 | +8.9% |
-| 14 | EW | 60 (Developing VCP) | Breakout | VCP-adjacent | $95.19 | +2.4% |
-| 15 | VTRS | 60 (Developing VCP) | Early-post-breakout | VCP-adjacent | $18.92 | +2.7% |
-| 16 | COP | 60 (Developing VCP) | Early-post-breakout | VCP-adjacent | $144.40 | +2.0% |
-| 17 | BDX | 60 (Developing VCP) | Extended | VCP-adjacent | $198.17 | +6.2% |
-| 18 | DE | 58 (Weak VCP) | Pre-breakout | VCP-adjacent | $665.83 | -7.5% |
-| 19 | TGT | 58 (Weak VCP)★ | Damaged | Damaged | $154.40 | -3.2% |
-| 20 | EXPD | 58 (Weak VCP) | Breakout | VCP-adjacent | $204.31 | +1.8% |
+| 1 | BBY | 76 (Good VCP) | Early-post-breakout | Post-breakout | $101.36 | +0.8% |
+| 2 | ROST | 70 (Developing VCP) | Breakout | VCP-adjacent | $245.74 | +1.8% |
+| 3 | FDX | 69 (Developing VCP) | Breakout | Post-breakout | $329.40 | +0.4% |
+| 4 | MNST | 66 (Developing VCP) | Pre-breakout | VCP-adjacent | $48.75 | -1.0% |
+| 5 | CPAY | 66 (Developing VCP) | Early-post-breakout | VCP-adjacent | $418.60 | +2.7% |
+| 6 | CVX | 64 (Developing VCP) | Pre-breakout | VCP-adjacent | $216.96 | -0.4% |
+| 7 | AIZ | 63 (Developing VCP) | Extended | VCP-adjacent | $308.52 | +7.0% |
+| 8 | DXCM | 63 (Developing VCP) | Pre-breakout | VCP-adjacent | $88.48 | -0.4% |
+| 9 | JNJ | 63 (Developing VCP) | Early-post-breakout | VCP-adjacent | $276.32 | +0.4% |
+| 10 | XOM | 63 (Developing VCP) | Pre-breakout | VCP-adjacent | $169.27 | -0.2% |
+| 11 | D | 63 (Developing VCP) | Breakout | VCP-adjacent | $69.75 | +1.0% |
+| 12 | EW | 62 (Developing VCP) | Extended | Extended Leader | $99.37 | +5.8% |
+| 13 | CNC | 62 (Developing VCP) | Early-post-breakout | VCP-adjacent | $76.01 | +4.8% |
+| 14 | BEN | 62 (Developing VCP) | Early-post-breakout | VCP-adjacent | $33.87 | +1.8% |
+| 15 | UNP | 62 (Developing VCP) | Pre-breakout | VCP-adjacent | $308.53 | -1.3% |
+| 16 | MRK | 61 (Developing VCP) | Pre-breakout | VCP-adjacent | $150.36 | -2.1% |
+| 17 | CSX | 61 (Developing VCP) | Early-post-breakout | VCP-adjacent | $52.05 | +0.1% |
+| 18 | IFF | 60 (Developing VCP) | Breakout | VCP-adjacent | $87.67 | +1.1% |
+| 19 | ABBV | 60 (Developing VCP) | Breakout | VCP-adjacent | $294.83 | +1.2% |
+| 20 | XYZ | 60 (Developing VCP) | Extended | Extended Leader | $87.63 | +8.0% |
 
 ★ = State Cap applied (rating downgraded from raw score)
 
@@ -52,418 +52,418 @@ No actionable pre-breakout candidates found.
 
 ## Section B: Extended / Quality VCP (20 stocks)
 
-### 1. EOG - EOG Resources
-**Quality:** 66/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $155.17 | **Market Cap:** $82.8B | **Sector:** Energy
+### 1. BBY - Best Buy
+**Quality:** 76/100 (Good VCP) | **State:** Early-post-breakout | **Type:** Post-breakout
+**Price:** $101.36 | **Market Cap:** $19.7B | **Sector:** Consumer Discretionary
 
 | Component | Score | Details |
 |-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=7.1%, T2=10.9% |
-| Volume Pattern | 40/100 | Dry-up: 0.80 |
-| Pivot Proximity | 90/100 | +1.3% from pivot (ABOVE PIVOT (within 3%)) |
-| Relative Strength | 80/100 | RS Percentile: 75, Weighted RS: +23.2% |
+| Trend Template | 95/100 | 7/7 criteria (raw 100, ext -5) |
+| Contraction Quality | 60/100 | 2 contractions: T1=13.3%, T2=7.4% |
+| Volume Pattern | 50/100 | Dry-up: 0.79 |
+| Pivot Proximity | 90/100 | +0.8% from pivot (ABOVE PIVOT (within 3%)) |
+| Relative Strength | 90/100 | RS Percentile: 93, Weighted RS: +37.3% |
 
 **Trade Setup:**
-- Pivot: $153.13
-- Stop-loss: $135.07
-- Risk: 12.9%
-- Guidance: Watchlist - wait for tighter contraction near pivot
+- Pivot: $100.58
+- Stop-loss: $92.25
+- Risk: 9.0%
+- Guidance: Buy on volume confirmation above pivot
 
 ---
 
-### 2. WSM - Williams-Sonoma, Inc.
-**Quality:** 66/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $253.70 | **Market Cap:** $30.6B | **Sector:** Consumer Discretionary
+### 2. ROST - Ross Stores
+**Quality:** 70/100 (Developing VCP) | **State:** Breakout | **Type:** VCP-adjacent
+**Price:** $245.74 | **Market Cap:** $74.0B | **Sector:** Consumer Discretionary
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 40/100 | 3 contractions: T1=6.8%, T2=11.4%, T3=11.9% |
-| Volume Pattern | 40/100 | Dry-up: 0.81 |
-| Pivot Proximity | 90/100 | +2.6% from pivot (ABOVE PIVOT (within 3%)) |
-| Relative Strength | 60/100 | RS Percentile: 51, Weighted RS: +14.9% |
+| Contraction Quality | 40/100 | 3 contractions: T1=8.7%, T2=8.2%, T3=6.7% |
+| Volume Pattern | 60/100 | Dry-up: 1.00 |
+| Pivot Proximity | 100/100 | +1.8% from pivot (BREAKOUT CONFIRMED) |
+| Relative Strength | 50/100 | RS Percentile: 33, Weighted RS: +10.9% |
 
 **Trade Setup:**
-- Pivot: $247.32
-- Stop-loss: $215.76
-- Risk: 14.9%
+- Pivot: $241.49
+- Stop-loss: $223.05
+- Risk: 9.2%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
 ### 3. FDX - FedEx
-**Quality:** 65/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $318.02 | **Market Cap:** $74.5B | **Sector:** Industrials
+**Quality:** 69/100 (Developing VCP) | **State:** Breakout | **Type:** Post-breakout
+**Price:** $329.40 | **Market Cap:** $74.5B | **Sector:** Industrials
 
 | Component | Score | Details |
 |-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
+| Trend Template | 95/100 | 7/7 criteria (raw 100, ext -5) |
 | Contraction Quality | 60/100 | 2 contractions: T1=11.1%, T2=7.7% |
-| Volume Pattern | 30/100 | Dry-up: 1.01 |
-| Pivot Proximity | 75/100 | -3.1% from pivot (NEAR PIVOT (2-5% below)) |
-| Relative Strength | 50/100 | RS Percentile: 41, Weighted RS: +12.6% |
+| Volume Pattern | 40/100 | Dry-up: 1.05 |
+| Pivot Proximity | 100/100 | +0.4% from pivot (BREAKOUT CONFIRMED) |
+| Relative Strength | 50/100 | RS Percentile: 43, Weighted RS: +13.2% |
 
 **Trade Setup:**
 - Pivot: $328.20
 - Stop-loss: $299.84
-- Risk: 5.7%
+- Risk: 9.0%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 4. CPAY - Corpay
-**Quality:** 64/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $406.58 | **Market Cap:** $26.9B | **Sector:** Financials
+### 4. MNST - Monster Beverage
+**Quality:** 66/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
+**Price:** $48.75 | **Market Cap:** $138.6B | **Sector:** Consumer Staples
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 95/100 | 7/7 criteria (raw 100, ext -5) |
+| Contraction Quality | 40/100 | 3 contractions: T1=7.4%, T2=9.9%, T3=14.3% |
+| Volume Pattern | 50/100 | Dry-up: 0.94 |
+| Pivot Proximity | 90/100 | -1.0% from pivot (AT PIVOT (within 2%)) |
+| Relative Strength | 60/100 | RS Percentile: 47, Weighted RS: +13.7% |
+
+**Trade Setup:**
+- Pivot: $49.24
+- Stop-loss: $41.77
+- Risk: 14.3%
+- Guidance: Watchlist - wait for tighter contraction near pivot
+
+---
+
+### 5. CPAY - Corpay
+**Quality:** 66/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
+**Price:** $418.60 | **Market Cap:** $26.7B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
 | Contraction Quality | 30/100 | 2 contractions: T1=9.7%, T2=4.4% |
 | Volume Pattern | 40/100 | Dry-up: 0.84 |
-| Pivot Proximity | 90/100 | -0.2% from pivot (AT PIVOT (within 2%)) |
-| Relative Strength | 70/100 | RS Percentile: 71, Weighted RS: +22.4% |
+| Pivot Proximity | 90/100 | +2.7% from pivot (ABOVE PIVOT (within 3%)) |
+| Relative Strength | 80/100 | RS Percentile: 80, Weighted RS: +22.9% |
 
 **Trade Setup:**
 - Pivot: $407.52
 - Stop-loss: $385.86
-- Risk: 5.1%
+- Risk: 7.8%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 5. MNST - Monster Beverage
+### 6. CVX - Chevron Corporation
 **Quality:** 64/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $47.18 | **Market Cap:** $141.1B | **Sector:** Consumer Staples
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 40/100 | 3 contractions: T1=7.4%, T2=9.9%, T3=14.3% |
-| Volume Pattern | 50/100 | Dry-up: 0.93 |
-| Pivot Proximity | 75/100 | -4.2% from pivot (NEAR PIVOT (2-5% below)) |
-| Relative Strength | 50/100 | RS Percentile: 34, Weighted RS: +11.5% |
-
-**Trade Setup:**
-- Pivot: $49.24
-- Stop-loss: $41.77
-- Risk: 11.5%
-- Guidance: Watchlist - wait for tighter contraction near pivot
-
----
-
-### 6. TRGP - Targa Resources
-**Quality:** 64/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $298.56 | **Market Cap:** $63.2B | **Sector:** Energy
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=6.1%, T2=10.0% |
-| Volume Pattern | 20/100 | Dry-up: 1.10 |
-| Pivot Proximity | 90/100 | +1.1% from pivot (ABOVE PIVOT (within 3%)) |
-| Relative Strength | 90/100 | RS Percentile: 92, Weighted RS: +33.9% |
-
-**Trade Setup:**
-- Pivot: $295.44
-- Stop-loss: $263.27
-- Risk: 11.8%
-- Guidance: Watchlist - wait for tighter contraction near pivot
-
----
-
-### 7. CVX - Chevron Corporation
-**Quality:** 62/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $225.27 | **Market Cap:** $450.0B | **Sector:** Energy
+**Price:** $216.96 | **Market Cap:** $445.1B | **Sector:** Energy
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
 | Contraction Quality | 30/100 | 2 contractions: T1=5.3%, T2=7.8% |
-| Volume Pattern | 40/100 | Dry-up: 0.90 |
-| Pivot Proximity | 65/100 | +3.4% from pivot (EXTENDED - Moderate chase risk) |
-| Relative Strength | 80/100 | RS Percentile: 76, Weighted RS: +23.6% |
+| Volume Pattern | 40/100 | Dry-up: 0.88 |
+| Pivot Proximity | 90/100 | -0.4% from pivot (AT PIVOT (within 2%)) |
+| Relative Strength | 70/100 | RS Percentile: 63, Weighted RS: +17.8% |
 
 **Trade Setup:**
 - Pivot: $217.78
 - Stop-loss: $198.77
-- Risk: 11.8%
-- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +3.4% above pivot - Minervini advises against chasing >5% above pivot
+- Risk: 8.4%
+- Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 8. PSX - Phillips 66
-**Quality:** 62/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $271.94 | **Market Cap:** $107.3B | **Sector:** Energy
+### 7. AIZ - Assurant
+**Quality:** 63/100 (Developing VCP) | **State:** Extended | **Type:** VCP-adjacent
+**Price:** $308.52 | **Market Cap:** $14.6B | **Sector:** Financials
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 95/100 | 7/7 criteria (raw 100, ext -5) |
+| Contraction Quality | 30/100 | 2 contractions: T1=5.6%, T2=3.3% |
+| Volume Pattern | 70/100 | Dry-up: 0.95 |
+| Pivot Proximity | 50/100 | +7.0% from pivot (EXTENDED - High chase risk) |
+| Relative Strength | 70/100 | RS Percentile: 60, Weighted RS: +17.1% |
+
+**Trade Setup:**
+- Pivot: $288.36
+- Stop-loss: $276.17
+- Risk from current price: 10.5%
+- WARNING: +7.0% above pivot — consider waiting for pullback to pivot.
+- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +7.0% above pivot - Minervini advises against chasing >5% above pivot
+
+---
+
+### 8. DXCM - Dexcom
+**Quality:** 63/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
+**Price:** $88.48 | **Market Cap:** $30.9B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 0/100 | 1 contractions: T1=10.3% |
+| Contraction Quality | 40/100 | 3 contractions: T1=10.9%, T2=8.3%, T3=13.9% |
+| Volume Pattern | 20/100 | Dry-up: 1.50 |
+| Pivot Proximity | 90/100 | -0.4% from pivot (AT PIVOT (within 2%)) |
+| Relative Strength | 70/100 | RS Percentile: 70, Weighted RS: +20.0% |
+
+**Trade Setup:**
+- Pivot: $88.87
+- Stop-loss: $75.75
+- Risk: 14.4%
+- Guidance: Watchlist - wait for tighter contraction near pivot
+
+---
+
+### 9. JNJ - Johnson & Johnson
+**Quality:** 63/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
+**Price:** $276.32 | **Market Cap:** $640.8B | **Sector:** Health Care
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 100/100 | 7/7 criteria |
+| Contraction Quality | 30/100 | 2 contractions: T1=7.2%, T2=8.7% |
 | Volume Pattern | 40/100 | Dry-up: 0.98 |
-| Pivot Proximity | 90/100 | -1.9% from pivot (AT PIVOT (within 2%)) |
-| Relative Strength | 100/100 | RS Percentile: 97, Weighted RS: +58.5% |
+| Pivot Proximity | 90/100 | +0.4% from pivot (ABOVE PIVOT (within 3%)) |
+| Relative Strength | 60/100 | RS Percentile: 56, Weighted RS: +16.1% |
 
 **Trade Setup:**
-- Pivot: $277.12
-- Stop-loss: $246.02
-- Risk: 9.5%
+- Pivot: $275.23
+- Stop-loss: $248.66
+- Risk: 10.0%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 9. IFF - International Flavors & Fragrances
-**Quality:** 61/100 (Developing VCP) | **State:** Extended | **Type:** VCP-adjacent
-**Price:** $92.18 | **Market Cap:** $24.1B | **Sector:** Materials
+### 10. XOM - ExxonMobil
+**Quality:** 63/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
+**Price:** $169.27 | **Market Cap:** $723.9B | **Sector:** Energy
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 40/100 | 3 contractions: T1=9.5%, T2=6.8%, T3=5.9% |
-| Volume Pattern | 40/100 | Dry-up: 1.23 |
-| Pivot Proximity | 50/100 | +6.3% from pivot (EXTENDED - High chase risk) |
-| Relative Strength | 70/100 | RS Percentile: 70, Weighted RS: +20.3% |
-
-**Trade Setup:**
-- Pivot: $86.68
-- Stop-loss: $80.72
-- Risk from current price: 12.4%
-- WARNING: +6.3% above pivot — consider waiting for pullback to pivot.
-- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +6.3% above pivot - Minervini advises against chasing >5% above pivot
-
----
-
-### 10. PFE - Pfizer
-**Quality:** 61/100 (Developing VCP) | **State:** Breakout | **Type:** VCP-adjacent
-**Price:** $30.00 | **Market Cap:** $174.8B | **Sector:** Health Care
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 0/100 | 1 contractions: T1=6.7% |
-| Volume Pattern | 60/100 | Dry-up: 0.99 |
-| Pivot Proximity | 100/100 | +2.7% from pivot (BREAKOUT CONFIRMED) |
-| Relative Strength | 60/100 | RS Percentile: 55, Weighted RS: +15.4% |
-
-**Trade Setup:**
-- Pivot: $29.21
-- Stop-loss: $26.98
-- Risk: 10.1%
-- Guidance: Watchlist - wait for tighter contraction near pivot
-
----
-
-### 11. NDSN - Nordson Corporation
-**Quality:** 61/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $331.06 | **Market Cap:** $18.2B | **Sector:** Industrials
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=9.5%, T2=5.8% |
+| Contraction Quality | 30/100 | 2 contractions: T1=7.9%, T2=8.1% |
 | Volume Pattern | 40/100 | Dry-up: 0.99 |
-| Pivot Proximity | 75/100 | -2.1% from pivot (NEAR PIVOT (2-5% below)) |
-| Relative Strength | 60/100 | RS Percentile: 50, Weighted RS: +14.6% |
+| Pivot Proximity | 90/100 | -0.2% from pivot (AT PIVOT (within 2%)) |
+| Relative Strength | 60/100 | RS Percentile: 51, Weighted RS: +14.9% |
 
 **Trade Setup:**
-- Pivot: $338.18
-- Stop-loss: $315.49
-- Risk: 4.7%
+- Pivot: $169.64
+- Stop-loss: $154.29
+- Risk: 8.8%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 12. UNP - Union Pacific Corporation
-**Quality:** 61/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $303.43 | **Market Cap:** $182.4B | **Sector:** Industrials
+### 11. D - Dominion Energy
+**Quality:** 63/100 (Developing VCP) | **State:** Breakout | **Type:** VCP-adjacent
+**Price:** $69.75 | **Market Cap:** $58.7B | **Sector:** Utilities
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 81/100 | 6/7 criteria (raw 86, ext -5) |
+| Contraction Quality | 30/100 | 2 contractions: T1=9.6%, T2=7.2% |
+| Volume Pattern | 70/100 | Dry-up: 0.96 |
+| Pivot Proximity | 100/100 | +1.0% from pivot (BREAKOUT CONFIRMED) |
+| Relative Strength | 40/100 | RS Percentile: 15, Weighted RS: +7.0% |
+
+**Trade Setup:**
+- Pivot: $69.05
+- Stop-loss: $63.41
+- Risk: 9.1%
+- Guidance: Watchlist - wait for tighter contraction near pivot
+
+---
+
+### 12. EW - Edwards Lifesciences
+**Quality:** 62/100 (Developing VCP) | **State:** Extended | **Type:** Extended Leader
+**Price:** $99.37 | **Market Cap:** $54.9B | **Sector:** Health Care
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 90/100 | 7/7 criteria (raw 100, ext -10) |
+| Contraction Quality | 60/100 | 2 contractions: T1=15.7%, T2=10.8% |
+| Volume Pattern | 50/100 | Dry-up: 1.25 |
+| Pivot Proximity | 50/100 | +5.8% from pivot (EXTENDED - High chase risk) |
+| Relative Strength | 50/100 | RS Percentile: 34, Weighted RS: +11.0% |
+
+**Trade Setup:**
+- Pivot: $93.91
+- Stop-loss: $82.97
+- Risk from current price: 16.5%
+- WARNING: +5.8% above pivot — consider waiting for pullback to pivot.
+- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +5.8% above pivot - Minervini advises against chasing >5% above pivot
+
+---
+
+### 13. CNC - Centene Corporation
+**Quality:** 62/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
+**Price:** $76.01 | **Market Cap:** $33.4B | **Sector:** Health Care
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 90/100 | 7/7 criteria (raw 100, ext -10) |
+| Contraction Quality | 30/100 | 2 contractions: T1=14.6%, T2=10.6% |
+| Volume Pattern | 30/100 | Dry-up: 1.15 |
+| Pivot Proximity | 75/100 | +4.8% from pivot (EXTENDED - Moderate chase risk (vol confirmed)) |
+| Relative Strength | 100/100 | RS Percentile: 98, Weighted RS: +49.8% |
+
+**Trade Setup:**
+- Pivot: $72.50
+- Stop-loss: $64.20
+- Risk: 15.5%
+- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +4.8% above pivot - Minervini advises against chasing >5% above pivot
+
+---
+
+### 14. BEN - Franklin Resources
+**Quality:** 62/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
+**Price:** $33.87 | **Market Cap:** $16.4B | **Sector:** Financials
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 100/100 | 7/7 criteria |
+| Contraction Quality | 40/100 | 3 contractions: T1=8.6%, T2=5.7%, T3=9.6% |
+| Volume Pattern | 30/100 | Dry-up: 0.86 |
+| Pivot Proximity | 90/100 | +1.8% from pivot (ABOVE PIVOT (within 3%)) |
+| Relative Strength | 50/100 | RS Percentile: 40, Weighted RS: +12.5% |
+
+**Trade Setup:**
+- Pivot: $33.28
+- Stop-loss: $29.79
+- Risk: 12.1%
+- Guidance: Watchlist - wait for tighter contraction near pivot
+
+---
+
+### 15. UNP - Union Pacific Corporation
+**Quality:** 62/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
+**Price:** $308.53 | **Market Cap:** $180.3B | **Sector:** Industrials
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
 | Contraction Quality | 30/100 | 2 contractions: T1=9.9%, T2=14.2% |
 | Volume Pattern | 40/100 | Dry-up: 1.15 |
-| Pivot Proximity | 75/100 | -3.0% from pivot (NEAR PIVOT (2-5% below)) |
-| Relative Strength | 60/100 | RS Percentile: 45, Weighted RS: +13.4% |
+| Pivot Proximity | 90/100 | -1.3% from pivot (AT PIVOT (within 2%)) |
+| Relative Strength | 50/100 | RS Percentile: 41, Weighted RS: +12.9% |
 
 **Trade Setup:**
 - Pivot: $312.70
 - Stop-loss: $265.58
-- Risk: 12.5%
+- Risk: 13.9%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 13. KDP - Keurig Dr Pepper
-**Quality:** 60/100 (Developing VCP) | **State:** Extended | **Type:** VCP-adjacent
-**Price:** $34.74 | **Market Cap:** $50.1B | **Sector:** Consumer Staples
+### 16. MRK - Merck & Co.
+**Quality:** 61/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
+**Price:** $150.36 | **Market Cap:** $356.9B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=7.9%, T2=5.8% |
-| Volume Pattern | 50/100 | Dry-up: 1.47 |
-| Pivot Proximity | 50/100 | +8.9% from pivot (EXTENDED - High chase risk) |
-| Relative Strength | 70/100 | RS Percentile: 61, Weighted RS: +17.1% |
+| Contraction Quality | 30/100 | 2 contractions: T1=8.8%, T2=9.6% |
+| Volume Pattern | 20/100 | Dry-up: 1.12 |
+| Pivot Proximity | 75/100 | -2.1% from pivot (NEAR PIVOT (2-5% below)) |
+| Relative Strength | 90/100 | RS Percentile: 90, Weighted RS: +31.2% |
 
 **Trade Setup:**
-- Pivot: $31.91
-- Stop-loss: $29.76
-- Risk from current price: 14.3%
-- WARNING: +8.9% above pivot — consider waiting for pullback to pivot.
-- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +8.9% above pivot - Minervini advises against chasing >5% above pivot
+- Pivot: $153.57
+- Stop-loss: $137.41
+- Risk: 8.6%
+- Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 14. EW - Edwards Lifesciences
+### 17. CSX - CSX Corporation
+**Quality:** 61/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
+**Price:** $52.05 | **Market Cap:** $93.5B | **Sector:** Industrials
+
+| Component | Score | Details |
+|-----------|-------|---------|
+| Trend Template | 100/100 | 7/7 criteria |
+| Contraction Quality | 30/100 | 2 contractions: T1=7.8%, T2=12.0% |
+| Volume Pattern | 30/100 | Dry-up: 1.34 |
+| Pivot Proximity | 90/100 | +0.1% from pivot (ABOVE PIVOT (within 3%)) |
+| Relative Strength | 60/100 | RS Percentile: 46, Weighted RS: +13.7% |
+
+**Trade Setup:**
+- Pivot: $52.01
+- Stop-loss: $45.33
+- Risk: 12.9%
+- Guidance: Watchlist - wait for tighter contraction near pivot
+
+---
+
+### 18. IFF - International Flavors & Fragrances
 **Quality:** 60/100 (Developing VCP) | **State:** Breakout | **Type:** VCP-adjacent
-**Price:** $95.19 | **Market Cap:** $53.8B | **Sector:** Health Care
+**Price:** $87.67 | **Market Cap:** $23.5B | **Sector:** Materials
 
 | Component | Score | Details |
 |-----------|-------|---------|
 | Trend Template | 86/100 | 6/7 criteria |
-| Contraction Quality | 40/100 | 3 contractions: T1=15.7%, T2=5.5%, T3=9.8% |
-| Volume Pattern | 40/100 | Dry-up: 1.15 |
-| Pivot Proximity | 100/100 | +2.4% from pivot (BREAKOUT CONFIRMED) |
-| Relative Strength | 40/100 | RS Percentile: 17, Weighted RS: +7.4% |
+| Contraction Quality | 40/100 | 3 contractions: T1=9.5%, T2=6.8%, T3=5.9% |
+| Volume Pattern | 40/100 | Dry-up: 1.25 |
+| Pivot Proximity | 100/100 | +1.1% from pivot (BREAKOUT CONFIRMED) |
+| Relative Strength | 40/100 | RS Percentile: 28, Weighted RS: +9.7% |
 
 **Trade Setup:**
-- Pivot: $92.95
-- Stop-loss: $82.97
-- Risk: 12.8%
+- Pivot: $86.68
+- Stop-loss: $80.72
+- Risk: 7.9%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 15. VTRS - Viatris
-**Quality:** 60/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $18.92 | **Market Cap:** $21.4B | **Sector:** Health Care
+### 19. ABBV - AbbVie
+**Quality:** 60/100 (Developing VCP) | **State:** Breakout | **Type:** VCP-adjacent
+**Price:** $294.83 | **Market Cap:** $505.4B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 0/100 | 1 contractions: T1=8.4% |
-| Volume Pattern | 40/100 | Dry-up: 0.97 |
-| Pivot Proximity | 90/100 | +2.7% from pivot (ABOVE PIVOT (within 3%)) |
-| Relative Strength | 90/100 | RS Percentile: 85, Weighted RS: +29.4% |
+| Trend Template | 95/100 | 7/7 criteria (raw 100, ext -5) |
+| Contraction Quality | 0/100 | 1 contractions: T1=4.6% |
+| Volume Pattern | 40/100 | Dry-up: 1.07 |
+| Pivot Proximity | 100/100 | +1.2% from pivot (BREAKOUT CONFIRMED) |
+| Relative Strength | 90/100 | RS Percentile: 86, Weighted RS: +28.0% |
 
 **Trade Setup:**
-- Pivot: $18.43
-- Stop-loss: $16.72
-- Risk: 11.6%
+- Pivot: $291.40
+- Stop-loss: $275.23
+- Risk: 6.7%
 - Guidance: Watchlist - wait for tighter contraction near pivot
 
 ---
 
-### 16. COP - ConocoPhillips
-**Quality:** 60/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $144.40 | **Market Cap:** $176.4B | **Sector:** Energy
+### 20. XYZ - Block, Inc.
+**Quality:** 60/100 (Developing VCP) | **State:** Extended | **Type:** Extended Leader
+**Price:** $87.63 | **Market Cap:** $45.7B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 0/100 | 1 contractions: T1=12.1% |
-| Volume Pattern | 40/100 | Dry-up: 0.97 |
-| Pivot Proximity | 90/100 | +2.0% from pivot (ABOVE PIVOT (within 3%)) |
-| Relative Strength | 90/100 | RS Percentile: 90, Weighted RS: +31.3% |
+| Trend Template | 90/100 | 7/7 criteria (raw 100, ext -10) |
+| Contraction Quality | 60/100 | 2 contractions: T1=14.5%, T2=9.1% |
+| Volume Pattern | 30/100 | Dry-up: 1.07 |
+| Pivot Proximity | 50/100 | +8.0% from pivot (EXTENDED - High chase risk) |
+| Relative Strength | 60/100 | RS Percentile: 59, Weighted RS: +17.0% |
 
 **Trade Setup:**
-- Pivot: $141.62
-- Stop-loss: $123.23
-- Risk: 14.7%
-- Guidance: Watchlist - wait for tighter contraction near pivot
-
----
-
-### 17. BDX - Becton Dickinson
-**Quality:** 60/100 (Developing VCP) | **State:** Extended | **Type:** VCP-adjacent
-**Price:** $198.17 | **Market Cap:** $54.1B | **Sector:** Health Care
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=8.7%, T2=4.7% |
-| Volume Pattern | 40/100 | Dry-up: 0.96 |
-| Pivot Proximity | 50/100 | +6.2% from pivot (EXTENDED - High chase risk) |
-| Relative Strength | 80/100 | RS Percentile: 78, Weighted RS: +23.7% |
-
-**Trade Setup:**
-- Pivot: $186.63
-- Stop-loss: $176.09
-- Risk from current price: 11.1%
-- WARNING: +6.2% above pivot — consider waiting for pullback to pivot.
-- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +6.2% above pivot - Minervini advises against chasing >5% above pivot
-
----
-
-### 18. DE - Deere & Company
-**Quality:** 58/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $665.83 | **Market Cap:** $180.0B | **Sector:** Industrials
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=5.7%, T2=10.5% |
-| Volume Pattern | 40/100 | Dry-up: 0.80 |
-| Pivot Proximity | 60/100 | -7.5% from pivot (APPROACHING (5-8% below)) |
-| Relative Strength | 60/100 | RS Percentile: 57, Weighted RS: +16.0% |
-
-**Trade Setup:**
-- Pivot: $719.50
-- Stop-loss: $637.62
-- Risk: 4.2%
-- Guidance: Monitor only - pattern needs more development
-
----
-
-### 19. TGT - Target Corporation
-**Quality:** 58/100 (Weak VCP) ★ → No VCP | **State:** Damaged | **Type:** Damaged
-**Price:** $154.40 | **Market Cap:** $72.0B | **Sector:** Consumer Staples
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 86/100 | 6/7 criteria |
-| Contraction Quality | 30/100 | 2 contractions: T1=6.4%, T2=8.9% |
-| Volume Pattern | 30/100 | Dry-up: 1.00 |
-| Pivot Proximity | 75/100 | -3.2% from pivot (NEAR PIVOT (2-5% below)) |
-| Relative Strength | 80/100 | RS Percentile: 80, Weighted RS: +25.0% |
-
-**Trade Setup:**
-- Pivot: $159.56
-- Stop-loss: $143.87
-- Risk: 6.8%
-- Guidance: Not actionable as VCP
-
----
-
-### 20. EXPD - Expeditors International
-**Quality:** 58/100 (Weak VCP) | **State:** Breakout | **Type:** VCP-adjacent
-**Price:** $204.31 | **Market Cap:** $26.1B | **Sector:** Industrials
-
-| Component | Score | Details |
-|-----------|-------|---------|
-| Trend Template | 100/100 | 7/7 criteria |
-| Contraction Quality | 0/100 | 1 contractions: T1=3.5% |
-| Volume Pattern | 30/100 | Dry-up: 1.13 |
-| Pivot Proximity | 100/100 | +1.8% from pivot (BREAKOUT CONFIRMED) |
-| Relative Strength | 80/100 | RS Percentile: 83, Weighted RS: +26.4% |
-
-**Trade Setup:**
-- Pivot: $200.66
-- Stop-loss: $191.75
-- Risk: 6.2%
-- Guidance: Monitor only - pattern needs more development
+- Pivot: $81.17
+- Stop-loss: $73.05
+- Risk from current price: 16.6%
+- WARNING: +8.0% above pivot — consider waiting for pullback to pivot.
+- Guidance: Watchlist - wait for tighter contraction near pivot | WARNING: Stock is +8.0% above pivot - Minervini advises against chasing >5% above pivot
 
 ---
 
 ---
 
 ## Summary Statistics
-- **Total VCP Candidates:** 157
+- **Total VCP Candidates:** 172
 - **Textbook VCP:** 0
 - **Strong VCP:** 0
-- **Good VCP:** 0
-- **Developing VCP:** 17
-- **Weak / No VCP:** 140
+- **Good VCP:** 1
+- **Developing VCP:** 19
+- **Weak / No VCP:** 152
 
 *Counts are based on final rating (after state caps).*
 
@@ -471,21 +471,21 @@ No actionable pre-breakout candidates found.
 
 | Sector | Count |
 |--------|-------|
-| Health Care | 34 |
-| Industrials | 27 |
-| Financials | 22 |
-| Information Technology | 19 |
-| Energy | 14 |
-| Consumer Discretionary | 12 |
-| Consumer Staples | 10 |
-| Materials | 8 |
-| Real Estate | 6 |
-| Utilities | 3 |
-| Communication Services | 2 |
+| Health Care | 38 |
+| Financials | 33 |
+| Industrials | 25 |
+| Information Technology | 17 |
+| Consumer Discretionary | 15 |
+| Consumer Staples | 11 |
+| Energy | 9 |
+| Real Estate | 8 |
+| Materials | 7 |
+| Utilities | 5 |
+| Communication Services | 4 |
 
 ### API Usage
-- **API Calls Made:** 426
-- **Cache Entries:** 426
+- **API Calls Made:** 443
+- **Cache Entries:** 443
 
 ---
 
