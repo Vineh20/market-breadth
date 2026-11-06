@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-05 03:36:50
-**S&P 500:** $7688.62
-**QQQ:** $691.95
+**Generated:** 2026-11-06 03:31:58
+**S&P 500:** $7353.73
+**QQQ:** $647.05
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🟡 **Rally Attempt (Day 1-3)** |
+| **Current State** | 🔴 **Correction** |
 | **Quality Score** | **0/100** |
 | **Signal** | No FTD |
 | **Exposure Guidance** | 0-25% |
@@ -23,33 +23,17 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_ATTEMPT | $7688.62 | $7818.93 | -1.7% | 2026-11-02 ($7541.40) |
-| NASDAQ/QQQ | RALLY_ATTEMPT | $691.95 | $759.66 | -8.9% | 2026-11-02 ($681.09) |
-
----
-
-## Rally Attempt Details
-
-### S&P 500
-
-- **Swing Low:** 2026-11-02 ($7541.40, -3.5% decline)
-- **Rally Day 1:** 2026-11-03
-- **Current Day Count:** 2
-
-### NASDAQ/QQQ
-
-- **Swing Low:** 2026-11-02 ($681.09, -10.3% decline)
-- **Rally Day 1:** 2026-11-03
-- **Current Day Count:** 2
+| S&P 500 | CORRECTION | $7353.73 | $7818.93 | -6.0% | 2026-11-05 ($7353.73) |
+| NASDAQ/QQQ | CORRECTION | $647.05 | $759.66 | -14.8% | 2026-11-05 ($647.05) |
 
 ---
 
 ## Post-FTD Health
 
-- **Power Trend:** No (1/3 conditions)
-  - 21 EMA: $7677.78 (< 50 SMA: $7692.97)
+- **Power Trend:** No (0/3 conditions)
+  - 21 EMA: $7648.28 (< 50 SMA: $7686.53)
   - 50 SMA Rising: No
-  - Price above 21 EMA: Yes
+  - Price above 21 EMA: No
 
 ---
 
@@ -57,21 +41,21 @@
 
 **Recommended Exposure:** 0-25%
 
-- Rally attempt in progress (Day 1-3)
-- Too early to act - wait for Day 4+
-- Prepare watchlists, research leaders
-- Monitor for rally failure (close below swing low)
+- Market in correction, no rally attempt yet
+- Stay defensive, preserve capital
+- Build watchlists of relative strength leaders
+- Wait for first up day to start rally count
 
 ---
 
 ## Key Watch Levels
 
 **S&P 500:**
-- Swing Low: $7541.40 (2026-11-02)
+- Swing Low: $7353.73 (2026-11-05)
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $681.09 (2026-11-02)
+- Swing Low: $647.05 (2026-11-05)
 - Lookback High: $759.66
 
 ---

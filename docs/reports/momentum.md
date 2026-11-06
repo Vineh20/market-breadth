@@ -1,671 +1,671 @@
 # Stockbee Momentum Burst Report
 
-Generated at: 2026-11-05 03:39:24
+Generated at: 2026-11-06 03:34:33
 Market gate: `neutral`
 Input mode: `symbols`
 
 ## Summary
 
-- Symbols processed: 502
+- Symbols processed: 503
 - Non-rejected candidates: 50
-- Rejected candidates: 152
+- Rejected candidates: 424
 
 | State | Count |
 |---|---:|
-| ACTIONABLE_DAY1 | 79 |
-| MANUAL_REVIEW | 150 |
+| ACTIONABLE_DAY1 | 0 |
+| MANUAL_REVIEW | 9 |
 | MANUAL_REVIEW_ONLY | 0 |
-| WATCH_ONLY | 121 |
-| REJECTED | 152 |
+| WATCH_ONLY | 70 |
+| REJECTED | 424 |
 
 ## Candidates
 
-### EVRG — A / 91
+### CPAY — B / 77
 
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 86.21, day gain 0.89%, dollar gain 1.16
-- Volume: 5,923,100 (2.57x previous day, 3.0x 20d avg)
-- Close location: 92.81%
-- Base: 20 days, width 8.32%
-- Entry / stop reference: 86.21 / 83.24 (3.45% risk to stop)
-- Soft failure tags: none
+- State: `MANUAL_REVIEW`
+- Trigger: `4pct_breakout` (4pct_breakout)
+- Price: close 447.0, day gain 6.78%, dollar gain -7.66
+- Volume: 1,754,400 (2.53x previous day, 3.81x 20d avg)
+- Close location: 5.79%
+- Base: 20 days, width 7.57%
+- Entry / stop reference: 447.0 / 445.0 (0.45% risk to stop)
+- Soft failure tags: weak_close_location
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
 
-### JPM — A- / 89
+### MSI — B / 74
 
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, 9m_volume)
-- Price: close 352.11, day gain 4.18%, dollar gain 6.11
-- Volume: 10,378,200 (1.53x previous day, 1.49x 20d avg)
-- Close location: 97.83%
-- Base: 20 days, width 6.12%
-- Entry / stop reference: 352.11 / 342.21 (2.81% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### MSFT — A- / 89
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, 9m_volume)
-- Price: close 555.8, day gain 6.68%, dollar gain 12.1
-- Volume: 50,759,800 (2.54x previous day, 2.27x 20d avg)
-- Close location: 80.12%
-- Base: 20 days, width 8.87%
-- Entry / stop reference: 555.8 / 542.3 (2.43% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### NEE — A- / 89
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion, 9m_volume)
-- Price: close 88.45, day gain 4.89%, dollar gain 0.98
-- Volume: 27,510,400 (2.42x previous day, 2.35x 20d avg)
-- Close location: 85.22%
-- Base: 20 days, width 10.84%
-- Entry / stop reference: 88.45 / 86.49 (2.22% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### HD — A- / 88
-
-- State: `ACTIONABLE_DAY1`
+- State: `MANUAL_REVIEW`
 - Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 355.44, day gain 6.53%, dollar gain 9.43
-- Volume: 8,098,900 (2.13x previous day, 1.72x 20d avg)
-- Close location: 95.65%
-- Base: 14 days, width 12.02%
-- Entry / stop reference: 355.44 / 342.7 (3.58% risk to stop)
-- Soft failure tags: none
+- Price: close 517.01, day gain 4.03%, dollar gain 15.11
+- Volume: 3,406,500 (1.97x previous day, 3.51x 20d avg)
+- Close location: 41.3%
+- Base: 20 days, width 11.66%
+- Entry / stop reference: 517.01 / 495.0 (4.26% risk to stop)
+- Soft failure tags: weak_close_location
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
 
-### AAPL — A- / 87
+### NSC — B / 74
 
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, 9m_volume)
-- Price: close 349.51, day gain 5.31%, dollar gain 7.94
-- Volume: 89,523,300 (1.42x previous day, 2.05x 20d avg)
-- Close location: 63.06%
-- Base: 20 days, width 7.95%
-- Entry / stop reference: 349.51 / 340.99 (2.44% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### DTE — A- / 87
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 137.53, day gain 2.44%, dollar gain 2.47
-- Volume: 2,315,200 (1.83x previous day, 1.83x 20d avg)
-- Close location: 99.52%
-- Base: 20 days, width 7.7%
-- Entry / stop reference: 137.53 / 133.4 (3.0% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### HCA — A- / 87
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 510.7, day gain 10.34%, dollar gain 13.7
-- Volume: 3,446,300 (3.48x previous day, 2.66x 20d avg)
-- Close location: 81.46%
-- Base: 20 days, width 13.05%
-- Entry / stop reference: 510.7 / 492.12 (3.64% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### O — A- / 87
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion, 9m_volume)
-- Price: close 59.22, day gain 2.99%, dollar gain 0.95
-- Volume: 10,389,900 (1.6x previous day, 1.32x 20d avg)
-- Close location: 91.3%
-- Base: 20 days, width 8.39%
-- Entry / stop reference: 59.22 / 57.96 (2.13% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### REG — A- / 87
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 76.84, day gain 2.22%, dollar gain 1.34
-- Volume: 1,635,400 (1.58x previous day, 1.33x 20d avg)
-- Close location: 91.16%
-- Base: 20 days, width 7.25%
-- Entry / stop reference: 76.84 / 75.5 (1.74% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### AIZ — A- / 86
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 308.52, day gain 4.18%, dollar gain 4.62
-- Volume: 882,600 (2.46x previous day, 2.54x 20d avg)
-- Close location: 52.43%
-- Base: 20 days, width 11.63%
-- Entry / stop reference: 308.52 / 302.05 (2.1% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### APD — A- / 86
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 318.87, day gain 1.89%, dollar gain 1.28
-- Volume: 1,687,700 (1.55x previous day, 1.72x 20d avg)
-- Close location: 96.12%
-- Base: 20 days, width 14.43%
-- Entry / stop reference: 318.87 / 312.68 (1.94% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### MMM — A- / 86
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion, 9m_volume)
-- Price: close 193.95, day gain 9.55%, dollar gain 1.25
-- Volume: 9,052,800 (2.95x previous day, 2.59x 20d avg)
-- Close location: 88.34%
-- Base: 20 days, width 11.8%
-- Entry / stop reference: 193.95 / 187.74 (3.2% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### RJF — A- / 86
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout)
-- Price: close 168.69, day gain 4.34%, dollar gain 2.69
-- Volume: 1,201,200 (1.23x previous day, 0.96x 20d avg)
-- Close location: 91.09%
-- Base: 20 days, width 6.06%
-- Entry / stop reference: 168.69 / 164.5 (2.48% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### ALB — A- / 85
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 94.97, day gain 5.3%, dollar gain 2.47
-- Volume: 6,050,700 (3.72x previous day, 2.46x 20d avg)
-- Close location: 76.31%
-- Base: 17 days, width 12.19%
-- Entry / stop reference: 94.97 / 92.2 (2.92% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### D — A- / 85
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, 9m_volume)
-- Price: close 69.75, day gain 4.45%, dollar gain 0.51
-- Volume: 10,969,000 (2.76x previous day, 2.49x 20d avg)
-- Close location: 84.94%
-- Base: 20 days, width 10.54%
-- Entry / stop reference: 69.75 / 68.34 (2.02% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### ECL — A- / 85
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 315.01, day gain 3.39%, dollar gain 4.01
-- Volume: 2,747,100 (2.18x previous day, 1.86x 20d avg)
-- Close location: 94.16%
-- Base: 20 days, width 11.11%
-- Entry / stop reference: 315.01 / 305.82 (2.92% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### UPS — A- / 85
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 114.31, day gain 4.71%, dollar gain 4.0
-- Volume: 7,876,500 (2.03x previous day, 1.56x 20d avg)
-- Close location: 97.25%
-- Base: 17 days, width 14.94%
-- Entry / stop reference: 114.31 / 110.07 (3.71% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### XYZ — A- / 85
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion, 9m_volume)
-- Price: close 87.63, day gain 15.3%, dollar gain 3.63
-- Volume: 20,735,000 (2.13x previous day, 4.14x 20d avg)
-- Close location: 83.24%
-- Base: 20 days, width 10.66%
-- Entry / stop reference: 87.63 / 83.26 (4.99% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### AEE — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 113.08, day gain 2.46%, dollar gain 2.2
-- Volume: 2,857,700 (2.06x previous day, 1.65x 20d avg)
-- Close location: 89.89%
-- Base: 20 days, width 10.25%
-- Entry / stop reference: 113.08 / 109.88 (2.83% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### BX — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 125.57, day gain 6.24%, dollar gain 4.17
-- Volume: 6,684,600 (1.81x previous day, 1.15x 20d avg)
-- Close location: 79.78%
-- Base: 8 days, width 6.45%
-- Entry / stop reference: 125.57 / 121.19 (3.49% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### BXP — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 65.96, day gain 5.32%, dollar gain 2.28
-- Volume: 1,943,300 (1.61x previous day, 1.28x 20d avg)
-- Close location: 94.86%
-- Base: 20 days, width 11.4%
-- Entry / stop reference: 65.96 / 63.56 (3.64% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### DUK — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 129.59, day gain 2.43%, dollar gain 2.18
-- Volume: 6,957,000 (1.92x previous day, 1.88x 20d avg)
-- Close location: 80.85%
-- Base: 20 days, width 10.98%
-- Entry / stop reference: 129.59 / 126.93 (2.05% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### IRM — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 118.66, day gain 1.69%, dollar gain 1.86
-- Volume: 2,509,000 (1.57x previous day, 1.98x 20d avg)
-- Close location: 89.56%
-- Base: 20 days, width 10.66%
-- Entry / stop reference: 118.66 / 114.2 (3.76% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### MAA — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 122.15, day gain 4.1%, dollar gain 2.37
-- Volume: 1,303,500 (1.21x previous day, 1.35x 20d avg)
-- Close location: 93.41%
-- Base: 20 days, width 8.15%
-- Entry / stop reference: 122.15 / 118.89 (2.67% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### PRU — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 126.63, day gain 6.58%, dollar gain 3.63
-- Volume: 3,633,300 (1.37x previous day, 2.07x 20d avg)
-- Close location: 82.97%
-- Base: 20 days, width 6.65%
-- Entry / stop reference: 126.63 / 120.98 (4.46% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### RL — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 412.06, day gain 4.48%, dollar gain 11.48
-- Volume: 803,100 (1.35x previous day, 1.6x 20d avg)
-- Close location: 88.85%
-- Base: 20 days, width 12.09%
-- Entry / stop reference: 412.06 / 399.79 (2.98% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### ZTS — A- / 84
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion, 9m_volume)
-- Price: close 89.2, day gain 7.48%, dollar gain 3.83
-- Volume: 9,174,600 (2.46x previous day, 2.37x 20d avg)
-- Close location: 97.98%
-- Base: 18 days, width 13.52%
-- Entry / stop reference: 89.2 / 84.83 (4.9% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### AEP — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 129.24, day gain -0.48%, dollar gain 1.14
-- Volume: 6,813,700 (2.11x previous day, 1.98x 20d avg)
-- Close location: 89.61%
-- Base: 20 days, width 8.44%
-- Entry / stop reference: 129.24 / 123.72 (4.27% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### BDX — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 209.19, day gain 5.56%, dollar gain 6.19
-- Volume: 4,460,500 (2.28x previous day, 2.8x 20d avg)
-- Close location: 93.19%
-- Base: 20 days, width 11.38%
-- Entry / stop reference: 209.19 / 200.3 (4.25% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### BEN — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, range_expansion)
-- Price: close 33.87, day gain 4.67%, dollar gain 0.87
-- Volume: 4,765,200 (1.26x previous day, 1.3x 20d avg)
-- Close location: 98.43%
-- Base: 20 days, width 7.66%
-- Entry / stop reference: 33.87 / 32.62 (3.69% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### BLK — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 1224.37, day gain 5.43%, dollar gain 37.16
-- Volume: 1,093,000 (1.56x previous day, 1.56x 20d avg)
-- Close location: 86.1%
-- Base: 20 days, width 11.24%
-- Entry / stop reference: 1224.37 / 1182.43 (3.43% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### LVS — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 40.74, day gain 6.48%, dollar gain 1.33
-- Volume: 8,513,500 (1.51x previous day, 1.32x 20d avg)
-- Close location: 85.35%
-- Base: 20 days, width 9.79%
-- Entry / stop reference: 40.74 / 39.4 (3.29% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### NKE — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, range_expansion, 9m_volume)
-- Price: close 40.49, day gain 5.22%, dollar gain 0.87
-- Volume: 34,473,400 (1.91x previous day, 1.33x 20d avg)
-- Close location: 62.35%
-- Base: 20 days, width 14.97%
-- Entry / stop reference: 40.49 / 39.48 (2.49% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### PFG — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 117.31, day gain 4.13%, dollar gain 2.31
-- Volume: 1,508,500 (1.3x previous day, 1.17x 20d avg)
-- Close location: 97.74%
-- Base: 20 days, width 7.04%
-- Entry / stop reference: 117.31 / 113.85 (2.95% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### SOLV — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout)
-- Price: close 89.35, day gain 5.42%, dollar gain 1.86
-- Volume: 2,168,000 (2.15x previous day, 1.95x 20d avg)
-- Close location: 59.84%
-- Base: 20 days, width 10.25%
-- Entry / stop reference: 89.35 / 87.48 (2.09% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### TSN — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 60.03, day gain 5.39%, dollar gain 2.22
-- Volume: 5,580,700 (1.48x previous day, 1.75x 20d avg)
-- Close location: 88.26%
-- Base: 20 days, width 11.25%
-- Entry / stop reference: 60.03 / 57.7 (3.88% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### UHS — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 196.46, day gain 10.91%, dollar gain 10.46
-- Volume: 1,782,000 (2.73x previous day, 2.72x 20d avg)
-- Close location: 90.5%
-- Base: 20 days, width 12.67%
-- Entry / stop reference: 196.46 / 185.31 (5.68% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### WYNN — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout)
-- Price: close 82.38, day gain 6.05%, dollar gain 1.28
-- Volume: 4,388,800 (2.33x previous day, 2.06x 20d avg)
-- Close location: 76.37%
-- Base: 20 days, width 10.7%
-- Entry / stop reference: 82.38 / 80.57 (2.2% risk to stop)
-- Soft failure tags: prior_3day_runup
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### XEL — A- / 83
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion, 9m_volume)
-- Price: close 80.5, day gain 2.21%, dollar gain 1.43
-- Volume: 12,187,300 (1.03x previous day, 1.96x 20d avg)
-- Close location: 84.0%
-- Base: 20 days, width 10.79%
-- Entry / stop reference: 80.5 / 78.4 (2.61% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### CB — A- / 82
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 374.17, day gain 2.08%, dollar gain 4.01
-- Volume: 1,726,600 (1.43x previous day, 1.14x 20d avg)
-- Close location: 94.94%
-- Base: 20 days, width 10.02%
-- Entry / stop reference: 374.17 / 366.1 (2.16% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### DRI — A- / 82
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 230.61, day gain 5.11%, dollar gain 6.83
-- Volume: 1,140,600 (1.43x previous day, 1.16x 20d avg)
-- Close location: 91.79%
-- Base: 20 days, width 13.19%
-- Entry / stop reference: 230.61 / 222.23 (3.63% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### DVA — A- / 82
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout)
-- Price: close 192.66, day gain 5.76%, dollar gain 7.14
-- Volume: 1,158,900 (1.53x previous day, 1.42x 20d avg)
-- Close location: 92.5%
-- Base: 20 days, width 14.21%
-- Entry / stop reference: 192.66 / 185.51 (3.71% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### LOW — A- / 82
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
-- Price: close 229.38, day gain 7.5%, dollar gain 6.48
-- Volume: 4,877,300 (1.59x previous day, 1.51x 20d avg)
-- Close location: 95.28%
-- Base: 14 days, width 13.19%
-- Entry / stop reference: 229.38 / 221.1 (3.61% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### MLM — A- / 82
-
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 556.56, day gain 2.35%, dollar gain 16.56
-- Volume: 1,795,500 (1.86x previous day, 2.08x 20d avg)
-- Close location: 82.79%
-- Base: 14 days, width 14.91%
-- Entry / stop reference: 556.56 / 538.71 (3.21% risk to stop)
-- Soft failure tags: none
-- Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
-
-### NSC — A- / 82
-
-- State: `ACTIONABLE_DAY1`
+- State: `MANUAL_REVIEW`
 - Trigger: `range_expansion` (range_expansion)
-- Price: close 344.14, day gain 0.94%, dollar gain -0.01
-- Volume: 1,444,600 (2.12x previous day, 1.81x 20d avg)
-- Close location: 80.56%
-- Base: 20 days, width 10.55%
-- Entry / stop reference: 344.14 / 336.89 (2.11% risk to stop)
-- Soft failure tags: none
+- Price: close 329.25, day gain -4.33%, dollar gain -4.74
+- Volume: 2,626,400 (1.82x previous day, 3.16x 20d avg)
+- Close location: 24.46%
+- Base: 20 days, width 10.45%
+- Entry / stop reference: 329.25 / 325.61 (1.11% risk to stop)
+- Soft failure tags: weak_close_location
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
 
-### SBUX — A- / 82
+### SRE — B / 72
 
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, 9m_volume)
-- Price: close 109.7, day gain 4.71%, dollar gain 3.38
-- Volume: 10,192,700 (1.52x previous day, 1.0x 20d avg)
-- Close location: 96.95%
-- Base: 15 days, width 14.26%
-- Entry / stop reference: 109.7 / 105.88 (3.48% risk to stop)
-- Soft failure tags: none
+- State: `MANUAL_REVIEW`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 79.83, day gain -3.7%, dollar gain -2.51
+- Volume: 11,767,900 (1.01x previous day, 3.23x 20d avg)
+- Close location: 21.87%
+- Base: 20 days, width 9.53%
+- Entry / stop reference: 79.83 / 79.06 (0.96% risk to stop)
+- Soft failure tags: weak_close_location
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
 
-### SPGI — A- / 82
+### RSG — B / 71
 
-- State: `ACTIONABLE_DAY1`
+- State: `MANUAL_REVIEW`
 - Trigger: `range_expansion` (dollar_breakout, range_expansion)
-- Price: close 481.69, day gain 3.36%, dollar gain 8.17
-- Volume: 2,614,600 (1.89x previous day, 1.42x 20d avg)
-- Close location: 83.86%
-- Base: 14 days, width 14.18%
-- Entry / stop reference: 481.69 / 470.0 (2.43% risk to stop)
+- Price: close 249.42, day gain 1.63%, dollar gain 1.22
+- Volume: 1,921,100 (1.53x previous day, 1.41x 20d avg)
+- Close location: 32.84%
+- Base: 20 days, width 14.08%
+- Entry / stop reference: 249.42 / 246.99 (0.97% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
+
+### ADI — B / 70
+
+- State: `MANUAL_REVIEW`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 361.01, day gain -11.13%, dollar gain -26.24
+- Volume: 13,100,900 (2.38x previous day, 3.19x 20d avg)
+- Close location: 2.2%
+- Base: 20 days, width 12.73%
+- Entry / stop reference: 361.01 / 360.13 (0.24% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
+
+### CASY — B / 70
+
+- State: `MANUAL_REVIEW`
+- Trigger: `dollar_breakout` (dollar_breakout)
+- Price: close 689.53, day gain 2.18%, dollar gain 10.54
+- Volume: 583,600 (1.04x previous day, 1.29x 20d avg)
+- Close location: 76.68%
+- Base: 20 days, width 12.44%
+- Entry / stop reference: 689.53 / 675.0 (2.11% risk to stop)
 - Soft failure tags: none
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
 
-### V — A- / 82
+### PTC — B / 70
 
-- State: `ACTIONABLE_DAY1`
-- Trigger: `range_expansion` (dollar_breakout, range_expansion, 9m_volume)
-- Price: close 436.57, day gain 3.84%, dollar gain 9.15
-- Volume: 9,677,300 (1.75x previous day, 1.48x 20d avg)
-- Close location: 98.59%
-- Base: 20 days, width 13.6%
-- Entry / stop reference: 436.57 / 423.28 (3.04% risk to stop)
+- State: `MANUAL_REVIEW`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 194.6, day gain -0.3%, dollar gain -0.53
+- Volume: 3,421,900 (1.62x previous day, 1.32x 20d avg)
+- Close location: 34.64%
+- Base: 20 days, width 1.51%
+- Entry / stop reference: 194.6 / 194.07 (0.27% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
+
+### ROK — B / 70
+
+- State: `MANUAL_REVIEW`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 381.05, day gain -14.15%, dollar gain -21.91
+- Volume: 2,808,200 (2.24x previous day, 3.15x 20d avg)
+- Close location: 7.98%
+- Base: 20 days, width 9.34%
+- Entry / stop reference: 381.05 / 378.31 (0.72% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Manual chart review only; consider reduced risk if upgraded by chart quality.
+
+### APD — Watch / 69
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 309.49, day gain -2.94%, dollar gain -14.51
+- Volume: 2,218,500 (1.31x previous day, 2.18x 20d avg)
+- Close location: 15.59%
+- Base: 20 days, width 14.16%
+- Entry / stop reference: 309.49 / 306.81 (0.87% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### IRM — Watch / 69
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 105.5, day gain -11.09%, dollar gain -4.22
+- Volume: 4,353,300 (1.74x previous day, 3.28x 20d avg)
+- Close location: 19.24%
+- Base: 20 days, width 10.48%
+- Entry / stop reference: 105.5 / 104.19 (1.24% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### TPR — Watch / 69
+
+- State: `WATCH_ONLY`
+- Trigger: `4pct_breakout` (4pct_breakout)
+- Price: close 134.17, day gain 7.07%, dollar gain -5.83
+- Volume: 5,311,300 (1.16x previous day, 2.07x 20d avg)
+- Close location: 18.67%
+- Base: 20 days, width 13.22%
+- Entry / stop reference: 134.17 / 131.86 (1.72% risk to stop)
+- Soft failure tags: prior_3day_runup, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### A — Watch / 68
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 171.78, day gain -3.04%, dollar gain -4.67
+- Volume: 2,698,700 (1.64x previous day, 1.31x 20d avg)
+- Close location: 10.26%
+- Base: 20 days, width 11.1%
+- Entry / stop reference: 171.78 / 171.07 (0.41% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### AWK — Watch / 68
+
+- State: `WATCH_ONLY`
+- Trigger: `dollar_breakout` (dollar_breakout)
+- Price: close 152.42, day gain 1.86%, dollar gain 1.52
+- Volume: 3,150,500 (1.01x previous day, 1.59x 20d avg)
+- Close location: 66.31%
+- Base: 19 days, width 14.95%
+- Entry / stop reference: 152.42 / 149.92 (1.64% risk to stop)
 - Soft failure tags: none
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
 
-### ABT — A- / 81
+### CEG — Watch / 68
 
-- State: `ACTIONABLE_DAY1`
-- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion, 9m_volume)
-- Price: close 115.51, day gain 5.59%, dollar gain 2.86
-- Volume: 12,711,300 (1.74x previous day, 1.32x 20d avg)
-- Close location: 82.68%
-- Base: 20 days, width 12.81%
-- Entry / stop reference: 115.51 / 112.12 (2.93% risk to stop)
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 239.65, day gain -2.47%, dollar gain -1.85
+- Volume: 7,428,500 (1.09x previous day, 2.07x 20d avg)
+- Close location: 63.57%
+- Base: 12 days, width 14.41%
+- Entry / stop reference: 239.65 / 231.3 (3.48% risk to stop)
+- Soft failure tags: recent_4pct_breakdown
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### MCHP — Watch / 68
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 64.85, day gain -13.92%, dollar gain -9.73
+- Volume: 44,047,700 (2.93x previous day, 3.82x 20d avg)
+- Close location: 6.89%
+- Base: 14 days, width 11.39%
+- Entry / stop reference: 64.85 / 64.04 (1.25% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### PM — Watch / 68
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 201.5, day gain -4.63%, dollar gain -7.4
+- Volume: 9,027,600 (2.02x previous day, 1.96x 20d avg)
+- Close location: 5.07%
+- Base: 20 days, width 14.36%
+- Entry / stop reference: 201.5 / 200.99 (0.25% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### UNP — Watch / 68
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 297.95, day gain -3.43%, dollar gain -2.86
+- Volume: 5,820,800 (2.02x previous day, 2.33x 20d avg)
+- Close location: 23.1%
+- Base: 20 days, width 11.55%
+- Entry / stop reference: 297.95 / 294.48 (1.16% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### VRSK — Watch / 68
+
+- State: `WATCH_ONLY`
+- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion)
+- Price: close 211.47, day gain 6.88%, dollar gain 17.47
+- Volume: 2,515,400 (1.35x previous day, 1.98x 20d avg)
+- Close location: 78.11%
+- Base: 19 days, width 14.66%
+- Entry / stop reference: 211.47 / 193.81 (8.35% risk to stop)
 - Soft failure tags: none
 - Reject reasons: none
-- Downstream action: Send to technical-analyst, then position-sizer if chart review passes.
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### BDX — Watch / 67
+
+- State: `WATCH_ONLY`
+- Trigger: `dollar_breakout` (dollar_breakout)
+- Price: close 213.55, day gain 2.08%, dollar gain 5.55
+- Volume: 3,990,500 (0.89x previous day, 2.32x 20d avg)
+- Close location: 85.14%
+- Base: 20 days, width 14.79%
+- Entry / stop reference: 213.55 / 206.5 (3.3% risk to stop)
+- Soft failure tags: none
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### CHTR — Watch / 67
+
+- State: `WATCH_ONLY`
+- Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout)
+- Price: close 125.86, day gain 4.67%, dollar gain 3.51
+- Volume: 4,491,300 (1.38x previous day, 1.67x 20d avg)
+- Close location: 87.51%
+- Base: 5 days, width 14.21%
+- Entry / stop reference: 125.86 / 116.75 (7.24% risk to stop)
+- Soft failure tags: none
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### CSCO — Watch / 67
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 95.72, day gain -7.62%, dollar gain -4.49
+- Volume: 37,433,700 (1.27x previous day, 2.24x 20d avg)
+- Close location: 4.32%
+- Base: 17 days, width 14.3%
+- Entry / stop reference: 95.72 / 95.43 (0.3% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### PH — Watch / 67
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 892.29, day gain -1.97%, dollar gain -75.71
+- Volume: 1,776,300 (1.61x previous day, 2.59x 20d avg)
+- Close location: 2.18%
+- Base: 20 days, width 11.86%
+- Entry / stop reference: 892.29 / 890.42 (0.21% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### TXN — Watch / 67
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 278.15, day gain -10.7%, dollar gain -23.77
+- Volume: 19,184,800 (1.89x previous day, 2.35x 20d avg)
+- Close location: 0.96%
+- Base: 20 days, width 14.93%
+- Entry / stop reference: 278.15 / 277.87 (0.1% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### C — Watch / 66
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 118.45, day gain -5.04%, dollar gain -8.02
+- Volume: 16,984,000 (1.04x previous day, 1.73x 20d avg)
+- Close location: 12.94%
+- Base: 20 days, width 10.78%
+- Entry / stop reference: 118.45 / 117.09 (1.15% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### CBOE — Watch / 66
+
+- State: `WATCH_ONLY`
+- Trigger: `dollar_breakout` (dollar_breakout)
+- Price: close 353.07, day gain 2.28%, dollar gain 1.46
+- Volume: 1,673,800 (1.46x previous day, 1.27x 20d avg)
+- Close location: 73.06%
+- Base: 15 days, width 14.65%
+- Entry / stop reference: 353.07 / 345.18 (2.23% risk to stop)
+- Soft failure tags: none
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### HBAN — Watch / 66
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 15.61, day gain -2.8%, dollar gain -0.68
+- Volume: 26,233,100 (1.01x previous day, 1.13x 20d avg)
+- Close location: 11.22%
+- Base: 20 days, width 9.65%
+- Entry / stop reference: 15.61 / 15.5 (0.7% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### ON — Watch / 66
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 63.01, day gain -11.55%, dollar gain -5.74
+- Volume: 26,045,700 (2.41x previous day, 2.5x 20d avg)
+- Close location: 3.32%
+- Base: 18 days, width 14.99%
+- Entry / stop reference: 63.01 / 62.76 (0.4% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### HUBB — Watch / 65
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 418.79, day gain -4.44%, dollar gain -12.99
+- Volume: 1,504,834 (1.85x previous day, 2.13x 20d avg)
+- Close location: 32.09%
+- Base: 20 days, width 14.79%
+- Entry / stop reference: 418.79 / 411.67 (1.7% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### J — Watch / 65
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 147.54, day gain -7.85%, dollar gain -12.49
+- Volume: 2,006,600 (1.31x previous day, 2.15x 20d avg)
+- Close location: 9.38%
+- Base: 11 days, width 14.32%
+- Entry / stop reference: 147.54 / 146.2 (0.91% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### NUE — Watch / 65
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 245.68, day gain -8.3%, dollar gain -23.25
+- Volume: 3,280,700 (1.4x previous day, 2.36x 20d avg)
+- Close location: 2.06%
+- Base: 18 days, width 14.71%
+- Entry / stop reference: 245.68 / 245.14 (0.22% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### AXON — Watch / 64
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 382.56, day gain -9.81%, dollar gain -44.16
+- Volume: 3,612,800 (4.24x previous day, 3.87x 20d avg)
+- Close location: 21.99%
+- Base: 20 days, width 14.8%
+- Entry / stop reference: 382.56 / 368.0 (3.81% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### HST — Watch / 64
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 24.63, day gain -5.67%, dollar gain -1.14
+- Volume: 18,464,900 (1.48x previous day, 2.12x 20d avg)
+- Close location: 7.69%
+- Base: 19 days, width 14.25%
+- Entry / stop reference: 24.63 / 24.5 (0.53% risk to stop)
+- Soft failure tags: prior_3day_runup, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### AVGO — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 291.53, day gain -10.43%, dollar gain -20.36
+- Volume: 53,594,200 (2.24x previous day, 2.46x 20d avg)
+- Close location: 5.9%
+- Base: 19 days, width 14.54%
+- Entry / stop reference: 291.53 / 290.12 (0.48% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### FCX — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 57.9, day gain -7.51%, dollar gain -5.41
+- Volume: 27,263,600 (2.41x previous day, 2.49x 20d avg)
+- Close location: 17.53%
+- Base: 13 days, width 14.42%
+- Entry / stop reference: 57.9 / 56.75 (1.99% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### MTB — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 219.78, day gain -2.16%, dollar gain -8.62
+- Volume: 1,290,400 (1.38x previous day, 1.34x 20d avg)
+- Close location: 9.9%
+- Base: 20 days, width 7.75%
+- Entry / stop reference: 219.78 / 218.66 (0.51% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### NDSN — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 310.49, day gain -6.11%, dollar gain -20.26
+- Volume: 438,300 (1.1x previous day, 1.19x 20d avg)
+- Close location: 3.25%
+- Base: 20 days, width 7.33%
+- Entry / stop reference: 310.49 / 309.75 (0.24% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### NVDA — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 181.6, day gain -9.26%, dollar gain -14.47
+- Volume: 303,158,900 (2.03x previous day, 2.93x 20d avg)
+- Close location: 0.95%
+- Base: 18 days, width 14.58%
+- Entry / stop reference: 181.6 / 181.46 (0.08% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### NXPI — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 244.43, day gain -7.77%, dollar gain -15.24
+- Volume: 12,466,100 (2.37x previous day, 2.65x 20d avg)
+- Close location: 0.05%
+- Base: 11 days, width 14.39%
+- Entry / stop reference: 244.43 / 244.42 (0.0% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### PANW — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 314.67, day gain -9.59%, dollar gain -22.88
+- Volume: 13,320,100 (2.32x previous day, 2.35x 20d avg)
+- Close location: 9.49%
+- Base: 3 days, width 7.77%
+- Entry / stop reference: 314.67 / 312.12 (0.81% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### QCOM — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `dollar_breakout` (dollar_breakout, 9m_volume)
+- Price: close 156.75, day gain -9.49%, dollar gain 6.69
+- Volume: 40,067,300 (1.8x previous day, 3.53x 20d avg)
+- Close location: 67.73%
+- Base: 20 days, width 14.56%
+- Entry / stop reference: 156.75 / 148.25 (5.42% risk to stop)
+- Soft failure tags: recent_4pct_breakdown
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### RF — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 28.41, day gain -2.14%, dollar gain -1.14
+- Volume: 10,341,600 (1.02x previous day, 0.9x 20d avg)
+- Close location: 10.6%
+- Base: 20 days, width 11.37%
+- Entry / stop reference: 28.41 / 28.25 (0.56% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### TSLA — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 343.69, day gain -10.77%, dollar gain -30.43
+- Volume: 79,133,000 (1.66x previous day, 2.12x 20d avg)
+- Close location: 15.33%
+- Base: 12 days, width 13.13%
+- Entry / stop reference: 343.69 / 338.15 (1.61% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### USB — Watch / 63
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 59.75, day gain -2.1%, dollar gain -2.7
+- Volume: 10,593,000 (1.46x previous day, 1.42x 20d avg)
+- Close location: 11.36%
+- Base: 20 days, width 11.01%
+- Entry / stop reference: 59.75 / 59.39 (0.6% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### BR — Watch / 62
+
+- State: `WATCH_ONLY`
+- Trigger: `dollar_breakout` (dollar_breakout)
+- Price: close 193.92, day gain 2.45%, dollar gain 1.86
+- Volume: 1,702,500 (0.86x previous day, 1.87x 20d avg)
+- Close location: 79.57%
+- Base: 17 days, width 14.14%
+- Entry / stop reference: 193.92 / 188.74 (2.67% risk to stop)
+- Soft failure tags: none
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### CMS — Watch / 62
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 70.68, day gain -0.42%, dollar gain -1.31
+- Volume: 5,984,400 (1.29x previous day, 1.44x 20d avg)
+- Close location: 30.99%
+- Base: 20 days, width 9.62%
+- Entry / stop reference: 70.68 / 69.93 (1.06% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### MO — Watch / 62
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 77.58, day gain -0.55%, dollar gain -1.12
+- Volume: 9,710,000 (1.09x previous day, 1.09x 20d avg)
+- Close location: 13.26%
+- Base: 20 days, width 12.58%
+- Entry / stop reference: 77.58 / 77.23 (0.45% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### TMO — Watch / 62
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 676.94, day gain -4.14%, dollar gain -29.98
+- Volume: 2,835,700 (1.15x previous day, 1.21x 20d avg)
+- Close location: 2.47%
+- Base: 20 days, width 10.88%
+- Entry / stop reference: 676.94 / 676.13 (0.12% risk to stop)
+- Soft failure tags: weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### BKR — Watch / 61
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion, 9m_volume)
+- Price: close 46.2, day gain -7.36%, dollar gain -3.83
+- Volume: 17,571,300 (1.22x previous day, 2.2x 20d avg)
+- Close location: 2.72%
+- Base: 5 days, width 13.05%
+- Entry / stop reference: 46.2 / 46.09 (0.24% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
+
+### CMI — Watch / 61
+
+- State: `WATCH_ONLY`
+- Trigger: `range_expansion` (range_expansion)
+- Price: close 448.58, day gain -4.93%, dollar gain 0.58
+- Volume: 3,389,200 (1.15x previous day, 2.67x 20d avg)
+- Close location: 16.18%
+- Base: 10 days, width 14.18%
+- Entry / stop reference: 448.58 / 443.62 (1.11% risk to stop)
+- Soft failure tags: recent_4pct_breakdown, weak_close_location
+- Reject reasons: none
+- Downstream action: Watchlist/model-book candidate; wait for cleaner risk or follow-through.
