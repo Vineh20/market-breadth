@@ -1,22 +1,22 @@
-# Upcoming Earnings Calendar - Week of November 02 to November 06, 2026
+# Upcoming Earnings Calendar - Week of November 12 to November 12, 2026
 
-**Report Generated**: November 01, 2026
+**Report Generated**: November 08, 2026
 **Data Source**: FMP API (US stocks, Mid-cap and above, >$2B market cap)
 **Coverage Period**: Next 7 days
-**Total Companies**: 12
+**Total Companies**: 1
 
 ---
 
 ## Executive Summary
 
-- **Total Companies Reporting**: 12
-- **Mega/Large Cap (>$10B)**: 10
-- **Mid Cap ($2B-$10B)**: 2
-- **Peak Day**: Tuesday (4 companies)
+- **Total Companies Reporting**: 1
+- **Mega/Large Cap (>$10B)**: 1
+- **Mid Cap ($2B-$10B)**: 0
+- **Peak Day**: Thursday (1 companies)
 
 ---
 
-## Monday, November 02, 2026
+## Thursday, November 12, 2026
 
 ### Before Market Open (BMO)
 
@@ -26,88 +26,7 @@
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| AAPL | Apple Inc. | $5.0T | Technology | $1.99 | $113.4B |
-| PLTR | Palantir Technologies Inc. | $423.6B | Technology | $0.41 | $2.2B |
-| ROKU | Roku, Inc. | $20.5B | Communication Serv | $0.53 | $1.4B |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Tuesday, November 03, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| SHOP | Shopify Inc. | $204.4B | Technology | $0.46 | $3.7B |
-| PFE | Pfizer Inc. | $174.0B | Healthcare | $0.73 | $15.9B |
-| ET | Energy Transfer LP | $69.7B | Energy | $0.40 | $31.0B |
-
-### After Market Close (AMC)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| AMD | Advanced Micro Devices, Inc. | $824.1B | Technology | $1.95 | $13.1B |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Wednesday, November 04, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| UBER | Uber Technologies, Inc. | $133.3B | Technology | $0.86 | $14.7B |
-
-### After Market Close (AMC)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| SNAP | Snap Inc. | $9.0B | Communication Serv | $0.00 | $1.7B |
-| RIOT | Riot Platforms, Inc. | $4.8B | Financial Services | $-0.34 | $160M |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Thursday, November 05, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| SONY | Sony Group Corporation | $148.7B | Technology | $0.38 | $20.1B |
-
-### After Market Close (AMC)
-
-*No earnings announcements*
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Friday, November 06, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| MRNA | Moderna, Inc. | $88.5B | Healthcare | $-1.10 | $890M |
-
-### After Market Close (AMC)
-
-*No earnings announcements*
+| CSCO | Cisco Systems, Inc. | $370.0B | Technology | $1.32 | $18.1B |
 
 ### Time Not Announced (TAS)
 
@@ -118,21 +37,13 @@
 ## Key Observations
 
 ### Highest Market Cap Companies This Week
-1. Apple Inc. (AAPL) - $5.0T - Mon AMC
-2. Advanced Micro Devices, Inc. (AMD) - $824.1B - Tue AMC
-3. Palantir Technologies Inc. (PLTR) - $423.6B - Mon AMC
-4. Shopify Inc. (SHOP) - $204.4B - Tue BMO
-5. Pfizer Inc. (PFE) - $174.0B - Tue BMO
+1. Cisco Systems, Inc. (CSCO) - $370.0B - Thu AMC
 
 ### Sector Distribution
-- **Technology**: 6 companies
-- **Communication Services**: 2 companies
-- **Healthcare**: 2 companies
-- **Energy**: 1 companies
-- **Financial Services**: 1 companies
+- **Technology**: 1 companies
 
 ### Trading Considerations
-- **Peak Day**: Tuesday with 4 earnings announcements
+- **Peak Day**: Thursday with 1 earnings announcements
 - **Pre-Market Focus**: BMO announcements before 9:30 AM ET
 - **After-Hours Focus**: AMC announcements after 4:00 PM ET
 
