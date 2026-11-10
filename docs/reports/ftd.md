@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-07 02:58:29
-**S&P 500:** $7376.86
-**QQQ:** $656.10
+**Generated:** 2026-11-10 04:43:26
+**S&P 500:** $7549.94
+**QQQ:** $679.35
 
 ---
 
@@ -23,8 +23,8 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_ATTEMPT | $7376.86 | $7818.93 | -5.7% | 2026-11-05 ($7353.73) |
-| NASDAQ/QQQ | RALLY_ATTEMPT | $656.10 | $759.66 | -13.6% | 2026-11-05 ($647.05) |
+| S&P 500 | RALLY_ATTEMPT | $7549.94 | $7818.93 | -3.4% | 2026-11-05 ($7353.73) |
+| NASDAQ/QQQ | RALLY_ATTEMPT | $679.35 | $759.66 | -10.6% | 2026-11-05 ($647.05) |
 
 ---
 
@@ -34,20 +34,20 @@
 
 - **Swing Low:** 2026-11-05 ($7353.73, -6.0% decline)
 - **Rally Day 1:** 2026-11-06
-- **Current Day Count:** 1
+- **Current Day Count:** 2
 
 ### NASDAQ/QQQ
 
 - **Swing Low:** 2026-11-05 ($647.05, -14.8% decline)
 - **Rally Day 1:** 2026-11-06
-- **Current Day Count:** 1
+- **Current Day Count:** 2
 
 ---
 
 ## Post-FTD Health
 
 - **Power Trend:** No (0/3 conditions)
-  - 21 EMA: $7623.58 (< 50 SMA: $7679.45)
+  - 21 EMA: $7616.88 (< 50 SMA: $7676.21)
   - 50 SMA Rising: No
   - Price above 21 EMA: No
 
