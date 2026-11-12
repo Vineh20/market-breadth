@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-11 02:54:08
-**S&P 500:** $7520.93
-**QQQ:** $674.76
+**Generated:** 2026-11-12 03:58:07
+**S&P 500:** $7619.38
+**QQQ:** $690.38
 
 ---
 
@@ -10,12 +10,13 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🔴 **Correction** |
-| **Quality Score** | **0/100** |
-| **Signal** | No FTD |
-| **Exposure Guidance** | 0-25% |
+| **Current State** | 🟢 **FTD Confirmed** |
+| **Quality Score** | **85/100** |
+| **Signal** | Strong FTD |
+| **Exposure Guidance** | 75-100% |
+| **FTD Index** | NASDAQ |
 
-> **Guidance:** No Follow-Through Day detected. Stay defensive.
+> **Guidance:** Aggressively increase exposure to 75-100%.
 
 ---
 
@@ -23,28 +24,73 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | CORRECTION | $7520.93 | $7818.93 | -3.8% | 2026-11-10 ($7520.93) |
-| NASDAQ/QQQ | CORRECTION | $674.76 | $759.66 | -11.2% | 2026-11-10 ($674.76) |
+| S&P 500 | RALLY_ATTEMPT | $7619.38 | $7818.93 | -2.5% | 2026-11-10 ($7520.93) |
+| NASDAQ/QQQ | FTD_CONFIRMED | $690.38 | $759.66 | -9.1% | 2026-11-05 ($647.05) |
+
+---
+
+## Rally Attempt Details
+
+### S&P 500
+
+- **Swing Low:** 2026-11-10 ($7520.93, -3.8% decline)
+- **Rally Day 1:** 2026-11-11
+- **Current Day Count:** 1
+
+### NASDAQ/QQQ
+
+- **Swing Low:** 2026-11-05 ($647.05, -14.8% decline)
+- **Rally Day 1:** 2026-11-06
+- **Current Day Count:** 4
+
+---
+
+## FTD Signal
+
+### NASDAQ/QQQ FTD
+
+| Metric | Value |
+|--------|-------|
+| **FTD Date** | 2026-11-11 |
+| **Day Number** | Day 4 |
+| **Price Gain** | +2.31% (strong) |
+| **Volume** | Above 50-day avg |
+
+---
+
+## Quality Score Breakdown
+
+**Total: 85/100**
+
+| Factor | Detail |
+|--------|--------|
+| Base | Day 4 FTD: +60 (prime window) |
+| Gain | +2.31% gain: +15 (strong) |
+| Volume | Above 50-day avg volume: +10 |
+| Dual Confirm | Single index (NASDAQ): +0 |
+| Post Ftd | Post-FTD data not yet available: +0 |
 
 ---
 
 ## Post-FTD Health
 
-- **Power Trend:** No (0/3 conditions)
-  - 21 EMA: $7608.17 (< 50 SMA: $7672.91)
+- **Distribution Days Since FTD:** 0 (in 0 days monitored)
+- **FTD Valid:** 0 days since FTD (FTD low: $683.56)
+- **Power Trend:** No (1/3 conditions)
+  - 21 EMA: $7609.19 (< 50 SMA: $7672.67)
   - 50 SMA Rising: No
-  - Price above 21 EMA: No
+  - Price above 21 EMA: Yes
 
 ---
 
 ## Action Guidance
 
-**Recommended Exposure:** 0-25%
+**Recommended Exposure:** 75-100%
 
-- Market in correction, no rally attempt yet
-- Stay defensive, preserve capital
-- Build watchlists of relative strength leaders
-- Wait for first up day to start rally count
+- Aggressively increase equity exposure
+- Buy leading stocks breaking out of proper bases
+- Use FTD day's low as stop-loss reference
+- Monitor for distribution days (early distribution = caution)
 
 ---
 
@@ -55,7 +101,9 @@
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $674.76 (2026-11-10)
+- Swing Low: $647.05 (2026-11-05)
+- FTD Day: 2026-11-11
+- FTD Day Low (invalidation level): $683.56
 - Lookback High: $759.66
 
 ---
