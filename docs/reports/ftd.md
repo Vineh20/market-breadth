@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-12 03:58:07
-**S&P 500:** $7619.38
-**QQQ:** $690.38
+**Generated:** 2026-11-13 03:30:23
+**S&P 500:** $7592.40
+**QQQ:** $688.17
 
 ---
 
@@ -11,7 +11,7 @@
 | Metric | Value |
 |--------|-------|
 | **Current State** | 🟢 **FTD Confirmed** |
-| **Quality Score** | **85/100** |
+| **Quality Score** | **95/100** |
 | **Signal** | Strong FTD |
 | **Exposure Guidance** | 75-100% |
 | **FTD Index** | NASDAQ |
@@ -24,8 +24,8 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_ATTEMPT | $7619.38 | $7818.93 | -2.5% | 2026-11-10 ($7520.93) |
-| NASDAQ/QQQ | FTD_CONFIRMED | $690.38 | $759.66 | -9.1% | 2026-11-05 ($647.05) |
+| S&P 500 | RALLY_ATTEMPT | $7592.40 | $7818.93 | -2.9% | 2026-11-10 ($7520.93) |
+| NASDAQ/QQQ | FTD_CONFIRMED | $688.17 | $759.66 | -9.4% | 2026-11-05 ($647.05) |
 
 ---
 
@@ -35,13 +35,13 @@
 
 - **Swing Low:** 2026-11-10 ($7520.93, -3.8% decline)
 - **Rally Day 1:** 2026-11-11
-- **Current Day Count:** 1
+- **Current Day Count:** 2
 
 ### NASDAQ/QQQ
 
 - **Swing Low:** 2026-11-05 ($647.05, -14.8% decline)
 - **Rally Day 1:** 2026-11-06
-- **Current Day Count:** 4
+- **Current Day Count:** 5
 
 ---
 
@@ -60,7 +60,7 @@
 
 ## Quality Score Breakdown
 
-**Total: 85/100**
+**Total: 95/100**
 
 | Factor | Detail |
 |--------|--------|
@@ -68,18 +68,18 @@
 | Gain | +2.31% gain: +15 (strong) |
 | Volume | Above 50-day avg volume: +10 |
 | Dual Confirm | Single index (NASDAQ): +0 |
-| Post Ftd | Post-FTD data not yet available: +0 |
+| Post Ftd | No post-FTD distribution (1 days clean): +10 |
 
 ---
 
 ## Post-FTD Health
 
-- **Distribution Days Since FTD:** 0 (in 0 days monitored)
-- **FTD Valid:** 0 days since FTD (FTD low: $683.56)
-- **Power Trend:** No (1/3 conditions)
-  - 21 EMA: $7609.19 (< 50 SMA: $7672.67)
+- **Distribution Days Since FTD:** 0 (in 1 days monitored)
+- **FTD Valid:** 1 days since FTD (FTD low: $683.56)
+- **Power Trend:** No (0/3 conditions)
+  - 21 EMA: $7607.68 (< 50 SMA: $7671.18)
   - 50 SMA Rising: No
-  - Price above 21 EMA: Yes
+  - Price above 21 EMA: No
 
 ---
 
