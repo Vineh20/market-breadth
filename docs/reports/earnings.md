@@ -1,32 +1,89 @@
-# Upcoming Earnings Calendar - Week of November 12 to November 12, 2026
+# Upcoming Earnings Calendar - Week of November 16 to November 19, 2026
 
-**Report Generated**: November 08, 2026
+**Report Generated**: November 15, 2026
 **Data Source**: FMP API (US stocks, Mid-cap and above, >$2B market cap)
 **Coverage Period**: Next 7 days
-**Total Companies**: 1
+**Total Companies**: 6
 
 ---
 
 ## Executive Summary
 
-- **Total Companies Reporting**: 1
-- **Mega/Large Cap (>$10B)**: 1
+- **Total Companies Reporting**: 6
+- **Mega/Large Cap (>$10B)**: 6
 - **Mid Cap ($2B-$10B)**: 0
-- **Peak Day**: Thursday (1 companies)
+- **Peak Day**: Tuesday (2 companies)
 
 ---
 
-## Thursday, November 12, 2026
+## Monday, November 16, 2026
 
 ### Before Market Open (BMO)
 
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| BIDU | Baidu, Inc. | $26.6B | Communication Serv | $0.85 | $4.6B |
+
+### After Market Close (AMC)
+
 *No earnings announcements*
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Tuesday, November 17, 2026
+
+### Before Market Open (BMO)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| DIS | The Walt Disney Company | $205.4B | Communication Serv | $1.68 | $25.2B |
 
 ### After Market Close (AMC)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| CSCO | Cisco Systems, Inc. | $370.0B | Technology | $1.32 | $18.1B |
+| NVDA | NVIDIA Corporation | $3.9T | Technology | $2.47 | $108.8B |
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Wednesday, November 18, 2026
+
+### Before Market Open (BMO)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| TGT | Target Corporation | $73.3B | Consumer Defensive | $2.07 | $26.5B |
+
+### After Market Close (AMC)
+
+*No earnings announcements*
+
+### Time Not Announced (TAS)
+
+*No earnings announcements*
+
+---
+
+## Thursday, November 19, 2026
+
+### Before Market Open (BMO)
+
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| WMT | Walmart Inc. | $1.0T | Consumer Defensive | $0.64 | $187.3B |
+| BABA | Alibaba Group Holding Limited | $229.6B | Consumer Cyclical | $1.65 | $40.2B |
+
+### After Market Close (AMC)
+
+*No earnings announcements*
 
 ### Time Not Announced (TAS)
 
@@ -37,13 +94,20 @@
 ## Key Observations
 
 ### Highest Market Cap Companies This Week
-1. Cisco Systems, Inc. (CSCO) - $370.0B - Thu AMC
+1. NVIDIA Corporation (NVDA) - $3.9T - Tue AMC
+2. Walmart Inc. (WMT) - $1.0T - Thu BMO
+3. Alibaba Group Holding Limited (BABA) - $229.6B - Thu BMO
+4. The Walt Disney Company (DIS) - $205.4B - Tue BMO
+5. Target Corporation (TGT) - $73.3B - Wed BMO
 
 ### Sector Distribution
+- **Communication Services**: 2 companies
+- **Consumer Defensive**: 2 companies
 - **Technology**: 1 companies
+- **Consumer Cyclical**: 1 companies
 
 ### Trading Considerations
-- **Peak Day**: Thursday with 1 earnings announcements
+- **Peak Day**: Tuesday with 2 earnings announcements
 - **Pre-Market Focus**: BMO announcements before 9:30 AM ET
 - **After-Hours Focus**: AMC announcements after 4:00 PM ET
 
