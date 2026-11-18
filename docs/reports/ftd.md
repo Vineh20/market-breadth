@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-17 05:10:35
-**S&P 500:** $7416.59
-**QQQ:** $661.75
+**Generated:** 2026-11-18 04:35:58
+**S&P 500:** $7340.53
+**QQQ:** $656.95
 
 ---
 
@@ -24,8 +24,8 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | CORRECTION | $7416.59 | $7818.93 | -5.2% | 2026-11-16 ($7416.59) |
-| NASDAQ/QQQ | FTD_INVALIDATED | $661.75 | $759.66 | -12.9% | 2026-11-05 ($647.05) |
+| S&P 500 | CORRECTION | $7340.53 | $7818.93 | -6.1% | 2026-11-17 ($7340.53) |
+| NASDAQ/QQQ | FTD_INVALIDATED | $656.95 | $759.66 | -13.5% | 2026-11-05 ($647.05) |
 
 ---
 
@@ -35,7 +35,7 @@
 
 - **Swing Low:** 2026-11-05 ($647.05, -14.8% decline)
 - **Rally Day 1:** 2026-11-06
-- **Current Day Count:** 7
+- **Current Day Count:** 8
 
 ---
 
@@ -62,19 +62,20 @@
 | Gain | +2.31% gain: +15 (strong) |
 | Volume | Above 50-day avg volume: +10 |
 | Dual Confirm | Single index (NASDAQ): +0 |
-| Post Ftd | Distribution on Day 2: -30 (very bearish) + multiple distributions (2x): -20 |
+| Post Ftd | Distribution on Day 2: -30 (very bearish) + multiple distributions (3x): -20 |
 | Invalidation | FTD invalidated on 2026-11-13 (Day 2) |
 
 ---
 
 ## Post-FTD Health
 
-- **Distribution Days Since FTD:** 2 (in 3 days monitored)
+- **Distribution Days Since FTD:** 3 (in 4 days monitored)
   - Day 2: 2026-11-13 (-1.20%, vol +13.1%)
-  - Day 3: 2026-11-16 (-2.67%, vol +1.7%)
+  - Day 3: 2026-11-16 (-2.67%, vol +3.5%)
+  - Day 4: 2026-11-17 (-0.73%, vol +26.3%)
 - **FTD INVALIDATED** on 2026-11-13 (Day 2, close $679.89 below FTD low $683.56)
 - **Power Trend:** No (0/3 conditions)
-  - 21 EMA: $7586.56 (< 50 SMA: $7661.42)
+  - 21 EMA: $7564.23 (< 50 SMA: $7654.76)
   - 50 SMA Rising: No
   - Price above 21 EMA: No
 
@@ -94,7 +95,7 @@
 ## Key Watch Levels
 
 **S&P 500:**
-- Swing Low: $7416.59 (2026-11-16)
+- Swing Low: $7340.53 (2026-11-17)
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
