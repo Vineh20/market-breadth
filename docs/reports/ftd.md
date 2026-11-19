@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-18 04:35:58
-**S&P 500:** $7340.53
-**QQQ:** $656.95
+**Generated:** 2026-11-19 04:18:34
+**S&P 500:** $7323.63
+**QQQ:** $659.51
 
 ---
 
@@ -10,13 +10,12 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🔴 **FTD Invalidated** |
+| **Current State** | 🟡 **Rally Attempt (Day 1-3)** |
 | **Quality Score** | **0/100** |
-| **Signal** | Failed/Invalidated |
+| **Signal** | No FTD |
 | **Exposure Guidance** | 0-25% |
-| **FTD Index** | NASDAQ |
 
-> **Guidance:** FTD invalidated. Reduce exposure, wait for new rally attempt.
+> **Guidance:** No Follow-Through Day detected. Stay defensive.
 
 ---
 
@@ -24,8 +23,8 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | CORRECTION | $7340.53 | $7818.93 | -6.1% | 2026-11-17 ($7340.53) |
-| NASDAQ/QQQ | FTD_INVALIDATED | $656.95 | $759.66 | -13.5% | 2026-11-05 ($647.05) |
+| S&P 500 | CORRECTION | $7323.63 | $7818.93 | -6.3% | 2026-11-18 ($7323.63) |
+| NASDAQ/QQQ | RALLY_ATTEMPT | $659.51 | $759.66 | -13.2% | 2026-11-17 ($656.95) |
 
 ---
 
@@ -33,49 +32,16 @@
 
 ### NASDAQ/QQQ
 
-- **Swing Low:** 2026-11-05 ($647.05, -14.8% decline)
-- **Rally Day 1:** 2026-11-06
-- **Current Day Count:** 8
-
----
-
-## FTD Signal
-
-### NASDAQ/QQQ FTD
-
-| Metric | Value |
-|--------|-------|
-| **FTD Date** | 2026-11-11 |
-| **Day Number** | Day 4 |
-| **Price Gain** | +2.31% (strong) |
-| **Volume** | Above 50-day avg |
-
----
-
-## Quality Score Breakdown
-
-**Total: 0/100**
-
-| Factor | Detail |
-|--------|--------|
-| Base | Day 4 FTD: +60 (prime window) |
-| Gain | +2.31% gain: +15 (strong) |
-| Volume | Above 50-day avg volume: +10 |
-| Dual Confirm | Single index (NASDAQ): +0 |
-| Post Ftd | Distribution on Day 2: -30 (very bearish) + multiple distributions (3x): -20 |
-| Invalidation | FTD invalidated on 2026-11-13 (Day 2) |
+- **Swing Low:** 2026-11-17 ($656.95, -13.5% decline)
+- **Rally Day 1:** 2026-11-18
+- **Current Day Count:** 1
 
 ---
 
 ## Post-FTD Health
 
-- **Distribution Days Since FTD:** 3 (in 4 days monitored)
-  - Day 2: 2026-11-13 (-1.20%, vol +13.1%)
-  - Day 3: 2026-11-16 (-2.67%, vol +3.5%)
-  - Day 4: 2026-11-17 (-0.73%, vol +26.3%)
-- **FTD INVALIDATED** on 2026-11-13 (Day 2, close $679.89 below FTD low $683.56)
 - **Power Trend:** No (0/3 conditions)
-  - 21 EMA: $7564.23 (< 50 SMA: $7654.76)
+  - 21 EMA: $7542.39 (< 50 SMA: $7648.51)
   - 50 SMA Rising: No
   - Price above 21 EMA: No
 
@@ -85,23 +51,21 @@
 
 **Recommended Exposure:** 0-25%
 
-- FTD has been invalidated - signal failed
-- Reduce exposure back to defensive levels
-- Wait for new swing low and fresh rally attempt
-- Do not try to anticipate next FTD
+- Rally attempt in progress (Day 1-3)
+- Too early to act - wait for Day 4+
+- Prepare watchlists, research leaders
+- Monitor for rally failure (close below swing low)
 
 ---
 
 ## Key Watch Levels
 
 **S&P 500:**
-- Swing Low: $7340.53 (2026-11-17)
+- Swing Low: $7323.63 (2026-11-18)
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $647.05 (2026-11-05)
-- FTD Day: 2026-11-11
-- FTD Day Low (invalidation level): $683.56
+- Swing Low: $656.95 (2026-11-17)
 - Lookback High: $759.66
 
 ---
