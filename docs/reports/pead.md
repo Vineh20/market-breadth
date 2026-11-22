@@ -1,5 +1,5 @@
 # PEAD Screener Report - Post-Earnings Announcement Drift
-**Generated:** 2026-11-15 19:37:52
+**Generated:** 2026-11-22 20:37:49
 **Mode:** A (FMP Earnings Calendar)
 **Lookback:** 14 days
 **Watch Window:** 5 weeks
@@ -10,12 +10,12 @@
 
 | Stage | Count |
 |-------|-------|
-| Total Screened | 6 |
+| Total Screened | 1 |
 | BREAKOUT | 0 |
-| SIGNAL_READY | 2 |
-| MONITORING | 4 |
+| SIGNAL_READY | 0 |
+| MONITORING | 1 |
 | EXPIRED | 0 |
-| Timing unknown | 0 of 14 |
+| Timing unknown | 0 of 9 |
 
 ---
 
@@ -26,122 +26,25 @@ No stocks in this stage.
 
 ---
 
-## SIGNAL_READY (2 stocks)
+## SIGNAL_READY (0 stocks)
 *Red candle pullback identified, awaiting breakout*
 
-### 1. SONY [DEVELOPING]
-**Price:** $27.07 | **Earnings:** 2026-11-05 (bmo) | **Gap:** +6.2% | **Weeks Since:** 1
-**PEAD Score:** 61.5/100 (Developing)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 75 | 30% | 22.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 70 | 20% | 14.0 |
-
-**Red Candle:** Week of 2026-11-09 | High: $27.32 | Low: $26.25
-
-**Trade Setup:**
-- Trigger: Close above $27.32 on green weekly candle
-- Stop (if triggered): $26.25
-- Action: Set alert at red candle high
-- Guidance: Watchlist, wait for cleaner breakout
+No stocks in this stage.
 
 ---
 
-### 2. SHOP [DEVELOPING]
-**Price:** $147.09 | **Earnings:** 2026-11-03 (bmo) | **Gap:** -12.7% | **Weeks Since:** 1
-**PEAD Score:** 55.5/100 (Developing)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 55 | 30% | 16.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 70 | 20% | 14.0 |
-
-**Red Candle:** Week of 2026-11-09 | High: $152.59 | Low: $142.10
-
-**Trade Setup:**
-- Trigger: Close above $152.59 on green weekly candle
-- Stop (if triggered): $142.10
-- Action: Set alert at red candle high
-- Guidance: Watchlist, wait for cleaner breakout
-
----
-
----
-
-## MONITORING (4 stocks)
+## MONITORING (1 stock)
 *Post-earnings gap-up, no red candle yet*
 
-### 1. RIOT 
-**Price:** $17.52 | **Earnings:** 2026-11-04 (bmo) | **Gap:** +11.4% | **Weeks Since:** 1
-**PEAD Score:** 52.5/100 (Weak)
+### 1. FUBO 
+**Price:** $5.53 | **Earnings:** 2026-11-17 (bmo) | **Gap:** +4.9% | **Weeks Since:** 0
+**PEAD Score:** 22.2/100 (Weak)
 
 | Component | Score | Weight | Weighted |
 |-----------|-------|--------|----------|
-| Setup Quality | 75 | 30% | 22.5 |
+| Setup Quality | 45 | 30% | 13.5 |
 | Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 25 | 20% | 5.0 |
-
-**Red Candle:** Not yet formed
-
-**Trade Setup:**
-- Action: Monitor for red candle formation
-- Guidance: Not actionable
-
----
-
-### 2. AAPL 
-**Price:** $356.27 | **Earnings:** 2026-11-02 (amc) | **Gap:** -3.8% | **Weeks Since:** 1
-**PEAD Score:** 40.5/100 (Weak)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 35 | 30% | 10.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 25 | 20% | 5.0 |
-
-**Red Candle:** Not yet formed
-
-**Trade Setup:**
-- Action: Monitor for red candle formation
-- Guidance: Not actionable
-
----
-
-### 3. PLTR 
-**Price:** $167.99 | **Earnings:** 2026-11-02 (amc) | **Gap:** -5.7% | **Weeks Since:** 1
-**PEAD Score:** 40.5/100 (Weak)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 35 | 30% | 10.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 100 | 25% | 25.0 |
-| Risk/Reward | 25 | 20% | 5.0 |
-
-**Red Candle:** Not yet formed
-
-**Trade Setup:**
-- Action: Monitor for red candle formation
-- Guidance: Not actionable
-
----
-
-### 4. SNAP 
-**Price:** $5.26 | **Earnings:** 2026-11-04 (amc) | **Gap:** -10.6% | **Weeks Since:** 1
-**PEAD Score:** 25.5/100 (Weak)
-
-| Component | Score | Weight | Weighted |
-|-----------|-------|--------|----------|
-| Setup Quality | 35 | 30% | 10.5 |
-| Breakout Strength | 0 | 25% | 0.0 |
-| Liquidity | 40 | 25% | 10.0 |
+| Liquidity | 15 | 25% | 3.8 |
 | Risk/Reward | 25 | 20% | 5.0 |
 
 **Red Candle:** Not yet formed
@@ -162,9 +65,9 @@ No stocks in this stage.
 ---
 
 ## API Usage
-- **API Calls Made:** 29
-- **Budget Remaining:** 171
-- **Cache Entries:** 29
+- **API Calls Made:** 19
+- **Budget Remaining:** 181
+- **Cache Entries:** 19
 
 ---
 

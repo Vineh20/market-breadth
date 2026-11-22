@@ -1,32 +1,32 @@
-# Upcoming Earnings Calendar - Week of November 16 to November 19, 2026
+# Upcoming Earnings Calendar - Week of November 23 to November 24, 2026
 
-**Report Generated**: November 15, 2026
+**Report Generated**: November 22, 2026
 **Data Source**: FMP API (US stocks, Mid-cap and above, >$2B market cap)
 **Coverage Period**: Next 7 days
-**Total Companies**: 6
+**Total Companies**: 2
 
 ---
 
 ## Executive Summary
 
-- **Total Companies Reporting**: 6
-- **Mega/Large Cap (>$10B)**: 6
-- **Mid Cap ($2B-$10B)**: 0
-- **Peak Day**: Tuesday (2 companies)
+- **Total Companies Reporting**: 2
+- **Mega/Large Cap (>$10B)**: 1
+- **Mid Cap ($2B-$10B)**: 1
+- **Peak Day**: Monday (1 companies)
 
 ---
 
-## Monday, November 16, 2026
+## Monday, November 23, 2026
 
 ### Before Market Open (BMO)
 
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| BIDU | Baidu, Inc. | $26.6B | Communication Serv | $0.85 | $4.6B |
+*No earnings announcements*
 
 ### After Market Close (AMC)
 
-*No earnings announcements*
+| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
+|--------|---------|------------|--------|----------|--------------|
+| ZM | Zoom Communications, Inc. | $23.7B | Technology | $1.49 | $1.3B |
 
 ### Time Not Announced (TAS)
 
@@ -34,52 +34,13 @@
 
 ---
 
-## Tuesday, November 17, 2026
+## Tuesday, November 24, 2026
 
 ### Before Market Open (BMO)
 
 | Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
 |--------|---------|------------|--------|----------|--------------|
-| DIS | The Walt Disney Company | $205.4B | Communication Serv | $1.68 | $25.2B |
-
-### After Market Close (AMC)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| NVDA | NVIDIA Corporation | $3.9T | Technology | $2.47 | $108.8B |
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Wednesday, November 18, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| TGT | Target Corporation | $73.3B | Consumer Defensive | $2.07 | $26.5B |
-
-### After Market Close (AMC)
-
-*No earnings announcements*
-
-### Time Not Announced (TAS)
-
-*No earnings announcements*
-
----
-
-## Thursday, November 19, 2026
-
-### Before Market Open (BMO)
-
-| Ticker | Company | Market Cap | Sector | EPS Est. | Revenue Est. |
-|--------|---------|------------|--------|----------|--------------|
-| WMT | Walmart Inc. | $1.0T | Consumer Defensive | $0.64 | $187.3B |
-| BABA | Alibaba Group Holding Limited | $229.6B | Consumer Cyclical | $1.65 | $40.2B |
+| BILI | Bilibili Inc. | $4.4B | Communication Serv | $0.27 | $1.2B |
 
 ### After Market Close (AMC)
 
@@ -94,20 +55,15 @@
 ## Key Observations
 
 ### Highest Market Cap Companies This Week
-1. NVIDIA Corporation (NVDA) - $3.9T - Tue AMC
-2. Walmart Inc. (WMT) - $1.0T - Thu BMO
-3. Alibaba Group Holding Limited (BABA) - $229.6B - Thu BMO
-4. The Walt Disney Company (DIS) - $205.4B - Tue BMO
-5. Target Corporation (TGT) - $73.3B - Wed BMO
+1. Zoom Communications, Inc. (ZM) - $23.7B - Mon AMC
+2. Bilibili Inc. (BILI) - $4.4B - Tue BMO
 
 ### Sector Distribution
-- **Communication Services**: 2 companies
-- **Consumer Defensive**: 2 companies
 - **Technology**: 1 companies
-- **Consumer Cyclical**: 1 companies
+- **Communication Services**: 1 companies
 
 ### Trading Considerations
-- **Peak Day**: Tuesday with 2 earnings announcements
+- **Peak Day**: Monday with 1 earnings announcements
 - **Pre-Market Focus**: BMO announcements before 9:30 AM ET
 - **After-Hours Focus**: AMC announcements after 4:00 PM ET
 
