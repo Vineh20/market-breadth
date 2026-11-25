@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-24 07:01:50
-**S&P 500:** $7237.17
-**QQQ:** $651.03
+**Generated:** 2026-11-25 05:32:29
+**S&P 500:** $7201.09
+**QQQ:** $638.10
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **Current State** | 🟡 **Rally Attempt (Day 1-3)** |
+| **Current State** | 🔴 **Correction** |
 | **Quality Score** | **0/100** |
 | **Signal** | No FTD |
 | **Exposure Guidance** | 0-25% |
@@ -23,31 +23,15 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | RALLY_ATTEMPT | $7237.17 | $7818.93 | -7.4% | 2026-11-20 ($6910.39) |
-| NASDAQ/QQQ | RALLY_ATTEMPT | $651.03 | $759.66 | -14.3% | 2026-11-20 ($608.45) |
-
----
-
-## Rally Attempt Details
-
-### S&P 500
-
-- **Swing Low:** 2026-11-20 ($6910.39, -11.6% decline)
-- **Rally Day 1:** 2026-11-23
-- **Current Day Count:** 1
-
-### NASDAQ/QQQ
-
-- **Swing Low:** 2026-11-20 ($608.45, -19.9% decline)
-- **Rally Day 1:** 2026-11-23
-- **Current Day Count:** 1
+| S&P 500 | CORRECTION | $7201.09 | $7818.93 | -7.9% | 2026-11-24 ($7201.09) |
+| NASDAQ/QQQ | CORRECTION | $638.10 | $759.66 | -16.0% | 2026-11-24 ($638.10) |
 
 ---
 
 ## Post-FTD Health
 
 - **Power Trend:** No (0/3 conditions)
-  - 21 EMA: $7434.99 (< 50 SMA: $7617.60)
+  - 21 EMA: $7413.76 (< 50 SMA: $7609.91)
   - 50 SMA Rising: No
   - Price above 21 EMA: No
 
@@ -57,21 +41,21 @@
 
 **Recommended Exposure:** 0-25%
 
-- Rally attempt in progress (Day 1-3)
-- Too early to act - wait for Day 4+
-- Prepare watchlists, research leaders
-- Monitor for rally failure (close below swing low)
+- Market in correction, no rally attempt yet
+- Stay defensive, preserve capital
+- Build watchlists of relative strength leaders
+- Wait for first up day to start rally count
 
 ---
 
 ## Key Watch Levels
 
 **S&P 500:**
-- Swing Low: $6910.39 (2026-11-20)
+- Swing Low: $7201.09 (2026-11-24)
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $608.45 (2026-11-20)
+- Swing Low: $638.10 (2026-11-24)
 - Lookback High: $759.66
 
 ---
