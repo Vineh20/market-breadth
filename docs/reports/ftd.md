@@ -1,8 +1,8 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-25 05:32:29
-**S&P 500:** $7201.09
-**QQQ:** $638.10
+**Generated:** 2026-11-26 05:14:25
+**S&P 500:** $7182.78
+**QQQ:** $633.93
 
 ---
 
@@ -23,15 +23,15 @@
 
 | Index | State | Current | High | Correction | Swing Low |
 |-------|-------|---------|------|------------|-----------|
-| S&P 500 | CORRECTION | $7201.09 | $7818.93 | -7.9% | 2026-11-24 ($7201.09) |
-| NASDAQ/QQQ | CORRECTION | $638.10 | $759.66 | -16.0% | 2026-11-24 ($638.10) |
+| S&P 500 | CORRECTION | $7182.78 | $7818.93 | -8.1% | 2026-11-25 ($7182.78) |
+| NASDAQ/QQQ | CORRECTION | $633.93 | $759.66 | -16.6% | 2026-11-25 ($633.93) |
 
 ---
 
 ## Post-FTD Health
 
 - **Power Trend:** No (0/3 conditions)
-  - 21 EMA: $7413.76 (< 50 SMA: $7609.91)
+  - 21 EMA: $7392.76 (< 50 SMA: $7602.53)
   - 50 SMA Rising: No
   - Price above 21 EMA: No
 
@@ -51,11 +51,11 @@
 ## Key Watch Levels
 
 **S&P 500:**
-- Swing Low: $7201.09 (2026-11-24)
+- Swing Low: $7182.78 (2026-11-25)
 - Lookback High: $7818.93
 
 **NASDAQ/QQQ:**
-- Swing Low: $638.10 (2026-11-24)
+- Swing Low: $633.93 (2026-11-25)
 - Lookback High: $759.66
 
 ---
