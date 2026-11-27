@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-26T04:14:49.397957Z",
+  "last_updated": "2026-11-27T04:23:46.151453Z",
   "latest_date": "2026-11-25",
   "ratio": 0.32,
   "ratio5": 0.38,
@@ -12,6 +12,6 @@
   "extreme_zone": "DIP_TOE_ZONE",
   "regime": "BEAR",
   "signal": "DEFENSIVE",
-  "t2108_approx": 58.5,
+  "t2108_approx": 58.4,
   "total_rows": 200
 }
