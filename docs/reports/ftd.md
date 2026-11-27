@@ -1,6 +1,6 @@
 # FTD Detector Report
 
-**Generated:** 2026-11-26 05:14:25
+**Generated:** 2026-11-27 05:11:58
 **S&P 500:** $7182.78
 **QQQ:** $633.93
 

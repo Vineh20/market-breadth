@@ -1,5 +1,5 @@
 # VCP Screener Report - Minervini Volatility Contraction Pattern
-**Generated:** 2026-11-26 05:14:24
+**Generated:** 2026-11-27 05:11:57
 **Universe:** S&P 500 (503 stocks)
 
 ---
@@ -54,7 +54,7 @@ No actionable pre-breakout candidates found.
 
 ### 1. WTW - Willis Towers Watson
 **Quality:** 68/100 (Developing VCP) | **State:** Breakout | **Type:** VCP-adjacent
-**Price:** $352.56 | **Market Cap:** $31.0B | **Sector:** Financials
+**Price:** $352.56 | **Market Cap:** $32.0B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -74,7 +74,7 @@ No actionable pre-breakout candidates found.
 
 ### 2. EW - Edwards Lifesciences
 **Quality:** 65/100 (Developing VCP) ★ → Weak VCP | **State:** Overextended | **Type:** Extended Leader
-**Price:** $106.36 | **Market Cap:** $60.4B | **Sector:** Health Care
+**Price:** $106.36 | **Market Cap:** $61.6B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -94,7 +94,7 @@ No actionable pre-breakout candidates found.
 
 ### 3. PRU - Prudential Financial
 **Quality:** 64/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $120.22 | **Market Cap:** $41.0B | **Sector:** Financials
+**Price:** $120.22 | **Market Cap:** $40.7B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -114,7 +114,7 @@ No actionable pre-breakout candidates found.
 
 ### 4. HUM - Humana
 **Quality:** 64/100 (Developing VCP) ★ → No VCP | **State:** Damaged | **Type:** Damaged
-**Price:** $406.51 | **Market Cap:** $46.1B | **Sector:** Health Care
+**Price:** $406.51 | **Market Cap:** $47.4B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -134,7 +134,7 @@ No actionable pre-breakout candidates found.
 
 ### 5. ADP - Automatic Data Processing
 **Quality:** 61/100 (Developing VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $316.72 | **Market Cap:** $119.3B | **Sector:** Industrials
+**Price:** $316.72 | **Market Cap:** $122.6B | **Sector:** Industrials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -154,7 +154,7 @@ No actionable pre-breakout candidates found.
 
 ### 6. BAX - Baxter International
 **Quality:** 60/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $27.26 | **Market Cap:** $13.8B | **Sector:** Health Care
+**Price:** $27.26 | **Market Cap:** $14.1B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -174,7 +174,7 @@ No actionable pre-breakout candidates found.
 
 ### 7. FDS - FactSet
 **Quality:** 60/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $324.55 | **Market Cap:** $11.0B | **Sector:** Financials
+**Price:** $324.55 | **Market Cap:** $11.3B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -194,7 +194,7 @@ No actionable pre-breakout candidates found.
 
 ### 8. DXCM - Dexcom
 **Quality:** 60/100 (Developing VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $84.84 | **Market Cap:** $30.7B | **Sector:** Health Care
+**Price:** $84.84 | **Market Cap:** $31.7B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -214,7 +214,7 @@ No actionable pre-breakout candidates found.
 
 ### 9. OKTA - Okta, Inc.
 **Quality:** 60/100 (Developing VCP) ★ → Weak VCP | **State:** Overextended | **Type:** VCP-adjacent
-**Price:** $201.77 | **Market Cap:** $36.1B | **Sector:** Information Technology
+**Price:** $201.77 | **Market Cap:** $34.6B | **Sector:** Information Technology
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -234,7 +234,7 @@ No actionable pre-breakout candidates found.
 
 ### 10. RL - Ralph Lauren Corporation
 **Quality:** 60/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $400.71 | **Market Cap:** $22.8B | **Sector:** Consumer Discretionary
+**Price:** $400.71 | **Market Cap:** $23.5B | **Sector:** Consumer Discretionary
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -254,7 +254,7 @@ No actionable pre-breakout candidates found.
 
 ### 11. AIZ - Assurant
 **Quality:** 60/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $325.73 | **Market Cap:** $15.7B | **Sector:** Financials
+**Price:** $325.73 | **Market Cap:** $15.8B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -294,7 +294,7 @@ No actionable pre-breakout candidates found.
 
 ### 13. EG - Everest Group
 **Quality:** 59/100 (Weak VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $433.64 | **Market Cap:** $15.7B | **Sector:** Financials
+**Price:** $433.64 | **Market Cap:** $15.8B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -314,7 +314,7 @@ No actionable pre-breakout candidates found.
 
 ### 14. BIIB - Biogen
 **Quality:** 59/100 (Weak VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $261.44 | **Market Cap:** $37.9B | **Sector:** Health Care
+**Price:** $261.44 | **Market Cap:** $40.1B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -334,7 +334,7 @@ No actionable pre-breakout candidates found.
 
 ### 15. GILD - Gilead Sciences
 **Quality:** 59/100 (Weak VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $176.74 | **Market Cap:** $211.6B | **Sector:** Health Care
+**Price:** $176.74 | **Market Cap:** $221.6B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -354,7 +354,7 @@ No actionable pre-breakout candidates found.
 
 ### 16. CAH - Cardinal Health
 **Quality:** 58/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $282.91 | **Market Cap:** $62.9B | **Sector:** Health Care
+**Price:** $282.91 | **Market Cap:** $65.4B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -374,7 +374,7 @@ No actionable pre-breakout candidates found.
 
 ### 17. CTAS - Cintas
 **Quality:** 58/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $227.65 | **Market Cap:** $88.8B | **Sector:** Industrials
+**Price:** $227.65 | **Market Cap:** $87.1B | **Sector:** Industrials
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -394,7 +394,7 @@ No actionable pre-breakout candidates found.
 
 ### 18. DGX - Quest Diagnostics
 **Quality:** 57/100 (Weak VCP) | **State:** Early-post-breakout | **Type:** VCP-adjacent
-**Price:** $265.64 | **Market Cap:** $29.0B | **Sector:** Health Care
+**Price:** $265.64 | **Market Cap:** $29.6B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -414,7 +414,7 @@ No actionable pre-breakout candidates found.
 
 ### 19. AMGN - Amgen
 **Quality:** 57/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $469.24 | **Market Cap:** $242.9B | **Sector:** Health Care
+**Price:** $469.24 | **Market Cap:** $258.0B | **Sector:** Health Care
 
 | Component | Score | Details |
 |-----------|-------|---------|
@@ -434,7 +434,7 @@ No actionable pre-breakout candidates found.
 
 ### 20. V - Visa Inc.
 **Quality:** 57/100 (Weak VCP) | **State:** Pre-breakout | **Type:** VCP-adjacent
-**Price:** $424.39 | **Market Cap:** $739.1B | **Sector:** Financials
+**Price:** $424.39 | **Market Cap:** $749.6B | **Sector:** Financials
 
 | Component | Score | Details |
 |-----------|-------|---------|

@@ -1,6 +1,6 @@
 # Stockbee Momentum Burst Report
 
-Generated at: 2026-11-26 05:17:01
+Generated at: 2026-11-27 05:14:33
 Market gate: `neutral`
 Input mode: `symbols`
 
@@ -38,7 +38,7 @@ Input mode: `symbols`
 - State: `ACTIONABLE_DAY1`
 - Trigger: `range_expansion` (dollar_breakout, range_expansion, 9m_volume)
 - Price: close 125.6, day gain 2.52%, dollar gain 3.62
-- Volume: 16,344,400 (1.41x previous day, 1.59x 20d avg)
+- Volume: 16,355,200 (1.41x previous day, 1.6x 20d avg)
 - Close location: 87.19%
 - Base: 20 days, width 11.93%
 - Entry / stop reference: 125.6 / 120.97 (3.69% risk to stop)
@@ -389,7 +389,7 @@ Input mode: `symbols`
 - State: `MANUAL_REVIEW`
 - Trigger: `4pct_breakout` (4pct_breakout, dollar_breakout, range_expansion, 9m_volume)
 - Price: close 31.15, day gain 11.49%, dollar gain 1.2
-- Volume: 39,069,000 (1.44x previous day, 2.72x 20d avg)
+- Volume: 39,105,300 (1.44x previous day, 2.72x 20d avg)
 - Close location: 61.7%
 - Base: 18 days, width 13.85%
 - Entry / stop reference: 31.15 / 29.7 (4.65% risk to stop)
@@ -402,7 +402,7 @@ Input mode: `symbols`
 - State: `MANUAL_REVIEW`
 - Trigger: `range_expansion` (dollar_breakout, range_expansion)
 - Price: close 428.74, day gain 1.57%, dollar gain 20.86
-- Volume: 511,192 (1.2x previous day, 0.78x 20d avg)
+- Volume: 513,245 (1.21x previous day, 0.78x 20d avg)
 - Close location: 94.16%
 - Base: 20 days, width 11.84%
 - Entry / stop reference: 428.74 / 406.81 (5.11% risk to stop)
@@ -571,7 +571,7 @@ Input mode: `symbols`
 - State: `MANUAL_REVIEW`
 - Trigger: `range_expansion` (dollar_breakout, range_expansion, 9m_volume)
 - Price: close 609.89, day gain 3.4%, dollar gain 34.55
-- Volume: 18,599,400 (1.53x previous day, 0.97x 20d avg)
+- Volume: 18,668,200 (1.53x previous day, 0.98x 20d avg)
 - Close location: 97.3%
 - Base: 9 days, width 14.45%
 - Entry / stop reference: 609.89 / 567.75 (6.91% risk to stop)
@@ -636,7 +636,7 @@ Input mode: `symbols`
 - State: `MANUAL_REVIEW`
 - Trigger: `dollar_breakout` (dollar_breakout, 9m_volume)
 - Price: close 48.54, day gain -0.04%, dollar gain 1.37
-- Volume: 38,275,100 (1.04x previous day, 1.06x 20d avg)
+- Volume: 38,285,800 (1.04x previous day, 1.06x 20d avg)
 - Close location: 89.39%
 - Base: 20 days, width 12.66%
 - Entry / stop reference: 48.54 / 46.94 (3.3% risk to stop)
